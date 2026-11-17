@@ -18,7 +18,7 @@ const items = [
     {items.map(([s, t, d, i]) => <LinkCard href={`/resources/${s}/`} title={t} text={d} icon={i} cta="Open →" />)}
   </div></section>
   {articles.length > 0 && (
-    <section class="section pt-0"><div class="container-x"><h2 class="mb-5">Latest articles</h2>
+    <section class="section pt-0"><div class="container-x"><h2 class="title-bar mb-7">Latest articles</h2>
       <div class="grid-cards">{articles.slice(0, 3).map((a) => <LinkCard compact href={`/resources/technical-articles/${a.slug}/`} title={a.title} text={a.summary} cta="Read →" />)}</div>
     </div></section>
   )}
