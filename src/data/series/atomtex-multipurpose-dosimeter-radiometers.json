@@ -1,0 +1,79 @@
+{
+  "slug": "atomtex-multipurpose-dosimeter-radiometers",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-survey-meters",
+  "subtype": "Multipurpose instruments",
+  "name": "ATOMTEX Multipurpose Dosimeter-Radiometers",
+  "summary": "Modular instruments that accept interchangeable detection units, so one processing unit can measure gamma and neutron dose rate, surface contamination and sample activity.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "X-ray",
+    "Neutron"
+  ],
+  "applications": [
+    "dose-measurement",
+    "neutron-detection",
+    "contamination-monitoring",
+    "alpha-beta-detection"
+  ],
+  "image": "/images/products/atomtex-multipurpose-dosimeter-radiometers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT1117M",
+      "anchor": "atomtex-at1117m",
+      "specs": {
+        "Description": "Modular: X-ray, gamma and neutron dose, surface contamination and source search via probes"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1125",
+      "anchor": "atomtex-at1125",
+      "specs": {
+        "Description": "X-ray/gamma dose rate 30 nSv/h – 300 µSv/h; Cs-137 activity; alpha/beta with BDPS-02"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1125A",
+      "anchor": "atomtex-at1125a",
+      "specs": {
+        "Description": "As AT1125 with extended range up to 100 mSv/h"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1117M (neutron set)",
+      "anchor": "atomtex-at1117m-neutron-set",
+      "specs": {
+        "Description": "Neutron and gamma dose-rate measurement with GPS-linked logging"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "atomtex-whole-body-counters",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "contamination-monitors",
+  "subtype": "Personnel contamination monitors",
+  "name": "ATOMTEX Whole-Body Counters",
+  "summary": "Human radiation spectrometers that measure internal contamination and estimate internal dose for personnel screening programmes.",
+  "radiationTypes": [
+    "Gamma"
+  ],
+  "applications": [
+    "personnel-monitoring",
+    "contamination-monitoring"
+  ],
+  "image": "/images/products/atomtex-whole-body-counters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT1316",
+      "anchor": "atomtex-at1316",
+      "specs": {
+        "Description": "Human radiation spectrometer estimating internal dose from Cs-137/Cs-134"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1316A",
+      "anchor": "atomtex-at1316a",
+      "specs": {
+        "Description": "Version for internal contamination in the lungs"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1322",
+      "anchor": "atomtex-at1322",
+      "specs": {
+        "Description": "Personnel screening spectrometer with database and reports"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1322/1",
+      "anchor": "atomtex-at1322-1",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

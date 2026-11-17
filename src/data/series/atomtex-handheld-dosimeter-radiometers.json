@@ -1,0 +1,142 @@
+{
+  "slug": "atomtex-handheld-dosimeter-radiometers",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-survey-meters",
+  "subtype": "Gamma dose-rate meters",
+  "name": "ATOMTEX Handheld Dosimeter-Radiometers",
+  "summary": "Compact, rugged survey meters for measuring X-ray and gamma dose rate and accumulated dose in the field. Selected models also check beta contamination on surfaces or cover high dose-rate ranges.",
+  "radiationTypes": [
+    "Gamma",
+    "X-ray",
+    "Beta"
+  ],
+  "applications": [
+    "dose-measurement",
+    "gamma-detection",
+    "contamination-monitoring"
+  ],
+  "image": "/images/products/atomtex-handheld-dosimeter-radiometers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT2140",
+      "anchor": "atomtex-at2140",
+      "specs": {
+        "Description": "Compact, battery-efficient X-ray/gamma dose-rate meter"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2140A",
+      "anchor": "atomtex-at2140a",
+      "specs": {
+        "Description": "Longer battery-life version of AT2140"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6130",
+      "anchor": "atomtex-at6130",
+      "specs": {
+        "Description": "X-ray/gamma dose and dose rate; beta flux on contaminated surfaces"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6130A",
+      "anchor": "atomtex-at6130a",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6130C",
+      "anchor": "atomtex-at6130c",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6130D",
+      "anchor": "atomtex-at6130d",
+      "specs": {
+        "Description": "High-range version, dose rate up to 100 mSv/h"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6131",
+      "anchor": "atomtex-at6131",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6131B",
+      "anchor": "atomtex-at6131b",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6130S",
+      "anchor": "atomtex-at6130s",
+      "specs": {
+        "Description": "Small, impact-resistant X-ray/gamma dose meter"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT2140A/1",
+      "anchor": "atomtex-at2140a-1",
+      "specs": {
+        "Description": "AT2140A with USB interface and software"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

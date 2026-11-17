@@ -1,0 +1,185 @@
+{
+  "slug": "atomtex-spectrometers-identifiers",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-survey-meters",
+  "subtype": "Spectrometers",
+  "name": "ATOMTEX Spectrometers, Identifiers & Scanning Systems",
+  "summary": "Handheld, backpack and mobile spectrometers for finding radioactive sources, identifying radionuclides and mapping contamination, with GPS logging on selected models.",
+  "radiationTypes": [
+    "Gamma",
+    "Neutron"
+  ],
+  "applications": [
+    "gamma-detection",
+    "neutron-detection",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/atomtex-spectrometers-identifiers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT1120",
+      "anchor": "atomtex-at1120",
+      "specs": {
+        "Description": "Sensitive search monitor with radionuclide identification and gamma dose rate"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1120A",
+      "anchor": "atomtex-at1120a",
+      "specs": {
+        "Description": "Variant of AT1120 with wider dose-rate range"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1321",
+      "anchor": "atomtex-at1321",
+      "specs": {
+        "Description": "Compact handheld identifier with dose-rate measurement and alarms"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101",
+      "anchor": "atomtex-at6101",
+      "specs": {
+        "Description": "Portable spectrometer for source search and identification"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101B",
+      "anchor": "atomtex-at6101b",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101C",
+      "anchor": "atomtex-at6101c",
+      "specs": {
+        "Description": "Backpack spectrometric scanner for area surveys with GPS"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101D",
+      "anchor": "atomtex-at6101d",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6102",
+      "anchor": "atomtex-at6102",
+      "specs": {
+        "Description": "Handheld radionuclide identifier with neutron detection"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6102A",
+      "anchor": "atomtex-at6102a",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6102B",
+      "anchor": "atomtex-at6102b",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6103",
+      "anchor": "atomtex-at6103",
+      "specs": {
+        "Description": "Mobile gamma-neutron scanning complex with GPS mapping"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6104DM1",
+      "anchor": "atomtex-at6104dm1",
+      "specs": {
+        "Description": "Maps contamination or dose rate by position with automatic nuclide identification"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101S",
+      "anchor": "atomtex-at6101s",
+      "specs": {
+        "Description": "Portable gamma-neutron spectrometer with GPS logging"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT6104DM",
+      "anchor": "atomtex-at6104dm",
+      "specs": {
+        "Description": "Maps contamination or dose rate by position with automatic nuclide identification"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

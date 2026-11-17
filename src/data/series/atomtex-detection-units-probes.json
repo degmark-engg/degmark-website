@@ -1,0 +1,99 @@
+{
+  "slug": "atomtex-detection-units-probes",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-detectors",
+  "subtype": "Probes & assemblies",
+  "name": "ATOMTEX Detection Units & Probes",
+  "summary": "External detection units and probes that extend ATOMTEX dosimeter-radiometers and monitoring systems to other radiation types and measurement ranges.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "Neutron"
+  ],
+  "applications": [
+    "gamma-detection",
+    "neutron-detection",
+    "alpha-beta-detection"
+  ],
+  "image": "/images/products/atomtex-detection-units-probes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "BDKG-204",
+      "anchor": "atomtex-bdkg-204",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "BDKN-03",
+      "anchor": "atomtex-bdkn-03",
+      "specs": {
+        "Description": "External neutron dose-rate unit for ATOMTEX dosimeter-radiometers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "BDPS-02",
+      "anchor": "atomtex-bdps-02",
+      "specs": {
+        "Description": "End-window GM probe for alpha/beta flux and gamma dose rate"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "BDPA-01",
+      "anchor": "atomtex-bdpa-01",
+      "specs": {
+        "Description": "Alpha probe for ATOMTEX instruments"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "BDPB-01",
+      "anchor": "atomtex-bdpb-01",
+      "specs": {
+        "Description": "Beta probe for ATOMTEX instruments"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "BDKN-05",
+      "anchor": "atomtex-bdkn-05",
+      "specs": {
+        "Description": "Neutron detection unit with He-3 counters"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

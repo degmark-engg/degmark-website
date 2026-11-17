@@ -1,0 +1,97 @@
+{
+  "slug": "atomtex-area-alarm-monitoring",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-monitoring-systems",
+  "subtype": "Area monitors",
+  "name": "ATOMTEX Area & Alarm Monitoring Systems",
+  "summary": "Fixed alarm dosimeters and monitoring systems that watch dose rate continuously and raise alarms at set thresholds, including versions for access points and vehicles.",
+  "radiationTypes": [
+    "Gamma",
+    "Neutron",
+    "Beta"
+  ],
+  "applications": [
+    "dose-measurement",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/atomtex-area-alarm-monitoring.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT2327",
+      "anchor": "atomtex-at2327",
+      "specs": {
+        "Description": "Alarm dosimeter family: area alarm, pedestrian and vehicle versions"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2330",
+      "anchor": "atomtex-at2330",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2337",
+      "anchor": "atomtex-at2337",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "DRG-AT2331",
+      "anchor": "atomtex-drg-at2331",
+      "specs": {
+        "Description": "Criticality (chain reaction) emergency alarm, works with AT2327"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT2533",
+      "anchor": "atomtex-at2533",
+      "specs": {
+        "Description": "Very wide-range gamma dose-rate meter with remote detector for harsh and emergency conditions"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "UDKG-37",
+      "anchor": "atomtex-udkg-37",
+      "specs": {
+        "Description": "Pulsed X-ray/gamma dose-rate detection in harsh conditions"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

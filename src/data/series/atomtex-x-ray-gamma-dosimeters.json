@@ -1,0 +1,74 @@
+{
+  "slug": "atomtex-x-ray-gamma-dosimeters",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-survey-meters",
+  "subtype": "Gamma dose-rate meters",
+  "name": "ATOMTEX X-ray & Gamma Dosimeters",
+  "summary": "Dosimeters for continuous, short and pulsed X-ray and gamma radiation, including low-energy X-ray measurement. Used around medical and industrial X-ray equipment, accelerators and in radiation protection surveys.",
+  "radiationTypes": [
+    "X-ray",
+    "Gamma"
+  ],
+  "applications": [
+    "dose-measurement",
+    "gamma-detection"
+  ],
+  "image": "/images/products/atomtex-x-ray-gamma-dosimeters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT1103M",
+      "anchor": "atomtex-at1103m",
+      "specs": {
+        "Description": "Sensitive X-ray dosimeter (NaI(Tl) with beryllium window) for lens and skin dose"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1121",
+      "anchor": "atomtex-at1121",
+      "specs": {
+        "Description": "Continuous, short-term and pulsed X-ray/gamma dose and dose rate; source search"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1123",
+      "anchor": "atomtex-at1123",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT5350/1",
+      "anchor": "atomtex-at5350-1",
+      "specs": {
+        "Description": "Reference dosimeter with interchangeable ionisation chambers (air kerma)"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

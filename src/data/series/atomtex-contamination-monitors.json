@@ -1,0 +1,74 @@
+{
+  "slug": "atomtex-contamination-monitors",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "contamination-monitors",
+  "subtype": "Alpha/beta",
+  "name": "ATOMTEX Contamination Monitors & Radiometers",
+  "summary": "Instruments for checking surfaces, smears and samples for alpha and beta contamination, from quick handheld checks to laboratory radiometers.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta"
+  ],
+  "applications": [
+    "contamination-monitoring",
+    "alpha-beta-detection"
+  ],
+  "image": "/images/products/atomtex-contamination-monitors.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT2522",
+      "anchor": "atomtex-at2522",
+      "specs": {
+        "Description": "Handheld alpha indicator for quick surface checks"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1329",
+      "anchor": "atomtex-at1329",
+      "specs": {
+        "Description": "Total alpha and beta activity in samples and smears"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1117M + BDPS-02",
+      "anchor": "atomtex-at1117m-bdps-02",
+      "specs": {
+        "Description": "Alpha and beta flux plus gamma dose rate on surfaces"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT1117M alpha/beta monitor",
+      "anchor": "atomtex-at1117m-alpha-beta-monitor",
+      "specs": {
+        "Description": "Stationary or wearable alpha/beta contamination monitor with alarms"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

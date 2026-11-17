@@ -1,0 +1,84 @@
+{
+  "slug": "atomtex-environmental-sample-spectrometers",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "radiation-monitoring-systems",
+  "subtype": "Environmental monitors",
+  "name": "ATOMTEX Environmental & Sample Spectrometers",
+  "summary": "Spectrometers and radiometers for measuring radionuclide activity in soil, water, food and other samples, in the laboratory or the field.",
+  "radiationTypes": [
+    "Gamma",
+    "Beta"
+  ],
+  "applications": [
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/atomtex-environmental-sample-spectrometers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT1315",
+      "anchor": "atomtex-at1315",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1320",
+      "anchor": "atomtex-at1320",
+      "specs": {
+        "Description": "Gamma radiometer for Cs activity in food, water and soil samples"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT6101DR",
+      "anchor": "atomtex-at6101dr",
+      "specs": {
+        "Description": "Field/stationary spectrometer measuring samples without sampling"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT1320A",
+      "anchor": "atomtex-at1320a",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT1320S",
+      "anchor": "atomtex-at1320s",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}

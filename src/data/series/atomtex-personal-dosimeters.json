@@ -1,0 +1,129 @@
+{
+  "slug": "atomtex-personal-dosimeters",
+  "status": "approved",
+  "brand": "ATOMTEX",
+  "category": "personal-dosimeters",
+  "subtype": "Electronic",
+  "name": "ATOMTEX Personal Dosimeters",
+  "summary": "Pocket electronic dosimeters that record each worker's X-ray and gamma dose, with readers and software for managing staff exposure records.",
+  "radiationTypes": [
+    "X-ray",
+    "Gamma"
+  ],
+  "applications": [
+    "personnel-monitoring",
+    "dose-measurement"
+  ],
+  "image": "/images/products/atomtex-personal-dosimeters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "AT2503",
+      "anchor": "atomtex-at2503",
+      "specs": {
+        "Description": "Personal X-ray/gamma dosimeter (energy-compensated GM) with reader and software"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2503A",
+      "anchor": "atomtex-at2503a",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2503B",
+      "anchor": "atomtex-at2503b",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT3509",
+      "anchor": "atomtex-at3509",
+      "specs": {
+        "Description": "Personal dosimeter with silicon detector; Hp(10) and Hp(0.07)"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT3509A",
+      "anchor": "atomtex-at3509a",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT3509B",
+      "anchor": "atomtex-at3509b",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT3509C",
+      "anchor": "atomtex-at3509c",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": true
+    },
+    {
+      "model": "AT2503V",
+      "anchor": "atomtex-at2503v",
+      "specs": {
+        "Description": "Newer version of AT2503 with colour OLED screen"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    },
+    {
+      "model": "AT3509V",
+      "anchor": "atomtex-at3509v",
+      "specs": {
+        "Description": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false,
+      "pastEnquiry": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://lab.scienceid.net/en/manufacturers/3640",
+    "https://pdf.directindustry.com/pdf/atomtex/"
+  ],
+  "internalNotes": "Descriptions from ATOMTEX catalogues/directories; numeric specs and variant differences to be added from datasheets. 'Details on request' = not yet confirmed. pastEnquiry = model enquired by DEGMARK customers (internal only)."
+}
