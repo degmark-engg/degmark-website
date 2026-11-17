@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import Icon from '../../../components/Icon.astro';
+import { altFor } from '../../../data/images';
 import BrandBadge from '../../../components/BrandBadge.astro';
 import ModelTable from '../../../components/ModelTable.astro';
 import OnRequestNote from '../../../components/OnRequestNote.astro';
@@ -32,7 +33,7 @@ const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${mod
       {s.status !== 'approved' && <p class="mb-4 rounded-btn bg-amber/30 px-3 py-2 text-[14px] font-semibold text-ink">Preview: this series is "{s.status}" and is not published on the live site.</p>}
       <div class="flex flex-wrap gap-8 items-start">
         <div class="flex-[1_1_300px]">
-          {s.image ? <img src={s.image} alt={s.name} class="w-full aspect-[4/3] object-contain bg-surface-muted rounded-card" /> : <div class="aspect-[4/3] rounded-card bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={cat.icon} size={72} class="text-teal/60" /></div>}
+          {s.image ? <img src={s.image} alt={altFor(s.image) || s.name} class="w-full aspect-[4/3] object-contain bg-surface-muted rounded-card" /> : <div class="aspect-[4/3] rounded-card bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={cat.icon} size={72} class="text-teal/60" /></div>}
         </div>
         <div class="flex-[999_1_480px] min-w-0">
           {brand ? <a href={`/brands/${brand.slug}/`} class="no-underline"><BrandBadge brand={s.brand} /></a> : <BrandBadge brand={s.brand} />}
