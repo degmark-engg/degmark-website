@@ -45,7 +45,7 @@ One JSON file per series in `src/data/series/`, named `{brand}-{series-slug}.jso
   "summary": "One or two sentences in our own words describing the series and what it is used for.",
   "radiationTypes": ["Alpha", "Beta", "Gamma"],
   "applications": ["alpha-beta-detection", "contamination-monitoring"],
-  "image": "/images/products/lnd-end-window-gm-tubes.jpg",
+  "image": "/images/products/lnd-712-end-window-geiger-mueller-tube.webp",
   "catalogue": "/datasheets/lnd-gm-tube-catalogue.pdf",
   "specColumns": ["Window density", "Effective diameter", "Operating voltage", "Connector"],
   "models": [
@@ -147,6 +147,7 @@ Send the model number(s) and datasheet(s). Claude adds them to the right series 
 - **Datasheets.** Publish manufacturer datasheets only where the principal allows it;
   otherwise show "Datasheet on request".
 - **Images.** Use images supplied by the principal or the owner, with permission.
+- **Image names (SEO).** Save as WebP in `public/images/products/`, named `brand-model-product-type.webp` in lowercase with hyphens (e.g. `lnd-7311-pancake-geiger-mueller-tube.webp`). Add the file's alt text to `src/data/images.ts`: brand, model and what the product is, in plain words.
 - **Model numbers exactly as the manufacturer writes them** (spacing, hyphens and letters).
 
 ---
