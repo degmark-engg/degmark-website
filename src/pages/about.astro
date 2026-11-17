@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { company, sectors } from '../data/site';
+---
+<Base title="About">
+  <section>
+    <div class="wrap">
+      <h1>About {company.name}</h1>
+      <p class="lead">{company.name} is a Mumbai-based supplier of radiation detection and nuclear instrumentation. We import equipment from international manufacturers and support customers across India's nuclear, research, industrial and healthcare sectors.</p>
+      <!-- TODO: add founding year, history and team -->
+      <h2 style="margin-top:32px">Sectors</h2>
+      <ul class="ticks">{sectors.map((s) => <li><strong>{s.name}</strong> — {s.note}</li>)}</ul>
+      <h2 style="margin-top:32px">Why Degmark</h2>
+      <ul class="ticks">
+        <li>Direct relationships with overseas manufacturers</li>
+        <li>Experience with tender and procurement requirements of government and PSU buyers</li>
+        <li>Support for installed equipment, not just new sales</li>
+      </ul>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import { brands, company } from '../data/site';
+---
+<Base title="Contact" description={`Contact ${company.name}, Mumbai, for radiation instruments, detectors and spares.`}>
+  <section>
+    <div class="wrap">
+      <h1>Contact us</h1>
+      <p class="lead">Send your requirement and we'll get back to you, usually within one working day.</p>
+      <p>{company.address}<br />
+        Phone: <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phone}</a><br />
+        Email: <a href={`mailto:${company.email}`}>{company.email}</a></p>
+
+      <form class="enquiry" method="post" action="/contact.php">
+        <div class="two">
+          <label>Name<input name="name" required /></label>
+          <label>Organisation<input name="org" /></label>
+        </div>
+        <div class="two">
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Phone<input name="phone" type="tel" /></label>
+        </div>
+        <div class="two">
+          <label>Enquiry type
+            <select name="type" id="type">
+              <option value="product">New product / quote</option>
+              <option value="spares">Spares / replacement</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>Brand (optional)
+            <select name="brand" id="brand">
+              <option value="">—</option>
+              {brands.map((b) => <option>{b.name}</option>)}
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label>Requirement<textarea name="message" rows="6" required placeholder="Model, part number, quantity, end user…"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn" type="submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+  <script is:inline>
+    const p = new URLSearchParams(location.search);
+    if (p.get('brand')) document.getElementById('brand').value = p.get('brand');
+    if (p.get('type')) document.getElementById('type').value = p.get('type');
+  </script>
+</Base>
