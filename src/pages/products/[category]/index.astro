@@ -6,6 +6,7 @@ import OnRequestNote from '../../../components/OnRequestNote.astro';
 import EnquiryStrip from '../../../components/EnquiryStrip.astro';
 import { categories } from '../../../data/categories';
 import { seriesInCategory } from '../../../lib/series';
+import { categoryImage } from '../../../lib/stats';
 
 export function getStaticPaths() {
   return categories.map((c) => ({ params: { category: c.slug }, props: { cat: c } }));
@@ -22,6 +23,7 @@ const count = (st: string) => list.filter((s) => s.subtype === st).length;
     lead={cat.intro}
     crumbs={[{ href: '/products/', label: 'Products' }, { label: cat.name }]}
     chips={radiation}
+    product={categoryImage[cat.slug]}
     panel={{ eyebrow: 'Specification ready?', text: 'Upload your tender or specification and we will match suitable models.', href: '/upload-requirement/', label: 'Upload requirement' }}
   />
 

@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Icon from '../../../components/Icon.astro';
 import BrandBadge from '../../../components/BrandBadge.astro';
 import ModelTable from '../../../components/ModelTable.astro';
 import OnRequestNote from '../../../components/OnRequestNote.astro';
@@ -25,13 +26,13 @@ const modelList = s.models.map((m) => m.model).filter((m) => !/^\[/.test(m));
 const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${modelList.slice(0, 8).join(', ')}.` : ''}`.slice(0, 300);
 ---
 <Base title={`${s.name}${modelList.length ? ` (${modelList.slice(0, 3).join(', ')})` : ''}`} description={description}>
-  <section class="bg-surface border-b border-line">
+  <section class="bg-surface grid-bg-light border-b border-line border-t-4 border-t-navy">
     <div class="container-x py-10">
       <Breadcrumb items={[{ href: '/products/', label: 'Products' }, { href: `/products/${cat.slug}/`, label: cat.name }, { label: s.name }]} />
       {s.status !== 'approved' && <p class="mb-4 rounded-btn bg-amber/30 px-3 py-2 text-[14px] font-semibold text-ink">Preview: this series is "{s.status}" and is not published on the live site.</p>}
       <div class="flex flex-wrap gap-8 items-start">
         <div class="flex-[1_1_300px]">
-          {s.image ? <img src={s.image} alt={s.name} class="w-full aspect-[4/3] object-contain bg-surface-muted rounded-card" /> : <div class="placeholder-box aspect-[4/3] rounded-card">[Product photo]</div>}
+          {s.image ? <img src={s.image} alt={s.name} class="w-full aspect-[4/3] object-contain bg-surface-muted rounded-card" /> : <div class="aspect-[4/3] rounded-card bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={cat.icon} size={72} class="text-teal/60" /></div>}
         </div>
         <div class="flex-[999_1_480px] min-w-0">
           {brand ? <a href={`/brands/${brand.slug}/`} class="no-underline"><BrandBadge brand={s.brand} /></a> : <BrandBadge brand={s.brand} />}
@@ -61,7 +62,7 @@ const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${mod
   {related.length > 0 && (
     <section class="section pt-0">
       <div class="container-x">
-        <h2 class="mb-5">Related series</h2>
+        <h2 class="title-bar mb-7">Related series</h2>
         <div class="grid-cards">{related.map((r) => <SeriesCard series={r} />)}</div>
       </div>
     </section>
