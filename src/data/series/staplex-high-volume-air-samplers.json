@@ -1,6 +1,6 @@
 {
   "slug": "staplex-high-volume-air-samplers",
-  "status": "review",
+  "status": "approved",
   "brand": "STAPLEX",
   "category": "air-sampling-equipment",
   "subtype": "High-volume samplers",
@@ -144,10 +144,10 @@
       "model": "TFRC-2",
       "anchor": "staplex-tfrc-2",
       "specs": {
-        "Power supply": "[to confirm]",
-        "Flow range": "[to confirm]",
+        "Power supply": "Details on request",
+        "Flow range": "Details on request",
         "Filter holder": "Particulate filter + charcoal cartridge",
-        "Built-in features": "[to confirm]"
+        "Built-in features": "Details on request"
       },
       "datasheet": null,
       "note": "Radioiodine sampler",
@@ -157,10 +157,10 @@
       "model": "TFRC-4IA",
       "anchor": "staplex-tfrc-4ia",
       "specs": {
-        "Power supply": "[to confirm]",
-        "Flow range": "[to confirm]",
+        "Power supply": "Details on request",
+        "Flow range": "Details on request",
         "Filter holder": "Particulate filter + charcoal cartridge",
-        "Built-in features": "[to confirm]"
+        "Built-in features": "Details on request"
       },
       "datasheet": null,
       "note": "Radioiodine sampler",

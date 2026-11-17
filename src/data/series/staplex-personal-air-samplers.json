@@ -1,6 +1,6 @@
 {
   "slug": "staplex-personal-air-samplers",
-  "status": "review",
+  "status": "approved",
   "brand": "STAPLEX",
   "category": "air-sampling-equipment",
   "subtype": "Particulate and aerosol samplers",
@@ -50,8 +50,8 @@
       "anchor": "staplex-pst-1dt",
       "specs": {
         "Type": "Detector tube sampler",
-        "Flow range": "[to confirm]",
-        "Power": "[to confirm]"
+        "Flow range": "Details on request",
+        "Power": "Details on request"
       },
       "datasheet": null,
       "note": "",
@@ -61,9 +61,9 @@
       "model": "PST-1TA",
       "anchor": "staplex-pst-1ta",
       "specs": {
-        "Type": "[to confirm]",
-        "Flow range": "[to confirm]",
-        "Power": "[to confirm]"
+        "Type": "Details on request",
+        "Flow range": "Details on request",
+        "Power": "Details on request"
       },
       "datasheet": null,
       "note": "",
@@ -73,9 +73,9 @@
       "model": "PST-1BA",
       "anchor": "staplex-pst-1ba",
       "specs": {
-        "Type": "[to confirm]",
-        "Flow range": "[to confirm]",
-        "Power": "[to confirm]"
+        "Type": "Details on request",
+        "Flow range": "Details on request",
+        "Power": "Details on request"
       },
       "datasheet": null,
       "note": "",
