@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brands, company } from '../../data/site';
+
+export function getStaticPaths() {
+  return brands.map((b) => ({ params: { slug: b.slug }, props: { brand: b } }));
+}
+const { brand } = Astro.props;
+---
+<Base title={brand.name} description={`${brand.name} (${brand.origin}) supplied in India by ${company.name}. ${brand.summary}`}>
+  <section>
+    <div class="wrap">
+      <p class="small"><a href="/brands/">Brands</a> / {brand.name}</p>
+      <h1>{brand.name}</h1>
+      <span class="tag">{brand.origin}</span>
+      <p class="lead" style="margin-top:16px">{brand.summary}</p>
+      <h2 style="margin-top:32px">Product lines</h2>
+      <ul class="ticks">{brand.lines.map((l) => <li>{l}</li>)}</ul>
+      <p>We also supply replacement parts and spares for {brand.name} instruments already in service.</p>
+      <div class="actions">
+        <a class="btn" href={`/contact/?brand=${encodeURIComponent(brand.name)}`}>Enquire about {brand.name}</a>
+      </div>
+      {brand.site && <p class="small" style="margin-top:20px">Manufacturer website: <a href={brand.site} rel="noopener" target="_blank">{brand.site.replace('https://', '')}</a></p>}
+    </div>
+  </section>
+</Base>

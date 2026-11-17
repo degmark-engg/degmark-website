@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brands } from '../../data/site';
+---
+<Base title="Brands" description="International radiation instrumentation brands supplied by Degmark Engineering in India: LND, ATOMTEX, STAPLEX, Gamma-Scout, Arrow-Tech and more.">
+  <section>
+    <div class="wrap">
+      <h1>Brands</h1>
+      <p class="lead">We work with established manufacturers of radiation detection and measurement equipment, and source from other international makers on request.</p>
+      <div class="grid" style="margin-top:28px">
+        {brands.map((b) => (
+          <a class="card" href={`/brands/${b.slug}/`}>
+            <h3>{b.name}</h3>
+            <p>{b.summary}</p>
+            <span class="tag">{b.origin}</span>
+          </a>
+        ))}
+        <div class="card">
+          <h3>Other manufacturers</h3>
+          <p>Looking for a make not listed here? We regularly source instruments and components from other international suppliers.</p>
+          <p style="margin-top:12px"><a href="/contact/">Ask us →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
