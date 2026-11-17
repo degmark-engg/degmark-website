@@ -1,20 +1,13 @@
 ---
 import '../styles/global.css';
+import UtilityBar from '../components/UtilityBar.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { company } from '../data/site';
 
-interface Props { title?: string; description?: string; }
-const { title, description = `${company.name} — ${company.tagline}. Supplier of radiation detectors, survey meters, air samplers, dosimeters and spares in India.` } = Astro.props;
-const pageTitle = title ? `${title} | ${company.name}` : `${company.name} — ${company.tagline}`;
-const path = Astro.url.pathname;
-const nav = [
-  ['/', 'Home'],
-  ['/products/', 'Products'],
-  ['/brands/', 'Brands'],
-  ['/spares/', 'Spares'],
-  ['/about/', 'About'],
-  ['/contact/', 'Contact'],
-];
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+interface Props { title?: string; description: string; noindex?: boolean; }
+const { title, description, noindex = false } = Astro.props;
+const pageTitle = title ? `${title} – DEGMARK` : `DEGMARK – ${company.tagline}`;
 ---
 <!doctype html>
 <html lang="en">
@@ -23,39 +16,19 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(path, company.domain)} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={new URL(Astro.url.pathname, company.domain)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap bar">
-        <a href="/" class="logo"><span class="mark">D</span>{company.name}</a>
-        <input type="checkbox" id="menu" class="menu-toggle" aria-label="Menu" />
-        <label for="menu" class="menu-btn">Menu</label>
-        <nav>
-          {nav.map(([href, label]) => <a href={href} class={isActive(href) ? 'active' : ''}>{label}</a>)}
-        </nav>
-      </div>
-    </header>
-    <main><slot /></main>
-    <footer class="site-footer">
-      <div class="wrap cols">
-        <div>
-          <strong>{company.name}</strong>
-          <p>{company.tagline}<br />{company.city}</p>
-        </div>
-        <div>
-          <p>{company.address}<br />
-          <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phone}</a><br />
-          <a href={`mailto:${company.email}`}>{company.email}</a></p>
-        </div>
-        <div>
-          <a href="/contact/" class="btn">Send an enquiry</a>
-        </div>
-      </div>
-      <div class="wrap small">© {new Date().getFullYear()} {company.name}</div>
-    </footer>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface p-2 z-50">Skip to content</a>
+    <UtilityBar />
+    <Header />
+    <main id="main" class="flex-1" data-pagefind-body><slot /></main>
+    <Footer />
   </body>
 </html>
