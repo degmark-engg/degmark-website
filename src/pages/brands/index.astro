@@ -11,7 +11,7 @@ import { modelsForBrand, countLabel } from '../../lib/stats';
     <div class="container-x grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {brands.map((b) => (
         <a href={`/brands/${b.slug}/`} class="group card lift reveal p-6 no-underline text-ink hover:text-ink hover:border-teal flex flex-col gap-2 border-t-4 !border-t-navy hover:!border-t-amber">
-          <div class="h-12 flex items-center">{b.logo ? <img src={b.logo} alt={b.name} class:list={['max-h-11 w-auto max-w-[220px] object-contain', b.logoOnLight === 'dark' && 'logo-dark-full']} /> : <span class="wordmark text-[22px] !tracking-[0.04em] text-navy">{b.name}</span>}</div>
+          <div class="h-12 flex items-center">{b.logo ? <img src={b.logo} alt={`${b.name} logo`} class:list={['max-h-11 w-auto max-w-[220px] object-contain', b.logoOnLight === 'dark' && 'logo-dark-full']} /> : <span class="wordmark text-[22px] !tracking-[0.04em] text-navy">{b.name}</span>}</div>
           {b.slug !== 'other-manufacturers' && <span class="count-badge self-start">{countLabel(modelsForBrand(b.name))}</span>}
           <span class="text-[13px] text-muted">{b.country}</span>
           <p class="text-[14px] text-muted">{b.oneLine}</p>
