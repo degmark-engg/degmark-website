@@ -6,6 +6,8 @@ export type Brand = {
   oneLine: string;
   about: string[];
   relationship: string;
+  logoOnDark?: 'white' | 'original';
+  logoOnLight?: 'dark' | 'original'; // ATOMTEX's file is white, so it is darkened on white backgrounds // how the logo shows on navy: recoloured white (default) or as supplied
   logo?: string; // official logo file supplied by the principal, e.g. /images/brands/lnd.svg
   website?: string;
 };
@@ -27,6 +29,8 @@ export const brands: Brand[] = [
     ],
     relationship: rel('LND'),
     website: 'https://www.lndinc.com',
+    logo: '/images/brands/lnd.png',
+    logoOnDark: 'original',
   },
   {
     slug: 'atomtex',
@@ -39,6 +43,8 @@ export const brands: Brand[] = [
     ],
     relationship: rel('ATOMTEX'),
     website: 'https://atomtex.com',
+    logo: '/images/brands/atomtex.svg',
+    logoOnLight: 'dark',
   },
   {
     slug: 'staplex',
