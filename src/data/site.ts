@@ -1,9 +1,9 @@
 // Company details and navigation. Values in [brackets] are placeholders to confirm.
 export const company = {
-  name: 'DEGMARK Engineering Co.',
+  name: 'Degmark Engineering',
   wordmark: 'DEGMARK',
   tagline: 'Radiation detection, monitoring and measurement instruments',
-  address: '[PLACEHOLDER: registered address]',
+  address: 'Mumbai, India',
   phone: '[PLACEHOLDER: phone]',
   email: '[PLACEHOLDER: enquiry email]',
   hours: '[PLACEHOLDER: business hours]',

@@ -10,6 +10,11 @@ export type Brand = {
   website?: string;
 };
 
+// Degmark buys from these manufacturers and supplies their products. Where a customer or tender
+// requires it, Degmark obtains the manufacturer's authorisation for that supply.
+const rel = (b: string) =>
+  `Degmark sources ${b} products from the manufacturer and supplies them to customers. Where a tender or customer requires it, we arrange ${b}'s authorisation for the supply.`;
+
 export const brands: Brand[] = [
   {
     slug: 'lnd',
@@ -20,7 +25,7 @@ export const brands: Brand[] = [
       'LND designs and manufactures nuclear radiation detectors. Its range covers Geiger-Müller tubes, proportional counters, neutron detectors and ionisation chambers.',
       'Its detectors are built into survey meters, area monitors, laboratory instruments and OEM systems across many industries.',
     ],
-    relationship: '[PLACEHOLDER: DEGMARK relationship with LND, e.g. authorised distributor since year]',
+    relationship: rel('LND'),
     website: 'https://www.lndinc.com',
   },
   {
@@ -32,7 +37,7 @@ export const brands: Brand[] = [
       'ATOMTEX develops and manufactures instruments for measuring ionising radiation, from personal dosimeters and survey meters to spectrometers and monitoring systems.',
       'Its instruments are used for radiation protection, environmental monitoring, laboratory analysis and border security.',
     ],
-    relationship: '[PLACEHOLDER: DEGMARK relationship with ATOMTEX]',
+    relationship: rel('ATOMTEX'),
     website: 'https://atomtex.com',
   },
   {
@@ -44,7 +49,7 @@ export const brands: Brand[] = [
       'STAPLEX manufactures air sampling equipment for collecting airborne particulates and radioactive aerosols, including high-volume and low-volume samplers.',
       'Its samplers are used in nuclear facilities, laboratories and environmental monitoring programmes.',
     ],
-    relationship: '[PLACEHOLDER: DEGMARK relationship with STAPLEX]',
+    relationship: rel('STAPLEX'),
     website: 'https://www.staplex.com',
   },
   {
@@ -55,7 +60,7 @@ export const brands: Brand[] = [
     about: [
       'Gamma-Scout makes compact Geiger counters that detect alpha, beta, gamma and X-ray radiation and log readings for long-term monitoring.',
     ],
-    relationship: '[PLACEHOLDER: DEGMARK relationship with Gamma-Scout]',
+    relationship: rel('Gamma-Scout'),
     website: 'https://www.gamma-scout.com',
   },
   {
@@ -67,7 +72,7 @@ export const brands: Brand[] = [
       'Arrow-Tech manufactures direct-reading dosimeters, chargers and related products for personal radiation monitoring.',
       'Its dosimeters are used in nuclear facilities, emergency response, industrial radiography and training.',
     ],
-    relationship: '[PLACEHOLDER: DEGMARK relationship with Arrow-Tech]',
+    relationship: rel('Arrow-Tech'),
     website: 'https://www.dosimeter.com',
   },
   {
