@@ -5,6 +5,7 @@ import Icon from '../../components/Icon.astro';
 import EnquiryStrip from '../../components/EnquiryStrip.astro';
 import { categories } from '../../data/categories';
 import { modelsInCategory, modelsInSubtype, countLabel, categoryImage } from '../../lib/stats';
+import { altFor } from '../../data/images';
 ---
 <Base title="Products" description="Radiation detectors, survey meters, monitoring systems, air sampling equipment, personal dosimeters, contamination monitors and detector components.">
   <PageHero title="Products" lead="Key models from our principals, grouped into seven categories. Other models are available on request." crumbs={[{ label: 'Products' }]} />
@@ -15,7 +16,7 @@ import { modelsInCategory, modelsInSubtype, countLabel, categoryImage } from '..
         return (
           <div class="group card lift relative overflow-hidden flex flex-col hover:border-teal reveal">
             <div class="relative h-[180px] bg-surface-muted flex items-center justify-center p-5">
-              {categoryImage[c.slug] ? <img src={categoryImage[c.slug]} alt="" class="max-h-[150px] w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={c.icon} size={64} class="text-teal" />}
+              {categoryImage[c.slug] ? <img src={categoryImage[c.slug]} alt={altFor(categoryImage[c.slug])} class="max-h-[150px] w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={c.icon} size={64} class="text-teal" />}
               <span class:list={['count-badge absolute top-3 right-3', n === 0 && 'count-badge-muted !bg-white']}>{countLabel(n)}</span>
             </div>
             <div class="p-5 flex flex-col gap-2 flex-1">
