@@ -2,12 +2,13 @@
 import BrandBadge from './BrandBadge.astro';
 import { seriesUrl, type Series } from '../lib/series';
 import Icon from './Icon.astro';
+import { altFor } from '../data/images';
 import { categories } from '../data/categories';
 interface Props { series: Series; }
 const { series: s } = Astro.props;
 ---
 <article class="group card lift relative overflow-hidden flex flex-col hover:border-teal" data-subtype={s.subtype} data-brand={s.brand} data-radiation={s.radiationTypes.join('|')}>
-  {s.image ? <img src={s.image} alt={s.name} class="h-[120px] w-full object-contain bg-surface-muted" loading="lazy" /> : <div class="h-[120px] bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={categories.find((c) => c.slug === s.category)?.icon ?? 'detector'} size={44} class="text-teal/70" /></div>}
+  {s.image ? <img src={s.image} alt={altFor(s.image) || s.name} class="h-[120px] w-full object-contain bg-surface-muted" loading="lazy" /> : <div class="h-[120px] bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={categories.find((c) => c.slug === s.category)?.icon ?? 'detector'} size={44} class="text-teal/70" /></div>}
   <div class="p-5 flex flex-col gap-2 flex-1">
     <div class="flex items-center gap-2"><BrandBadge brand={s.brand} /><span class="text-[13px] text-muted">{s.models.length} {s.models.length === 1 ? 'model' : 'models'}</span>{s.status !== 'approved' && <span class="text-[12px] font-semibold text-muted uppercase">· {s.status}</span>}</div>
     <h3 class="text-[16.5px] text-navy group-hover:text-teal transition-colors">{s.name}</h3>

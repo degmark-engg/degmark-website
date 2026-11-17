@@ -1,6 +1,7 @@
 ---
 // Inner-page banner: navy with a photo behind, white title with amber underline.
 import Breadcrumb from './Breadcrumb.astro';
+import { photos, altFor } from '../data/images';
 interface Props {
   title: string;
   lead?: string;
@@ -10,10 +11,10 @@ interface Props {
   image?: string;     // background photo (defaults to the site banner)
   product?: string;   // optional product photo shown on the right instead of the panel
 }
-const { title, lead, crumbs, chips, panel, image = '/images/home/hero.webp', product } = Astro.props;
+const { title, lead, crumbs, chips, panel, image = photos.banner, product } = Astro.props;
 ---
 <section class="relative isolate overflow-hidden bg-navy-deep text-white">
-  <img src={image} alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+  <img src={image} alt={altFor(image)} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
   <div class="absolute inset-0 -z-10" style="background: linear-gradient(90deg, rgba(10,30,44,.97) 0%, rgba(10,30,44,.9) 45%, rgba(10,30,44,.6) 100%);"></div>
   <div class="absolute inset-0 -z-10 grid-bg opacity-70"></div>
   <div class="container-x py-12 sm:py-16 flex flex-wrap gap-10 items-center">
@@ -26,7 +27,7 @@ const { title, lead, crumbs, chips, panel, image = '/images/home/hero.webp', pro
     </div>
     {product ? (
       <div class="flex-[1_1_280px] max-w-[380px] mx-auto">
-        <div class="rounded-card bg-white/95 p-6 flex items-center justify-center aspect-square shadow-[0_24px_48px_-20px_rgba(0,0,0,.6)]"><img src={product} alt="" class="max-h-full max-w-full object-contain mix-blend-multiply" /></div>
+        <div class="rounded-card bg-white/95 p-6 flex items-center justify-center aspect-square shadow-[0_24px_48px_-20px_rgba(0,0,0,.6)]"><img src={product} alt={altFor(product)} class="max-h-full max-w-full object-contain mix-blend-multiply" /></div>
       </div>
     ) : panel && (
       <aside class="flex-[1_1_280px] rounded-card p-6 bg-white/[.07] border border-white/15 backdrop-blur-sm">

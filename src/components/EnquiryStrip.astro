@@ -1,8 +1,9 @@
 ---
 import Icon from './Icon.astro';
+import { photos, altFor } from '../data/images';
 ---
 <section class="relative isolate overflow-hidden text-white">
-  <img src="/images/home/tender.webp" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" loading="lazy" />
+  <img src={photos.tender} alt={altFor(photos.tender)} class="absolute inset-0 -z-20 h-full w-full object-cover" loading="lazy" />
   <div class="absolute inset-0 -z-10 bg-navy-deep/[.88]"></div>
   <div class="container-x py-16 lg:py-20 grid gap-8 lg:grid-cols-[1.4fr_1fr] items-center">
     <div class="reveal">
