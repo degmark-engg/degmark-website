@@ -1,12 +1,13 @@
 ---
-interface Props { items: { href?: string; label: string }[]; }
-const { items } = Astro.props;
+interface Props { items: { href?: string; label: string }[]; dark?: boolean; }
+const { items, dark = false } = Astro.props;
+const link = dark ? 'text-on-navy-muted no-underline hover:text-white' : 'text-muted no-underline hover:text-teal';
 ---
-<nav aria-label="Breadcrumb" class="text-[14px] text-muted mb-3">
+<nav aria-label="Breadcrumb" class:list={['text-[14px] mb-4', dark ? 'text-on-navy-muted' : 'text-muted']}>
   <ol class="flex flex-wrap gap-1.5">
-    <li><a href="/" class="text-muted no-underline hover:text-teal">Home</a></li>
+    <li><a href="/" class={link}>Home</a></li>
     {items.map((i) => (
-      <li class="flex gap-1.5"><span aria-hidden="true">/</span>{i.href ? <a href={i.href} class="text-muted no-underline hover:text-teal">{i.label}</a> : <span class="text-ink" aria-current="page">{i.label}</span>}</li>
+      <li class="flex gap-1.5"><span aria-hidden="true">/</span>{i.href ? <a href={i.href} class={link}>{i.label}</a> : <span class={dark ? 'text-white' : 'text-ink'} aria-current="page">{i.label}</span>}</li>
     ))}
   </ol>
 </nav>

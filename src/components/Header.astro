@@ -1,30 +1,108 @@
 ---
 import { mainNav } from '../data/site';
+import { categories } from '../data/categories';
+import { brands } from '../data/brands';
+import { applications } from '../data/applications';
+import { industries } from '../data/industries';
+import { modelsInCategory, modelsForBrand, gmTubeModels, countLabel, applicationIcon, industryIcon } from '../lib/stats';
 import Icon from './Icon.astro';
 const path = Astro.url.pathname;
 const active = (href: string) => path.startsWith(href);
+
+// Dropdown content for each top-level item. Items without an entry are plain links.
+type MenuItem = { href: string; label: string; sub?: string; icon?: string; badge?: string };
+const menus: Record<string, { wide?: boolean; cols: number; items: MenuItem[]; all: string }> = {
+  '/products/': {
+    wide: true, cols: 2, all: 'All products',
+    items: categories.map((c) => ({ href: `/products/${c.slug}/`, label: c.name, sub: c.subtypes.slice(0, 3).join(' · '), icon: c.icon, badge: countLabel(modelsInCategory(c.slug)) }))
+      .concat([{ href: '/products/radiation-detectors/?subtype=GM%20tubes', label: 'Geiger-Müller (GM) Tubes', sub: 'End-window · Pancake · Thin-wall', icon: 'gmtube', badge: countLabel(gmTubeModels) }]),
+  },
+  '/brands/': {
+    cols: 1, all: 'All brands',
+    items: brands.map((b) => ({ href: `/brands/${b.slug}/`, label: b.name, sub: b.slug === 'other-manufacturers' ? b.oneLine : `${b.country} · ${b.oneLine}`, badge: b.slug === 'other-manufacturers' ? undefined : countLabel(modelsForBrand(b.name)) })),
+  },
+  '/applications/': {
+    cols: 2, all: 'All applications',
+    items: applications.map((a) => ({ href: `/applications/${a.slug}/`, label: a.name, icon: applicationIcon[a.slug] })),
+  },
+  '/industries/': {
+    cols: 2, all: 'All industries',
+    items: industries.map((i) => ({ href: `/industries/${i.slug}/`, label: i.name, icon: industryIcon[i.slug] })),
+  },
+  '/resources/': {
+    cols: 1, all: 'All resources',
+    items: [
+      { href: '/resources/catalogues/', label: 'Catalogues', icon: 'book' },
+      { href: '/resources/datasheets/', label: 'Datasheets', icon: 'document' },
+      { href: '/resources/manuals/', label: 'Manuals', icon: 'document' },
+      { href: '/resources/technical-articles/', label: 'Technical articles', icon: 'article' },
+      { href: '/resources/faqs/', label: 'FAQs', icon: 'question' },
+    ],
+  },
+};
 ---
-<header class="bg-surface border-b border-line sticky top-0 z-20">
-  <div class="container-x flex items-center justify-between gap-4 min-h-16">
-    <a href="/" class="flex items-center gap-2 no-underline text-navy hover:text-navy" aria-label="DEGMARK home">
-      <Icon name="logo" size={26} class="text-teal" />
-      <span class="text-[22px] font-bold tracking-[0.06em]">DEGMARK</span>
+<header class="bg-navy text-white sticky top-0 z-30 shadow-[0_1px_0_rgba(255,255,255,.08)]">
+  <div class="container-x relative flex items-center justify-between gap-4 min-h-[68px]">
+    <a href="/" class="flex items-center gap-2.5 no-underline text-white hover:text-white" aria-label="DEGMARK home">
+      <Icon name="logo" size={28} class="text-teal-bright" />
+      <span class="wordmark text-[22px]">DEGMARK</span>
     </a>
-    <nav class="hidden lg:flex items-center gap-1" aria-label="Main">
-      {mainNav.map((n) => (
-        <a href={n.href} class:list={['px-2.5 py-5 text-[15px] font-medium no-underline border-b-2', active(n.href) ? 'text-teal border-teal' : 'text-ink border-transparent hover:text-teal']}>{n.label}</a>
-      ))}
+
+    <nav class="hidden lg:flex items-stretch self-stretch" aria-label="Main">
+      {mainNav.map((n) => {
+        const m = menus[n.href];
+        return (
+          <div class:list={['group flex', m?.wide ? 'static' : 'relative']}>
+            <a href={n.href} aria-haspopup={m ? 'true' : undefined} class:list={['flex items-center gap-1 px-3 text-[15px] font-semibold no-underline border-b-[3px] transition-colors', active(n.href) ? 'text-white border-amber' : 'text-on-navy border-transparent hover:text-white group-hover:text-white group-hover:border-teal-bright']}>
+              {n.label}
+              {m && <Icon name="chevron" size={15} class="opacity-70 transition-transform group-hover:rotate-180" />}
+            </a>
+            {m && (
+              <div class:list={['menu-panel absolute top-full z-40 hidden group-hover:block group-focus-within:block', m.wide ? 'left-4 right-4 sm:left-6 sm:right-6' : 'left-0 min-w-[340px]', m.cols === 2 && !m.wide ? 'w-[560px]' : '']}>
+                <div class:list={['bg-surface text-ink rounded-b-card shadow-[0_24px_48px_-16px_rgba(10,30,44,.45)] border-t-[3px] border-teal overflow-hidden flex', !m.wide && 'flex-col']}>
+                  <ul class:list={['grid gap-1 p-3 flex-1', m.cols === 2 ? 'grid-cols-2' : 'grid-cols-1']}>
+                    {m.items.map((it) => (
+                      <li>
+                        <a href={it.href} class="flex items-start gap-3 rounded-btn p-3 no-underline text-ink hover:bg-teal-tint hover:text-ink">
+                          {it.icon && <span class="shrink-0 w-9 h-9 rounded-btn bg-teal-tint flex items-center justify-center"><Icon name={it.icon} size={20} /></span>}
+                          <span class="flex-1 min-w-0">
+                            <span class="flex items-center justify-between gap-2">
+                              <span class="font-semibold text-[15px] text-navy">{it.label}</span>
+                              {it.badge && <span class:list={['count-badge !text-[11px] !py-0.5', it.badge === 'On request' && 'count-badge-muted']}>{it.badge}</span>}
+                            </span>
+                            {it.sub && <span class="block text-[13px] text-muted mt-0.5 leading-snug">{it.sub}</span>}
+                          </span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  {m.wide && (
+                    <div class="w-[280px] shrink-0 bg-navy-deep grid-bg p-6 flex flex-col gap-3 text-on-navy">
+                      <div class="eyebrow text-amber">Have a tender?</div>
+                      <p class="text-[15px]">Upload your tender, specification or indent and we will match suitable instruments.</p>
+                      <a href="/upload-requirement/" class="btn-accent self-start">Upload requirement</a>
+                      <a href={n.href} class="mt-auto text-teal-bright font-semibold text-[14px] no-underline hover:text-white">{m.all} →</a>
+                    </div>
+                  )}
+                  {!m.wide && <a href={n.href} class="block bg-surface-muted text-teal font-semibold text-[14px] px-6 py-3 no-underline hover:text-teal-dark">{m.all} →</a>}
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </nav>
+
     <div class="flex items-center gap-2">
-      <a href="/search/" class="inline-flex items-center justify-center w-11 h-11 rounded-btn text-ink hover:text-teal" aria-label="Search"><Icon name="search" size={22} class="" /></a>
-      <a href="/request-a-quote/" class="btn-primary hidden sm:inline-flex">Request a Quote</a>
-      <button type="button" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-btn border border-line text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="menu-btn"><Icon name="menu" size={22} class="" /></button>
+      <a href="/search/" class="inline-flex items-center justify-center w-11 h-11 rounded-btn text-on-navy hover:text-white hover:bg-white/10" aria-label="Search"><Icon name="search" size={22} class="" /></a>
+      <a href="/request-a-quote/" class="btn-accent hidden sm:inline-flex">Request a Quote</a>
+      <button type="button" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-btn border border-white/30 text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="menu-btn"><Icon name="menu" size={22} class="" /></button>
     </div>
   </div>
-  <nav id="mobile-nav" class="lg:hidden hidden border-t border-line bg-surface" aria-label="Main mobile">
+  <nav id="mobile-nav" class="lg:hidden hidden border-t border-white/10 bg-navy-deep max-h-[calc(100vh-68px)] overflow-y-auto" aria-label="Main mobile">
     <div class="container-x py-2 flex flex-col">
-      {mainNav.map((n) => <a href={n.href} class:list={['py-3 text-[16px] font-medium no-underline border-b border-line', active(n.href) ? 'text-teal' : 'text-ink']}>{n.label}</a>)}
-      <a href="/request-a-quote/" class="btn-primary my-3">Request a Quote</a>
+      {mainNav.map((n) => <a href={n.href} class:list={['py-3 text-[16px] font-semibold no-underline border-b border-white/10', active(n.href) ? 'text-amber' : 'text-white']}>{n.label}</a>)}
+      <a href="/request-a-quote/" class="btn-accent my-3">Request a Quote</a>
     </div>
   </nav>
 </header>
@@ -34,5 +112,9 @@ const active = (href: string) => path.startsWith(href);
   b?.addEventListener('click', () => {
     const open = n?.classList.toggle('hidden') === false;
     b.setAttribute('aria-expanded', String(open));
+  });
+  // Escape closes an open dropdown for keyboard users.
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.activeElement instanceof HTMLElement && document.activeElement.closest('.menu-panel, [aria-haspopup]')) document.activeElement.blur();
   });
 </script>

@@ -1,19 +1,32 @@
 ---
 import { company, footerNav } from '../data/site';
+import { isPlaceholder } from '../lib/series';
+import Icon from './Icon.astro';
+const contacts = [company.phone, company.email].filter((v) => !isPlaceholder(v));
 ---
-<footer class="bg-navy text-on-navy">
-  <div class="container-x py-10 grid gap-8 md:grid-cols-3">
+<footer class="bg-navy-deep text-on-navy grid-bg">
+  <div class="h-1 bg-gradient-to-r from-teal via-teal-bright to-amber"></div>
+  <div class="container-x py-12 grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
     <div>
-      <div class="text-white font-bold tracking-[0.06em] text-[18px]">{company.name.toUpperCase()}</div>
-      <p class="mt-2 text-[14px] text-on-navy-muted">{company.tagline}</p>
+      <a href="/" class="flex items-center gap-2.5 no-underline text-white hover:text-white">
+        <Icon name="logo" size={28} class="text-teal-bright" />
+        <span class="wordmark text-[22px]">DEGMARK</span>
+      </a>
+      <p class="mt-1 font-mono text-[11px] uppercase tracking-[0.16em] text-on-navy-muted">Engineering Co.</p>
+      <p class="mt-4 text-[14px] text-on-navy-muted max-w-[320px]">{company.tagline} from leading international manufacturers.</p>
+      <a href="/request-a-quote/" class="btn-accent mt-5">Request a quote</a>
     </div>
-    <nav aria-label="Footer" class="grid grid-cols-2 gap-x-6 gap-y-2 text-[15px]">
-      {footerNav.map((n) => <a href={n.href} class="text-on-navy no-underline hover:text-white">{n.label}</a>)}
+    <nav aria-label="Footer">
+      <div class="eyebrow text-teal-bright mb-3">Explore</div>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-[15px]">
+        {footerNav.map((n) => <a href={n.href} class="text-on-navy no-underline hover:text-white">{n.label}</a>)}
+      </div>
     </nav>
-    <div class="text-[14px] space-y-1">
-      <p>{company.address}</p>
-      <p>{company.phone}</p>
-      <p>{company.email}</p>
+    <div class="text-[14px] space-y-2">
+      <div class="eyebrow text-teal-bright mb-3">Contact</div>
+      <p class="flex gap-2 items-start"><Icon name="pin" size={18} class="text-teal-bright mt-0.5" />{company.address}</p>
+      {contacts.map((c) => <p>{c}</p>)}
+      <a href="/contact/" class="inline-block text-teal-bright font-semibold no-underline hover:text-white">Contact us →</a>
     </div>
   </div>
   <div class="border-t border-white/10">

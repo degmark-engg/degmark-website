@@ -1,12 +1,22 @@
 ---
+// Whole card is the link. With `image`, shows a product photo panel; otherwise an icon tile.
 import Icon from './Icon.astro';
-interface Props { href: string; title: string; text?: string; icon?: string; cta?: string; compact?: boolean; }
-const { href, title, text, icon, cta = 'View range →', compact = false } = Astro.props;
+interface Props { href: string; title: string; text?: string; icon?: string; cta?: string; compact?: boolean; badge?: string; image?: string; }
+const { href, title, text, icon, cta = 'View range →', compact = false, badge, image } = Astro.props;
+const label = cta.replace(/\s*→\s*$/, '');
 ---
-<a href={href} class="card p-5 no-underline text-ink hover:text-ink hover:border-teal hover:shadow-sm transition flex flex-col gap-2">
-  {icon && !compact && <Icon name={icon} />}
-  <h3 class:list={['text-ink', compact ? 'text-[16px]' : 'text-[18px]']}>{title}</h3>
-  {text && <p class="text-[14px] text-muted">{text}</p>}
-  <slot />
-  <span class="link-arrow mt-auto pt-1">{cta}</span>
+<a href={href} class="group card lift overflow-hidden no-underline text-ink hover:text-ink hover:border-teal flex flex-col">
+  {(image || (icon && !compact)) && (
+    <div class:list={['relative bg-surface-muted flex items-center justify-center', image ? 'h-[170px] p-5' : 'h-[120px]']}>
+      {image ? <img src={image} alt="" class="max-h-[140px] w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={icon!} size={46} class="text-teal" />}
+      {badge && <span class:list={['count-badge absolute top-3 right-3', badge === 'On request' && 'count-badge-muted !bg-white']}>{badge}</span>}
+    </div>
+  )}
+  <div class="p-5 flex flex-col gap-2 flex-1">
+    {!image && !(icon && !compact) && badge && <span class="count-badge self-start">{badge}</span>}
+    <h3 class:list={['text-navy group-hover:text-teal transition-colors', compact ? 'text-[16.5px]' : 'text-[18px]']}>{title}</h3>
+    {text && <p class="text-[14px] text-muted">{text}</p>}
+    <slot />
+    <span class="mt-auto pt-2 flex items-center justify-between text-[14px] font-semibold text-navy"><span class="border-b-2 border-amber pb-0.5">{label}</span><span class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center transition-colors group-hover:bg-amber group-hover:text-navy" aria-hidden="true">→</span></span>
+  </div>
 </a>

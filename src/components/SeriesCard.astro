@@ -1,16 +1,18 @@
 ---
 import BrandBadge from './BrandBadge.astro';
 import { seriesUrl, type Series } from '../lib/series';
+import Icon from './Icon.astro';
+import { categories } from '../data/categories';
 interface Props { series: Series; }
 const { series: s } = Astro.props;
 ---
-<article class="card overflow-hidden flex flex-col" data-subtype={s.subtype} data-brand={s.brand} data-radiation={s.radiationTypes.join('|')}>
-  {s.image ? <img src={s.image} alt={s.name} class="h-[120px] w-full object-contain bg-surface-muted" loading="lazy" /> : <div class="placeholder-box h-[120px]">[Product photo]</div>}
+<article class="group card lift relative overflow-hidden flex flex-col hover:border-teal" data-subtype={s.subtype} data-brand={s.brand} data-radiation={s.radiationTypes.join('|')}>
+  {s.image ? <img src={s.image} alt={s.name} class="h-[120px] w-full object-contain bg-surface-muted" loading="lazy" /> : <div class="h-[120px] bg-surface-muted grid-bg-light flex items-center justify-center"><Icon name={categories.find((c) => c.slug === s.category)?.icon ?? 'detector'} size={44} class="text-teal/70" /></div>}
   <div class="p-5 flex flex-col gap-2 flex-1">
     <div class="flex items-center gap-2"><BrandBadge brand={s.brand} /><span class="text-[13px] text-muted">{s.models.length} {s.models.length === 1 ? 'model' : 'models'}</span>{s.status !== 'approved' && <span class="text-[12px] font-semibold text-muted uppercase">· {s.status}</span>}</div>
-    <h3 class="text-[16px] text-ink">{s.name}</h3>
+    <h3 class="text-[16.5px] text-navy group-hover:text-teal transition-colors">{s.name}</h3>
     <p class="text-[14px] text-muted line-clamp-2">{s.summary}</p>
     <div class="flex flex-wrap gap-1.5">{s.radiationTypes.map((r) => <span class="chip !text-[12px] !px-2.5 !py-1">{r}</span>)}</div>
-    <a href={seriesUrl(s)} class="link-arrow mt-auto pt-2">View models →</a>
+    <a href={seriesUrl(s)} class="stretched mt-auto pt-2 text-[14px] font-semibold text-navy no-underline"><span class="border-b-2 border-amber pb-0.5">View models</span> <span aria-hidden="true">→</span></a>
   </div>
 </article>
