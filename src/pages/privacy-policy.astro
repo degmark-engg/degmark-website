@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { company } from '../data/site';
+---
+<Base title="Privacy policy" description="How DEGMARK handles information sent through this website.">
+  <section class="section"><div class="container-x prose-x">
+    <h1>Privacy policy</h1>
+    <p class="text-muted text-[14px] mt-2">[PLACEHOLDER: last updated date]</p>
+    <h2>Information we collect</h2>
+    <p>When you send an enquiry, quotation request or document, we receive the details you enter (such as name, organisation, email, phone and message) and any file you upload.</p>
+    <h2>How we use it</h2>
+    <p>We use this information only to respond to your enquiry and to prepare quotations. We do not sell it or use it for advertising.</p>
+    <h2>Storage</h2>
+    <p>Enquiries are delivered by email and a backup copy is kept on our web server. [PLACEHOLDER: retention period]</p>
+    <h2>Cookies</h2>
+    <p>This website does not use tracking or advertising cookies.</p>
+    <h2>Contact</h2>
+    <p>For questions about your data, write to {company.email}.</p>
+    <p>[PLACEHOLDER: legal review]</p>
+  </div></section>
+</Base>

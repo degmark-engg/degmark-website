@@ -1,21 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
-import { company, sectors } from '../data/site';
+import PageHero from '../components/PageHero.astro';
+import EnquiryStrip from '../components/EnquiryStrip.astro';
+import Icon from '../components/Icon.astro';
+import { brands } from '../data/brands';
+const principals = brands.filter((b) => b.slug !== 'other-manufacturers');
 ---
-<Base title="About">
-  <section>
-    <div class="wrap">
-      <h1>About {company.name}</h1>
-      <p class="lead">{company.name} is a Mumbai-based supplier of radiation detection and nuclear instrumentation. We import equipment from international manufacturers and support customers across India's nuclear, research, industrial and healthcare sectors.</p>
-      <!-- TODO: add founding year, history and team -->
-      <h2 style="margin-top:32px">Sectors</h2>
-      <ul class="ticks">{sectors.map((s) => <li><strong>{s.name}</strong> — {s.note}</li>)}</ul>
-      <h2 style="margin-top:32px">Why Degmark</h2>
-      <ul class="ticks">
-        <li>Direct relationships with overseas manufacturers</li>
-        <li>Experience with tender and procurement requirements of government and PSU buyers</li>
-        <li>Support for installed equipment, not just new sales</li>
-      </ul>
-    </div>
-  </section>
+<Base title="About" description="DEGMARK Engineering Co. supplies radiation detection, monitoring and measurement equipment from international manufacturers.">
+  <PageHero title="About DEGMARK" lead="DEGMARK Engineering Co. supplies radiation detection, monitoring and measurement equipment from international manufacturers." crumbs={[{ label: 'About' }]} />
+  <section class="section"><div class="container-x prose-x">
+    <h2 class="!mt-0">Our company</h2>
+    <p>We represent manufacturers of radiation detectors and instruments and supply nuclear power plants, atomic energy and research establishments, hospitals, NDT firms, laboratories, environmental monitoring and defence organisations.</p>
+    <p>[PLACEHOLDER: founding year, history and team]</p>
+  </div></section>
+  <section class="section bg-surface border-y border-line"><div class="container-x">
+    <h2 class="mb-5">Our principals</h2>
+    <ul class="flex flex-wrap gap-3">{principals.map((b) => <li><a href={`/brands/${b.slug}/`} class="card flex items-center justify-center min-w-[150px] h-16 px-6 no-underline text-navy font-bold hover:border-teal">{b.logo ? <img src={b.logo} alt={b.name} class="max-h-10" /> : b.name}</a></li>)}</ul>
+  </div></section>
+  <section class="section"><div class="container-x">
+    <h2 class="mb-5">What we do</h2>
+    <ul class="grid gap-5 md:grid-cols-2">
+      {['Supply instruments, detectors and components from our principals and other manufacturers.', 'Help customers select instruments for their radiation type, range and application.', 'Respond to tenders, specifications and technical evaluation queries.', 'Provide manufacturer documentation and support after supply.'].map((t) => <li class="flex gap-3"><Icon name="check" size={24} /><span>{t}</span></li>)}
+    </ul>
+  </div></section>
+  <section class="section pt-0"><div class="container-x prose-x">
+    <h2 class="!mt-0">Quality</h2>
+    <p>[PLACEHOLDER: quality policy, certifications and registrations]</p>
+  </div></section>
+  <EnquiryStrip />
 </Base>

@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import FormShell from '../components/FormShell.astro';
+import FormField from '../components/FormField.astro';
+import NextSteps from '../components/NextSteps.astro';
+---
+<Base title="Request a Quote" description="Request a quotation for radiation detectors, survey meters, monitoring systems, air samplers and dosimeters.">
+  <PageHero title="Request a quote" lead="Tell us the models and quantities you need." crumbs={[{ label: 'Request a Quote' }]} />
+  <section class="section"><div class="container-x flex flex-wrap gap-6 items-start">
+    <div class="flex-[999_1_560px] min-w-0">
+      <FormShell type="quote" submit="Send request">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <FormField label="Name" name="name" required autocomplete="name" />
+          <FormField label="Organisation" name="organisation" required autocomplete="organization" />
+          <FormField label="Email" name="email" type="email" required autocomplete="email" />
+          <FormField label="Phone" name="phone" type="tel" required autocomplete="tel" />
+          <FormField label="Model number(s)" name="models" required hint="One or more, separated by commas." />
+          <FormField label="Quantity" name="quantity" required />
+        </div>
+        <FormField label="Tender / indent reference" name="tender_ref" />
+        <FormField label="Message" name="message" textarea />
+      </FormShell>
+    </div>
+    <NextSteps />
+  </div></section>
+</Base>
+<script>
+  const p = new URLSearchParams(location.search);
+  const m = p.get('model') || p.get('doc');
+  const el = document.getElementById('f-models') as HTMLInputElement | null;
+  if (m && el) el.value = m;
+</script>

@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import FormShell from '../components/FormShell.astro';
+import FormField from '../components/FormField.astro';
+import NextSteps from '../components/NextSteps.astro';
+---
+<Base title="Upload Requirement" description="Upload a tender, specification or indent and DEGMARK will match suitable radiation instruments.">
+  <PageHero title="Upload your requirement" lead="Send a tender, technical specification or indent. We will review it and reply with suitable models and a quotation." crumbs={[{ label: 'Upload Requirement' }]} />
+  <section class="section"><div class="container-x flex flex-wrap gap-6 items-start">
+    <div class="flex-[999_1_560px] min-w-0">
+      <FormShell type="upload" upload submit="Upload and send">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <FormField label="Name" name="name" required autocomplete="name" />
+          <FormField label="Organisation" name="organisation" required autocomplete="organization" />
+          <FormField label="Email" name="email" type="email" required autocomplete="email" />
+          <FormField label="Phone" name="phone" type="tel" required autocomplete="tel" />
+        </div>
+        <FormField label="Document" name="document" type="file" required accept=".pdf,.xlsx,.xls,.docx,.doc,.jpg,.jpeg,.png" hint="Tender, specification or indent. PDF, Excel, Word, JPG or PNG, up to 10 MB." />
+        <FormField label="Message" name="message" textarea />
+      </FormShell>
+    </div>
+    <NextSteps />
+  </div></section>
+</Base>

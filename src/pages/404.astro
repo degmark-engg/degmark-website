@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found" description="The page you were looking for could not be found." noindex>
+  <section class="section"><div class="container-x"><div class="card p-8 max-w-xl mx-auto text-center space-y-4">
+    <h1 class="!text-[30px]">Page not found</h1>
+    <p class="text-ink-soft">The page may have moved. Search by product or model number:</p>
+    <form action="/search/" class="flex gap-2"><label for="q404" class="sr-only">Search</label><input id="q404" name="q" type="search" class="field" placeholder="e.g. GM tube or model number" /><button class="btn-primary">Search</button></form>
+    <div class="flex flex-wrap justify-center gap-4 text-[15px] font-semibold"><a href="/products/">Products</a><a href="/brands/">Brands</a><a href="/contact/">Contact</a></div>
+  </div></div></section>
+</Base>

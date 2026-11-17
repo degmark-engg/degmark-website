@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+---
+<Base title="Search" description="Search DEGMARK products, series and model numbers." noindex>
+  <PageHero title="Search" lead="Search by product type, brand or model number." crumbs={[{ label: 'Search' }]} />
+  <section class="section"><div class="container-x"><div id="search" class="card p-6"></div></div></section>
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!window.PagefindUI) { document.getElementById('search').textContent = 'Search is available on the published site.'; return; }
+      const ui = new PagefindUI({ element: '#search', showSubResults: true, showImages: false });
+      const q = new URLSearchParams(location.search).get('q'); if (q) ui.triggerSearch(q);
+    });
+  </script>
+  <style is:global>
+    #search { --pagefind-ui-primary: #0B6670; --pagefind-ui-text: #14202B; --pagefind-ui-border: #C6D0D7; --pagefind-ui-border-radius: 6px; --pagefind-ui-font: "IBM Plex Sans", system-ui, sans-serif; }
+  </style>
+</Base>
