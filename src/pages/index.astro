@@ -1,98 +1,195 @@
 ---
 import Base from '../layouts/Base.astro';
-import LinkCard from '../components/LinkCard.astro';
 import SectionHead from '../components/SectionHead.astro';
-import EnquiryStrip from '../components/EnquiryStrip.astro';
 import Icon from '../components/Icon.astro';
+import EnquiryStrip from '../components/EnquiryStrip.astro';
+import { company } from '../data/site';
 import { categories } from '../data/categories';
 import { brands } from '../data/brands';
 import { applications } from '../data/applications';
 import { industries } from '../data/industries';
-import { articles } from '../data/resources';
+import { modelsInCategory, gmTubeModels, countLabel, totalModels, totalSeries, totalPrincipals, totalCategories, applicationIcon, categoryImage, industryImage } from '../lib/stats';
+
 const principals = brands.filter((b) => b.slug !== 'other-manufacturers');
+
+// Product tiles (all the same size).
+const order = ['radiation-survey-meters', 'radiation-detectors', 'personal-dosimeters', 'contamination-monitors', 'radiation-monitoring-systems', 'air-sampling-equipment', 'detector-components'];
+const tiles = [
+  ...order.map((slug) => {
+    const c = categories.find((x) => x.slug === slug)!;
+    return { href: `/products/${c.slug}/`, name: c.name, text: c.short, icon: c.icon, img: categoryImage[c.slug], count: countLabel(modelsInCategory(c.slug)) };
+  }),
+  { href: '/products/radiation-detectors/?subtype=GM%20tubes', name: 'Geiger-Müller (GM) Tubes', text: 'End-window, pancake, thin-wall and energy-compensated tubes.', icon: 'gmtube', img: categoryImage['gm-tubes'], count: countLabel(gmTubeModels) },
+];
+
+// Measurement tiles: every application, each with a product photo (ATOMTEX) or icon until a photo is added.
+const measureImage: Record<string, string | undefined> = {
+  'gamma-detection': '/images/measure/gamma.webp',
+  'alpha-beta-detection': '/images/products-hero/contamination-monitors.webp',
+  'neutron-detection': '/images/measure/neutron.webp',
+  'dose-measurement': '/images/measure/dose.webp',
+  'personnel-monitoring': '/images/products-hero/personal-dosimeters.webp',
+  'air-sampling': undefined, // STAPLEX photo to follow
+  'contamination-monitoring': '/images/measure/contamination.webp',
+  'environmental-monitoring': '/images/products-hero/radiation-monitoring-systems.webp',
+};
+const symbol: Record<string, string> = { 'gamma-detection': 'γ', 'alpha-beta-detection': 'αβ', 'neutron-detection': 'n' };
+const measures = applications.map((a) => ({ slug: a.slug, name: a.name, img: measureImage[a.slug], icon: applicationIcon[a.slug], sym: symbol[a.slug] }));
+
+const stats = [
+  [`${totalModels}+`, 'Models listed'],
+  [String(totalPrincipals), 'International principals'],
+  [String(totalCategories), 'Product categories'],
+  [String(totalSeries), 'Product series'],
+];
+const points = [
+  ['Established principals', 'Instruments and detectors from recognised international manufacturers.'],
+  ['Technical selection', 'Help choosing the right instrument for the radiation type, range and application.'],
+  ['Tender support', 'Responses to tenders, specifications and technical evaluation queries.'],
+  ['Beyond the catalogue', 'Models not listed on the site are available on request.'],
+];
 ---
 <Base description="DEGMARK supplies radiation detectors, survey meters, monitoring systems, air samplers, dosimeters and contamination monitors from leading international manufacturers.">
-  <section class="bg-surface border-b border-line">
-    <div class="container-x py-12 flex flex-wrap gap-8 items-center">
-      <div class="flex-[999_1_560px]">
-        <div class="eyebrow text-teal">Radiation detection · Monitoring · Measurement</div>
-        <h1 class="mt-3">Radiation detection and measurement instruments from leading manufacturers</h1>
-        <p class="lead mt-4">DEGMARK supplies detectors, survey meters, monitoring systems, air samplers, dosimeters and contamination monitors to nuclear, research, medical, industrial and environmental users.</p>
-        <div class="flex flex-wrap gap-3 mt-6">
-          <a href="/products/" class="btn-primary">Explore products</a>
-          <a href="/request-a-quote/" class="btn-secondary">Request a quote</a>
+
+  <!-- 1. Photo banner -->
+  <section class="relative isolate overflow-hidden bg-navy-deep text-white">
+    <img src="/images/home/hero.webp" alt="" class="kenburns absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" fetchpriority="high" />
+    <div class="absolute inset-0 -z-10" style="background: linear-gradient(90deg, rgba(10,30,44,.96) 0%, rgba(10,30,44,.86) 38%, rgba(10,30,44,.25) 72%, rgba(10,30,44,.05) 100%), linear-gradient(0deg, rgba(10,30,44,.9) 0%, rgba(10,30,44,0) 35%);"></div>
+    <div class="container-x min-h-[560px] lg:min-h-[640px] flex flex-col justify-center pt-16 pb-10">
+      <div class="max-w-[680px]">
+        <div class="eyebrow text-amber">Radiation detection · Monitoring · Measurement</div>
+        <h1 class="h-display mt-5 !text-white !text-[38px] sm:!text-[54px] lg:!text-[64px] !leading-[1.04]">Precision instruments for measuring what can't be seen.</h1>
+        <p class="mt-6 text-[17px] sm:text-[19px] leading-relaxed text-on-navy max-w-[560px]">Detectors, survey meters, monitoring systems, air samplers and dosimeters from leading international manufacturers, for nuclear, research, medical, industrial and environmental users.</p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="/products/" class="btn-accent !px-6 !min-h-12 !text-[16px]">Explore products <span aria-hidden="true">→</span></a>
+          <a href="/upload-requirement/" class="btn-ghost-light !px-6 !min-h-12 !text-[16px]">Upload a tender</a>
         </div>
       </div>
-      <aside class="flex-[1_1_280px] bg-navy rounded-card p-6">
-        <div class="eyebrow text-amber">Have a tender or specification?</div>
-        <p class="text-on-navy mt-2 mb-4">Upload your tender, specification or indent and we will match suitable instruments.</p>
-        <a href="/upload-requirement/" class="btn-accent">Upload requirement</a>
-      </aside>
+    </div>
+    <div class="border-t border-white/15 bg-white/[.04] backdrop-blur-sm">
+      <dl class="container-x grid grid-cols-2 lg:grid-cols-4">
+        {stats.map(([n, l], i) => (
+          <div class:list={['py-5 sm:py-6', i % 2 === 1 ? 'pl-5 sm:pl-8 border-l border-white/15' : (i > 0 ? 'lg:pl-8 lg:border-l border-white/15' : ''), i > 1 && 'border-t lg:border-t-0 border-white/15']}>
+            <dt class="sr-only">{l}</dt>
+            <dd class="font-display font-extrabold text-[30px] sm:text-[38px] leading-none">{n}</dd>
+            <dd class="mt-2 font-mono text-[11.5px] uppercase tracking-[0.14em] text-on-navy-muted">{l}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container-x">
-      <SectionHead title="Product categories" href="/products/" linkText="All products →" />
-      <div class="grid-cards">
-        {categories.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} />)}
-        <LinkCard href="/products/radiation-detectors/?subtype=GM%20tubes" title="Geiger-Müller (GM) Tubes" text="End-window, pancake, thin-wall, gamma and energy-compensated GM tubes." icon="detector" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section bg-surface border-y border-line">
-    <div class="container-x">
-      <SectionHead title="Brands we represent" href="/brands/" linkText="All brands →" />
-      <ul class="flex flex-wrap gap-3">
+  <!-- 2. Principal logos -->
+  <section class="bg-surface border-b border-line">
+    <div class="container-x py-7 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-10">
+      <p class="font-mono text-[11.5px] uppercase tracking-[0.14em] text-muted shrink-0">Supplying instruments from</p>
+      <ul class="flex flex-wrap items-center gap-x-10 gap-y-4 flex-1 lg:justify-between">
         {principals.map((b) => (
-          <li><a href={`/brands/${b.slug}/`} class="card flex items-center justify-center min-w-[150px] h-16 px-6 no-underline text-navy font-bold tracking-[0.04em] hover:border-teal">
-            {b.logo ? <img src={b.logo} alt={b.name} class="max-h-10" /> : b.name}
+          <li><a href={`/brands/${b.slug}/`} class="group block no-underline" aria-label={b.name}>
+            {b.logo ? <img src={b.logo} alt={b.name} class:list={['h-7 sm:h-8 w-auto transition', b.logoOnLight === 'dark' ? 'logo-dark group-hover:opacity-100' : 'logo-grey group-hover:filter-none group-hover:opacity-100']} /> : <span class="wordmark text-[20px] text-[#7A8792] group-hover:text-navy transition-colors">{b.name}</span>}
           </a></li>
         ))}
-        <li><a href="/brands/other-manufacturers/" class="card flex items-center justify-center min-w-[150px] h-16 px-6 no-underline text-muted font-semibold hover:border-teal">+ Other manufacturers</a></li>
       </ul>
     </div>
   </section>
 
-  <section class="section">
+  <!-- 3. Products: uniform tiles with product photos -->
+  <section class="bg-page py-20 lg:py-24">
     <div class="container-x">
-      <SectionHead title="What do you need to measure?" href="/applications/" linkText="All applications →" />
-      <div class="grid-cards">{applications.map((a) => <LinkCard compact href={`/applications/${a.slug}/`} title={a.name} text={a.question} cta="Learn more →" />)}</div>
-    </div>
-  </section>
-
-  <section class="section pt-0">
-    <div class="container-x">
-      <SectionHead title="Industries we serve" href="/industries/" linkText="All industries →" />
-      <div class="grid-cards">{industries.map((i) => <LinkCard compact href={`/industries/${i.slug}/`} title={i.name} text={i.oneLine} cta="Learn more →" />)}</div>
-    </div>
-  </section>
-
-  <section class="section bg-surface border-y border-line">
-    <div class="container-x">
-      <h2 class="mb-5">Why DEGMARK</h2>
-      <ul class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {[
-          ['Established principals', 'Instruments and detectors from recognised international manufacturers.'],
-          ['Technical selection', 'Help choosing the right instrument for the radiation type, range and application.'],
-          ['Tender support', 'Responses to tenders, specifications and technical evaluation queries.'],
-          ['Beyond the catalogue', 'Models not listed on the site are available on request.'],
-        ].map(([t, d]) => (
-          <li class="flex gap-3"><Icon name="check" size={24} /><div><h3 class="text-[16px]">{t}</h3><p class="text-[14px] text-muted mt-1">{d}</p></div></li>
+      <SectionHead eyebrow="Catalogue" title="Product categories" lead="Key models from our principals, with other models available on request." href="/products/" linkText="All products" />
+      <div class="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
+        {tiles.map((t) => (
+          <a href={t.href} class="group reveal relative overflow-hidden rounded-card bg-surface border border-line no-underline text-ink hover:text-ink hover:border-teal lift flex flex-col">
+            <div class="relative h-[130px] sm:h-[180px] bg-surface-muted flex items-center justify-center p-4 pt-8 sm:p-5">
+              {t.img ? <img src={t.img} alt="" class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={t.icon} size={64} class="text-teal opacity-80" />}
+              <span class:list={['count-badge absolute top-2 right-2 sm:top-3 sm:right-3 !text-[10.5px] sm:!text-[12px]', t.count === 'On request' && 'count-badge-muted !bg-white']}>{t.count}</span>
+            </div>
+            <div class="px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between gap-2 flex-1">
+              <h3 class="text-[14px] sm:text-[16.5px] text-navy leading-snug">{t.name}</h3>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-[14px] transition-colors group-hover:bg-amber group-hover:text-navy" aria-hidden="true">→</span>
+            </div>
+          </a>
         ))}
-      </ul>
+      </div>
     </div>
   </section>
 
-  {articles.length > 0 && (
-    <section class="section">
-      <div class="container-x">
-        <SectionHead title="Technical articles" href="/resources/technical-articles/" />
-        <div class="grid-cards">{articles.slice(0, 3).map((a) => <LinkCard compact href={`/resources/technical-articles/${a.slug}/`} title={a.title} text={a.summary} cta="Read →" />)}</div>
+  <!-- 4. Industries: equal photo tiles (swipe on mobile) -->
+  <section class="bg-surface py-20 lg:py-24">
+    <div class="container-x">
+      <SectionHead eyebrow="Sectors" title="Industries we serve" lead="The instruments each sector typically uses for radiation protection and measurement." href="/industries/" linkText="All industries" />
+      <div class="scroll-x gap-4 -mx-4 px-4 sm:mx-0 sm:px-0 pb-2">
+        {industries.map((i) => (
+          <a href={`/industries/${i.slug}/`} class="group reveal relative isolate overflow-hidden rounded-card aspect-[4/3] no-underline text-white hover:text-white">
+            <img src={industryImage(i.slug)} alt="" class="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.07]" loading="lazy" />
+            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-navy-deep via-navy-deep/45 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+              <span class="block h-[3px] w-10 bg-amber mb-2.5 transition-all duration-300 group-hover:w-16"></span>
+              <h3 class="text-[17px] sm:text-[18px] text-white leading-snug">{i.name}</h3>
+            </div>
+          </a>
+        ))}
+        <a href="/contact/" class="group reveal relative overflow-hidden rounded-card aspect-[4/3] bg-navy grid-bg p-5 flex flex-col no-underline text-white hover:text-white">
+          <Icon name="question" size={30} class="text-amber" />
+          <h3 class="mt-auto text-[18px] text-white">Sector not listed?</h3>
+          <span class="mt-1.5 text-[14px] font-semibold text-amber">Talk to us →</span>
+        </a>
       </div>
-    </section>
-  )}
+    </div>
+  </section>
+
+  <!-- 5. Measurement: navy band, equal image tiles -->
+  <section class="relative bg-navy grid-bg text-white py-20 lg:py-24 overflow-hidden">
+    <div class="absolute -right-40 -top-40 w-[520px] h-[520px] rounded-full border border-white/10 pointer-events-none"></div>
+    <div class="absolute -right-20 -top-20 w-[360px] h-[360px] rounded-full border border-white/10 pointer-events-none"></div>
+    <div class="container-x relative">
+      <SectionHead dark eyebrow="By measurement" title="What do you need to measure?" lead="Start from the radiation type or the task. Each guide explains which instruments suit it." href="/applications/" linkText="All applications" />
+      <div class="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
+        {measures.map((m) => (
+          <a href={`/applications/${m.slug}/`} class="group reveal lift relative overflow-hidden rounded-card bg-navy-light border border-white/10 no-underline text-white hover:text-white hover:border-amber flex flex-col">
+            <div class="relative h-[100px] sm:h-[120px] bg-surface flex items-center justify-center p-3">
+              {m.img ? <img src={m.img} alt="" class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={m.icon} size={52} class="text-navy" />}
+              {m.sym && <span class="absolute top-2 left-2 min-w-8 h-8 px-1.5 rounded-btn bg-amber text-navy font-display font-extrabold text-[17px] flex items-center justify-center">{m.sym}</span>}
+            </div>
+            <div class="px-3.5 sm:px-4 py-3 flex items-center justify-between gap-2 flex-1">
+              <h3 class="text-[14px] sm:text-[15.5px] text-white leading-snug">{m.name}</h3>
+              <span class="text-amber transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <EnquiryStrip />
+
+  <!-- 6. About DEGMARK (end of page) -->
+  <section class="bg-surface">
+    <div class="container-x py-16 lg:py-20 grid gap-10 lg:grid-cols-[1.35fr_1fr] items-center">
+      <div class="reveal">
+        <div class="eyebrow text-teal mb-3">About DEGMARK</div>
+        <h2 class="title-bar !text-[30px] sm:!text-[42px] !leading-[1.1] tracking-[-0.015em]">A specialist supplier for radiation measurement.</h2>
+        <p class="mt-6 text-[17px] leading-relaxed text-ink-soft">From a single replacement GM tube to complete area monitoring systems, we help engineers and health physicists select, specify and source the right instrument.</p>
+        <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-6">
+          {points.map(([t, d], i) => (
+            <li>
+              <div class="flex items-center gap-3"><span class="font-mono text-[12px] font-semibold text-teal">0{i + 1}</span><span class="h-px flex-1 bg-line"></span></div>
+              <h3 class="mt-2 text-[17px] text-navy">{t}</h3>
+              <p class="mt-1 text-[14.5px] text-muted">{d}</p>
+            </li>
+          ))}
+        </ul>
+        <a href="/about/" class="inline-flex items-center gap-2 mt-8 text-[15px] font-semibold text-navy no-underline border-b-2 border-amber pb-1 hover:text-teal">More about DEGMARK <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="relative reveal">
+        <img src="/images/home/ind-atomic-energy-research.webp" alt="Stainless-steel research instrumentation" class="w-full h-[200px] sm:h-[240px] object-cover rounded-card" loading="lazy" />
+        <div class="absolute -bottom-5 left-4 bg-navy text-white rounded-card px-5 py-4 shadow-[0_24px_48px_-20px_rgba(10,30,44,.6)] max-w-[260px]">
+          <div class="font-mono text-[11px] uppercase tracking-[0.14em] text-amber">Established</div>
+          <div class:list={['font-display font-extrabold mt-1 leading-tight', company.founded.startsWith('[') ? 'text-[18px] text-amber' : 'text-[30px]']}>{company.founded}</div>
+          <div class="text-[13.5px] text-on-navy mt-2">{company.address}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </Base>
