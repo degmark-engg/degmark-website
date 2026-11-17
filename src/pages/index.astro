@@ -34,7 +34,10 @@ const principals = brands.filter((b) => b.slug !== 'other-manufacturers');
   <section class="section">
     <div class="container-x">
       <SectionHead title="Product categories" href="/products/" linkText="All products →" />
-      <div class="grid-cards">{categories.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} />)}</div>
+      <div class="grid-cards">
+        {categories.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} />)}
+        <LinkCard href="/products/radiation-detectors/?subtype=GM%20tubes" title="Geiger-Müller (GM) Tubes" text="End-window, pancake, thin-wall, gamma and energy-compensated GM tubes." icon="detector" />
+      </div>
     </div>
   </section>
 
