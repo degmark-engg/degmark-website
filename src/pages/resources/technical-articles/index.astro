@@ -1,0 +1,14 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHero from '../../../components/PageHero.astro';
+import LinkCard from '../../../components/LinkCard.astro';
+import EnquiryStrip from '../../../components/EnquiryStrip.astro';
+import { articles } from '../../../data/resources';
+---
+<Base title="Technical articles" description="Technical articles on radiation detection, measurement and instrument selection.">
+  <PageHero title="Technical articles" lead="Practical guides to radiation measurement and choosing instruments." crumbs={[{ href: '/resources/', label: 'Resources' }, { label: 'Technical articles' }]} />
+  <section class="section"><div class="container-x">
+    {articles.length > 0 ? <div class="grid-cards">{articles.map((a) => <LinkCard compact href={`/resources/technical-articles/${a.slug}/`} title={a.title} text={a.summary} cta="Read →"><span class="text-[13px] text-muted">{a.topic}</span></LinkCard>)}</div> : <div class="card p-6 text-ink-soft">Articles are being written. Check back soon.</div>}
+  </div></section>
+  <EnquiryStrip />
+</Base>
