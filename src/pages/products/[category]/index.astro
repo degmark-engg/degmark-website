@@ -1,0 +1,91 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHero from '../../../components/PageHero.astro';
+import SeriesCard from '../../../components/SeriesCard.astro';
+import OnRequestNote from '../../../components/OnRequestNote.astro';
+import EnquiryStrip from '../../../components/EnquiryStrip.astro';
+import { categories } from '../../../data/categories';
+import { seriesInCategory } from '../../../lib/series';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { category: c.slug }, props: { cat: c } }));
+}
+const { cat } = Astro.props;
+const list = seriesInCategory(cat.slug);
+const radiation = [...new Set(list.flatMap((s) => s.radiationTypes))].sort();
+const brandsHere = [...new Set(list.map((s) => s.brand))].sort();
+const count = (st: string) => list.filter((s) => s.subtype === st).length;
+---
+<Base title={cat.name} description={`${cat.name}: ${cat.short} Key models from international manufacturers, other models on request.`}>
+  <PageHero
+    title={cat.name}
+    lead={cat.intro}
+    crumbs={[{ href: '/products/', label: 'Products' }, { label: cat.name }]}
+    chips={radiation}
+    panel={{ eyebrow: 'Specification ready?', text: 'Upload your tender or specification and we will match suitable models.', href: '/upload-requirement/', label: 'Upload requirement' }}
+  />
+
+  <section class="section pb-0">
+    <div class="container-x">
+      <h2 class="sr-only">Sub-types</h2>
+      <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by sub-type">
+        <button type="button" class="subtype-btn chip !bg-teal !text-white" data-subtype="" aria-pressed="true">All ({list.length})</button>
+        {cat.subtypes.map((st) => <button type="button" class="subtype-btn chip" data-subtype={st} aria-pressed="false">{st} ({count(st)})</button>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x flex flex-wrap gap-6 items-start">
+      <aside class="flex-[1_1_220px] card p-5 space-y-5">
+        <fieldset>
+          <legend class="text-[13px] font-semibold uppercase text-muted mb-2">Radiation type</legend>
+          {radiation.length === 0 && <p class="text-[14px] text-muted">—</p>}
+          {radiation.map((r) => <label class="flex items-center gap-2 text-[15px] min-h-9"><input type="checkbox" class="f-rad w-4 h-4 accent-teal" value={r} />{r}</label>)}
+        </fieldset>
+        <fieldset>
+          <legend class="text-[13px] font-semibold uppercase text-muted mb-2">Brand</legend>
+          {brandsHere.length === 0 && <p class="text-[14px] text-muted">—</p>}
+          {brandsHere.map((b) => <label class="flex items-center gap-2 text-[15px] min-h-9"><input type="checkbox" class="f-brand w-4 h-4 accent-teal" value={b} />{b}</label>)}
+        </fieldset>
+      </aside>
+      <div class="flex-[999_1_560px] min-w-0 space-y-5">
+        <p class="text-[14px] text-muted" aria-live="polite"><span id="count">{list.length}</span> series shown</p>
+        {list.length > 0 ? (
+          <div class="grid-cards" id="series-grid">{list.map((s) => <SeriesCard series={s} />)}</div>
+        ) : (
+          <div class="card p-6 text-ink-soft">Series for this category are being prepared. Send us your requirement and we will reply with suitable models.</div>
+        )}
+        <OnRequestNote text="Looking for a model not listed? Other models are available on request." />
+      </div>
+    </div>
+  </section>
+  <EnquiryStrip />
+</Base>
+
+<script>
+  let subtype = '';
+  const cards = [...document.querySelectorAll<HTMLElement>('#series-grid > article')];
+  const countEl = document.getElementById('count');
+  const checked = (cls: string) => [...document.querySelectorAll<HTMLInputElement>(`.${cls}:checked`)].map((i) => i.value);
+  function apply() {
+    const rads = checked('f-rad'), brands = checked('f-brand');
+    let n = 0;
+    cards.forEach((c) => {
+      const ok = (!subtype || c.dataset.subtype === subtype)
+        && (!brands.length || brands.includes(c.dataset.brand || ''))
+        && (!rads.length || rads.some((r) => (c.dataset.radiation || '').split('|').includes(r)));
+      c.hidden = !ok; if (ok) n++;
+    });
+    if (countEl) countEl.textContent = String(n);
+  }
+  document.querySelectorAll<HTMLButtonElement>('.subtype-btn').forEach((b) => b.addEventListener('click', () => {
+    subtype = b.dataset.subtype || '';
+    document.querySelectorAll<HTMLButtonElement>('.subtype-btn').forEach((x) => {
+      const on = x === b; x.setAttribute('aria-pressed', String(on));
+      x.classList.toggle('!bg-teal', on); x.classList.toggle('!text-white', on);
+    });
+    apply();
+  }));
+  document.querySelectorAll('.f-rad, .f-brand').forEach((i) => i.addEventListener('change', apply));
+</script>

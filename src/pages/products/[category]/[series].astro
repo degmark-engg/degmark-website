@@ -1,0 +1,70 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import BrandBadge from '../../../components/BrandBadge.astro';
+import ModelTable from '../../../components/ModelTable.astro';
+import OnRequestNote from '../../../components/OnRequestNote.astro';
+import SeriesCard from '../../../components/SeriesCard.astro';
+import EnquiryStrip from '../../../components/EnquiryStrip.astro';
+import { allSeries, type Series } from '../../../lib/series';
+import { categoryBySlug } from '../../../data/categories';
+import { applications } from '../../../data/applications';
+import { brandByName } from '../../../data/brands';
+
+export function getStaticPaths() {
+  return allSeries.map((s) => ({ params: { category: s.category, series: s.slug }, props: { s } }));
+}
+const { s } = Astro.props as { s: Series };
+const cat = categoryBySlug(s.category)!;
+const apps = applications.filter((a) => s.applications.includes(a.slug));
+const brand = brandByName(s.brand);
+const related = allSeries
+  .filter((x) => x.slug !== s.slug && (x.subtype === s.subtype || x.brand === s.brand))
+  .slice(0, 3);
+const modelList = s.models.map((m) => m.model).filter((m) => !/^\[/.test(m));
+const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${modelList.slice(0, 8).join(', ')}.` : ''}`.slice(0, 300);
+---
+<Base title={`${s.name}${modelList.length ? ` (${modelList.slice(0, 3).join(', ')})` : ''}`} description={description}>
+  <section class="bg-surface border-b border-line">
+    <div class="container-x py-10">
+      <Breadcrumb items={[{ href: '/products/', label: 'Products' }, { href: `/products/${cat.slug}/`, label: cat.name }, { label: s.name }]} />
+      {s.status !== 'approved' && <p class="mb-4 rounded-btn bg-amber/30 px-3 py-2 text-[14px] font-semibold text-ink">Preview: this series is "{s.status}" and is not published on the live site.</p>}
+      <div class="flex flex-wrap gap-8 items-start">
+        <div class="flex-[1_1_300px]">
+          {s.image ? <img src={s.image} alt={s.name} class="w-full aspect-[4/3] object-contain bg-surface-muted rounded-card" /> : <div class="placeholder-box aspect-[4/3] rounded-card">[Product photo]</div>}
+        </div>
+        <div class="flex-[999_1_480px] min-w-0">
+          {brand ? <a href={`/brands/${brand.slug}/`} class="no-underline"><BrandBadge brand={s.brand} /></a> : <BrandBadge brand={s.brand} />}
+          <h1 class="mt-3">{s.name}</h1>
+          <p class="lead mt-4">{s.summary}</p>
+          <div class="mt-5 space-y-3">
+            <div class="flex flex-wrap items-center gap-2"><span class="text-[13px] font-semibold uppercase text-muted w-28">Radiation</span>{s.radiationTypes.map((r) => <span class="chip">{r}</span>)}</div>
+            {apps.length > 0 && <div class="flex flex-wrap items-center gap-2"><span class="text-[13px] font-semibold uppercase text-muted w-28">Applications</span>{apps.map((a) => <a href={`/applications/${a.slug}/`} class="chip">{a.name}</a>)}</div>}
+          </div>
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href={`/request-a-quote/?model=${encodeURIComponent(s.name)}`} class="btn-primary">Request a quote</a>
+            {s.catalogue && <a href={s.catalogue} class="btn-secondary">Download catalogue</a>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x space-y-5">
+      <h2>Key models</h2>
+      <ModelTable series={s} />
+      <OnRequestNote />
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section pt-0">
+      <div class="container-x">
+        <h2 class="mb-5">Related series</h2>
+        <div class="grid-cards">{related.map((r) => <SeriesCard series={r} />)}</div>
+      </div>
+    </section>
+  )}
+  <EnquiryStrip />
+</Base>
