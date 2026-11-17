@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import LinkCard from '../../components/LinkCard.astro';
+import { categoryImage, modelsInCategory, countLabel } from '../../lib/stats';
 import SeriesCard from '../../components/SeriesCard.astro';
 import DownloadRow from '../../components/DownloadRow.astro';
 import OnRequestNote from '../../components/OnRequestNote.astro';
@@ -21,20 +22,17 @@ const docs = downloads.filter((d) => d.brand === b.name);
 ---
 <Base title={b.name} description={`${b.name} (${b.country}): ${b.oneLine} Supplied by DEGMARK.`}>
   <PageHero title={b.name} lead={b.oneLine} crumbs={[{ href: '/brands/', label: 'Brands' }, { label: b.name }]} chips={[b.country]}>
-    {b.logo && <img src={b.logo} alt="" class="max-h-12 mt-5" />}
+    {b.logo && <img src={b.logo} alt="" class:list={['max-h-12 mt-6', b.logoOnDark !== 'original' && 'logo-white']} />}
   </PageHero>
   <section class="section">
     <div class="container-x prose-x">
       <h2>About {b.name}</h2>
       {b.about.map((p) => <p class="mt-3">{p}</p>)}
-      <h2>DEGMARK and {b.name}</h2>
-      <p class="mt-3">{b.relationship}</p>
-      {b.website && <p class="text-[14px] text-muted">Manufacturer website: <a href={b.website} rel="noopener" target="_blank">{b.website.replace('https://', '')}</a></p>}
     </div>
   </section>
   {cats.length > 0 && (
-    <section class="section pt-0"><div class="container-x"><h2 class="mb-5">Product categories</h2>
-      <div class="grid-cards">{cats.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} />)}</div>
+    <section class="section pt-0"><div class="container-x"><h2 class="title-bar mb-7">Product categories</h2>
+      <div class="grid-cards">{cats.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} image={categoryImage[c.slug]} badge={countLabel(modelsInCategory(c.slug))} />)}</div>
     </div></section>
   )}
   <section class="section pt-0">
@@ -45,7 +43,7 @@ const docs = downloads.filter((d) => d.brand === b.name);
     </div>
   </section>
   {docs.length > 0 && (
-    <section class="section pt-0"><div class="container-x"><h2 class="mb-5">Catalogues and datasheets</h2>
+    <section class="section pt-0"><div class="container-x"><h2 class="title-bar mb-7">Catalogues and datasheets</h2>
       <ul class="card">{docs.map((d) => <DownloadRow item={d} />)}</ul>
     </div></section>
   )}
