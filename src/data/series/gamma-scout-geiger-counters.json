@@ -1,0 +1,86 @@
+{
+  "slug": "gamma-scout-geiger-counters",
+  "status": "review",
+  "brand": "Gamma-Scout",
+  "category": "radiation-survey-meters",
+  "subtype": "Personal Geiger counters",
+  "name": "Gamma-Scout Geiger Counters",
+  "summary": "Pocket-sized Geiger counters with an end-window GM tube and a selector for alpha + beta + gamma, beta + gamma or gamma only. They measure dose rate from 0.01 to 1,000 µSv/h and store up to 32,000 readings for long-term monitoring.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "gamma-detection",
+    "alpha-beta-detection",
+    "environmental-monitoring",
+    "dose-measurement"
+  ],
+  "image": "/images/products/gamma-scout-geiger-counters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Alarm and ticker",
+    "Power",
+    "PC connection"
+  ],
+  "models": [
+    {
+      "model": "GAMMA-SCOUT Standard",
+      "anchor": "gamma-scout-standard",
+      "specs": {
+        "Alarm and ticker": "—",
+        "Power": "Long-life lithium battery (years)",
+        "PC connection": "USB data download"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "GAMMA-SCOUT Alert",
+      "anchor": "gamma-scout-alert",
+      "specs": {
+        "Alarm and ticker": "Adjustable dose-rate and dose alarms; audible ticker",
+        "Power": "Long-life lithium battery (years)",
+        "PC connection": "USB data download"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "GAMMA-SCOUT Rechargeable",
+      "anchor": "gamma-scout-rechargeable",
+      "specs": {
+        "Alarm and ticker": "As Alert; ticker runs continuously",
+        "Power": "Rechargeable, via USB or mains adapter",
+        "PC connection": "USB data download"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "GAMMA-SCOUT Online",
+      "anchor": "gamma-scout-online",
+      "specs": {
+        "Alarm and ticker": "As Alert",
+        "Power": "Powered from PC USB while connected",
+        "PC connection": "Real-time data to PC, every 2 s"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.gamma-scout.com",
+    "https://ifsc.usp.br/lavfis/wp-content/uploads/2024/09/Radiation-Detector-GAMMA-SCOUT-Measures-Radioactivity-Easily-and-Reliably.pdf",
+    "https://www.krantz-online.de/en/geiger-counter-gamma-scout-rechargeable/I628",
+    "https://www.krantz-online.de/en/geiger-counter-gamma-scout-online/I629"
+  ],
+  "internalNotes": "Common specs from the Gamma-Scout manual: GM tube 38.1 x 9.1 mm, mica window 1.5–2 mg/cm²; alpha from 4 MeV, beta from 0.2 MeV, gamma from 30 keV; 163 x 72 x 30 mm, approx. 250 g. One reseller lists the Online model's lower limit as 0.1 µSv/h."
+}
