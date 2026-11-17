@@ -25,15 +25,7 @@ export const industryIcon: Record<string, string> = {
   'environmental-monitoring': 'leaf', 'defence-security': 'shield', laboratories: 'flask',
 };
 
-// Photos (public/images). Product photos are the manufacturers' own images; industry and banner photos are Unsplash (free licence).
-export const categoryImage: Record<string, string | undefined> = {
-  'radiation-detectors': '/images/products-hero/radiation-detectors.webp',
-  'radiation-survey-meters': '/images/products-hero/radiation-survey-meters.webp',
-  'radiation-monitoring-systems': '/images/products-hero/radiation-monitoring-systems.webp',
-  'air-sampling-equipment': undefined, // STAPLEX photo to follow
-  'personal-dosimeters': '/images/products-hero/personal-dosimeters.webp',
-  'contamination-monitors': '/images/products-hero/contamination-monitors.webp',
-  'detector-components': '/images/products-hero/detector-components.webp',
-  'gm-tubes': '/images/products-hero/gm-tubes.webp',
-};
-export const industryImage = (slug: string) => `/images/home/ind-${slug}.webp`;
+// Image paths now live in src/data/images.ts (SEO names + alt text).
+export { categoryPhoto as categoryImage } from '../data/images';
+import { industryPhoto } from '../data/images';
+export const industryImage = (slug: string) => industryPhoto[slug];
