@@ -13,5 +13,5 @@
 
 ## Product photos and logos (manufacturers' own images; confirm permission with each principal)
 - products-hero/*: ATOMTEX (atomtex.com) and LND (lndinc.com)
-- brands/lnd.png: LND, Inc.; brands/atomtex.svg: ATOMTEX
-- To add: STAPLEX air sampler photo and logo, Gamma-Scout logo, Arrow-Tech logo (dosimeter.com)
+- brands/lnd.png: LND, Inc.; brands/atomtex.svg: ATOMTEX; brands/gamma-scout.png: Gamma-Scout; brands/arrow-tech.png: Arrow-Tech (dosimeter.com)
+- To add: STAPLEX air sampler photo and logo
