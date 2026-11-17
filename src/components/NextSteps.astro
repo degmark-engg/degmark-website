@@ -1,5 +1,6 @@
 ---
 import { company } from '../data/site';
+import ContactLinks from './ContactLinks.astro';
 ---
 <aside class="flex-[1_1_280px] space-y-4">
   <div class="card p-6">
@@ -7,11 +8,11 @@ import { company } from '../data/site';
     <ol class="space-y-3 text-[15px] list-decimal pl-5">
       <li>We review your requirement and check model suitability.</li>
       <li>We confirm availability and delivery with the manufacturer.</li>
-      <li>You receive a quotation by email within {company.responseTime}.</li>
+      <li>You receive a quotation by email.</li>
     </ol>
   </div>
-  <div class="bg-navy rounded-card p-6 text-on-navy text-[15px] space-y-1">
+  <div class="bg-navy grid-bg rounded-card p-6 text-on-navy text-[15px]">
     <div class="eyebrow text-amber mb-2">Contact directly</div>
-    <p>{company.phone}</p><p>{company.email}</p>
+    <ContactLinks variant="dark" />
   </div>
 </aside>

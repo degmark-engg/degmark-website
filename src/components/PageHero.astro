@@ -17,11 +17,11 @@ const { title, lead, crumbs, chips, panel, image = photos.banner, product } = As
   <img src={image} alt={altFor(image)} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
   <div class="absolute inset-0 -z-10" style="background: linear-gradient(90deg, rgba(10,30,44,.97) 0%, rgba(10,30,44,.9) 45%, rgba(10,30,44,.6) 100%);"></div>
   <div class="absolute inset-0 -z-10 grid-bg opacity-70"></div>
-  <div class="container-x py-12 sm:py-16 flex flex-wrap gap-10 items-center">
+  <div class="container-x py-9 sm:py-11 flex flex-wrap gap-10 items-center">
     <div class="flex-[999_1_560px] min-w-0">
       {crumbs && <Breadcrumb items={crumbs} dark />}
-      <h1 class="title-bar !text-white !text-[34px] sm:!text-[50px] !leading-[1.06] tracking-[-0.02em]">{title}</h1>
-      {lead && <p class="mt-6 text-[17px] sm:text-[18px] leading-relaxed text-on-navy max-w-[640px]">{lead}</p>}
+      <h1 class="title-bar !text-white !text-[32px] sm:!text-[42px] !leading-[1.06] tracking-[-0.02em]">{title}</h1>
+      {lead && <p class="mt-5 text-[16px] sm:text-[17px] leading-relaxed text-on-navy max-w-[640px]">{lead}</p>}
       {chips && chips.length > 0 && <div class="flex flex-wrap gap-2 mt-6">{chips.map((c) => <span class="inline-flex items-center rounded-full border border-white/25 bg-white/[.06] text-white text-[13px] font-semibold px-3 py-1.5">{c}</span>)}</div>}
       <slot />
     </div>

@@ -1,0 +1,43 @@
+---
+// Clickable contact details with icons. `variant`: 'bar' (utility bar), 'dark' (footer), 'light' (cards).
+import Icon from './Icon.astro';
+import WhatsAppIcon from './WhatsAppIcon.astro';
+import { company } from '../data/site';
+interface Props { variant?: 'bar' | 'dark' | 'light'; address?: boolean; }
+const { variant = 'light', address = false } = Astro.props;
+const items = [
+  { href: company.phoneHref, label: company.phone, icon: 'mobile', title: 'Call mobile' },
+  { href: company.landlineHref, label: company.landline, icon: 'phone', title: 'Call landline' },
+  { href: company.emailHref, label: company.email, icon: 'mail', title: 'Email' },
+  { href: company.whatsapp, label: 'WhatsApp', icon: 'whatsapp', title: 'Chat on WhatsApp' },
+];
+const link = {
+  bar: 'inline-flex items-center gap-1.5 text-on-navy-muted no-underline hover:text-white',
+  dark: 'inline-flex items-center gap-2.5 text-on-navy no-underline hover:text-white',
+  light: 'inline-flex items-center gap-3 text-ink no-underline hover:text-teal font-medium',
+}[variant];
+const iconCls = {
+  bar: 'text-teal-bright',
+  dark: 'text-teal-bright',
+  light: 'text-teal',
+}[variant];
+const wrap = variant === 'bar' ? 'flex flex-wrap items-center gap-x-5 gap-y-1' : 'flex flex-col gap-3';
+---
+<ul class={wrap}>
+  {address && (
+    <li class:list={[link, 'hover:!text-inherit']}>
+      {variant === 'light' ? <span class="w-10 h-10 rounded-full bg-teal-tint flex items-center justify-center"><Icon name="pin" size={19} class={iconCls} /></span> : <Icon name="pin" size={17} class={iconCls} />}
+      <span>{company.address}</span>
+    </li>
+  )}
+  {items.map((it) => (
+    <li class:list={[it.icon === 'whatsapp' && variant === 'bar' && 'hidden md:list-item']}>
+      <a href={it.href} class={link} title={it.title} aria-label={`${it.title}: ${it.label}`} target={it.icon === 'whatsapp' ? '_blank' : undefined} rel={it.icon === 'whatsapp' ? 'noopener' : undefined}>
+        {variant === 'light'
+          ? <span class:list={['w-10 h-10 rounded-full flex items-center justify-center', it.icon === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-teal-tint']}>{it.icon === 'whatsapp' ? <WhatsAppIcon size={20} /> : <Icon name={it.icon} size={19} class={iconCls} />}</span>
+          : (it.icon === 'whatsapp' ? <WhatsAppIcon size={variant === 'bar' ? 14 : 17} class="text-[#25D366]" /> : <Icon name={it.icon} size={variant === 'bar' ? 14 : 17} class={iconCls} />)}
+        <span>{it.label}</span>
+      </a>
+    </li>
+  ))}
+</ul>

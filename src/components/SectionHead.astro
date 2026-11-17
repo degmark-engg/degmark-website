@@ -3,11 +3,11 @@
 interface Props { title: string; href?: string; linkText?: string; eyebrow?: string; lead?: string; dark?: boolean; center?: boolean; }
 const { title, href, linkText = 'View all →', eyebrow, lead, dark = false, center = false } = Astro.props;
 ---
-<div class:list={['flex flex-wrap gap-x-6 gap-y-4 mb-10 reveal', center ? 'flex-col items-center text-center' : 'items-end justify-between']}>
+<div class:list={['flex flex-wrap gap-x-6 gap-y-3 mb-7 reveal', center ? 'flex-col items-center text-center' : 'items-end justify-between']}>
   <div class:list={['max-w-[700px]', center && 'flex flex-col items-center']}>
     {eyebrow && <div class:list={['eyebrow mb-3', dark ? 'text-teal-bright' : 'text-teal']}>{eyebrow}</div>}
-    <h2 class:list={['title-bar !text-[30px] sm:!text-[40px] !leading-[1.1] tracking-[-0.015em]', center && 'title-bar-center', dark && '!text-white']}>{title}</h2>
-    {lead && <p class:list={['mt-5 text-[17px] leading-relaxed', dark ? 'text-on-navy' : 'text-ink-soft']}>{lead}</p>}
+    <h2 class:list={['title-bar !text-[26px] sm:!text-[34px] !leading-[1.12] tracking-[-0.015em]', center && 'title-bar-center', dark && '!text-white']}>{title}</h2>
+    {lead && <p class:list={['mt-4 text-[16px] leading-relaxed', dark ? 'text-on-navy' : 'text-ink-soft']}>{lead}</p>}
   </div>
   {href && <a href={href} class:list={['inline-flex items-center gap-2 text-[15px] font-semibold no-underline border-b-2 pb-1 transition-colors', dark ? 'text-white border-amber hover:text-amber' : 'text-navy border-amber hover:text-teal']}>{linkText.replace(/\s*→\s*$/, '')} <span aria-hidden="true">→</span></a>}
 </div>

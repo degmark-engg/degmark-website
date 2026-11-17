@@ -1,8 +1,7 @@
 ---
 import { company, footerNav } from '../data/site';
-import { isPlaceholder } from '../lib/series';
 import Icon from './Icon.astro';
-const contacts = [company.phone, company.email].filter((v) => !isPlaceholder(v));
+import ContactLinks from './ContactLinks.astro';
 ---
 <footer class="bg-navy-deep text-on-navy grid-bg">
   <div class="h-1 bg-gradient-to-r from-teal via-teal-bright to-amber"></div>
@@ -24,9 +23,8 @@ const contacts = [company.phone, company.email].filter((v) => !isPlaceholder(v))
     </nav>
     <div class="text-[14px] space-y-2">
       <div class="eyebrow text-teal-bright mb-3">Contact</div>
-      <p class="flex gap-2 items-start"><Icon name="pin" size={18} class="text-teal-bright mt-0.5" />{company.address}</p>
-      {contacts.map((c) => <p>{c}</p>)}
-      <a href="/contact/" class="inline-block text-teal-bright font-semibold no-underline hover:text-white">Contact us →</a>
+      <ContactLinks variant="dark" address />
+      <a href="/contact/" class="inline-block mt-2 text-teal-bright font-semibold no-underline hover:text-white">Contact us →</a>
     </div>
   </div>
   <div class="border-t border-white/10">
