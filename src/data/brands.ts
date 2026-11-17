@@ -55,10 +55,11 @@ export const brands: Brand[] = [
   {
     slug: 'gamma-scout',
     name: 'Gamma-Scout',
-    country: '[PLACEHOLDER: country]',
+    country: 'Germany',
     oneLine: 'Compact Geiger counters with data logging.',
     about: [
       'Gamma-Scout makes compact Geiger counters that detect alpha, beta, gamma and X-ray radiation and log readings for long-term monitoring.',
+      'Its instruments are developed and built in Germany and are used for environmental checks, education, laboratories and personal monitoring.',
     ],
     relationship: rel('Gamma-Scout'),
     website: 'https://www.gamma-scout.com',
