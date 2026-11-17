@@ -18,7 +18,11 @@ jobs:
       - run: npm run build
       # Add these three secrets in GitHub: Settings → Secrets and variables → Actions
       #   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD  (from Hostinger hPanel → Files → FTP Accounts)
+      # Upload is skipped until the FTP secrets are added (the build still runs as a check).
       - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        if: ${{ env.FTP_SERVER != '' }}
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
