@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import SectionHead from '../components/SectionHead.astro';
 import Icon from '../components/Icon.astro';
 import EnquiryStrip from '../components/EnquiryStrip.astro';
+import { photos, altFor, applicationPhoto } from '../data/images';
 import { company } from '../data/site';
 import { categories } from '../data/categories';
 import { brands } from '../data/brands';
@@ -23,18 +24,8 @@ const tiles = [
 ];
 
 // Measurement tiles: every application, each with a product photo (ATOMTEX) or icon until a photo is added.
-const measureImage: Record<string, string | undefined> = {
-  'gamma-detection': '/images/measure/gamma.webp',
-  'alpha-beta-detection': '/images/products-hero/contamination-monitors.webp',
-  'neutron-detection': '/images/measure/neutron.webp',
-  'dose-measurement': '/images/measure/dose.webp',
-  'personnel-monitoring': '/images/products-hero/personal-dosimeters.webp',
-  'air-sampling': undefined, // STAPLEX photo to follow
-  'contamination-monitoring': '/images/measure/contamination.webp',
-  'environmental-monitoring': '/images/products-hero/radiation-monitoring-systems.webp',
-};
 const symbol: Record<string, string> = { 'gamma-detection': 'γ', 'alpha-beta-detection': 'αβ', 'neutron-detection': 'n' };
-const measures = applications.map((a) => ({ slug: a.slug, name: a.name, img: measureImage[a.slug], icon: applicationIcon[a.slug], sym: symbol[a.slug] }));
+const measures = applications.map((a) => ({ slug: a.slug, name: a.name, img: applicationPhoto[a.slug], icon: applicationIcon[a.slug], sym: symbol[a.slug] }));
 
 const stats = [
   [`${totalModels}+`, 'Models listed'],
@@ -53,7 +44,7 @@ const points = [
 
   <!-- 1. Photo banner -->
   <section class="relative isolate overflow-hidden bg-navy-deep text-white">
-    <img src="/images/home/hero.webp" alt="" class="kenburns absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" fetchpriority="high" />
+    <img src={photos.banner} alt={altFor(photos.banner)} class="kenburns absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" fetchpriority="high" />
     <div class="absolute inset-0 -z-10" style="background: linear-gradient(90deg, rgba(10,30,44,.96) 0%, rgba(10,30,44,.86) 38%, rgba(10,30,44,.25) 72%, rgba(10,30,44,.05) 100%), linear-gradient(0deg, rgba(10,30,44,.9) 0%, rgba(10,30,44,0) 35%);"></div>
     <div class="container-x min-h-[560px] lg:min-h-[640px] flex flex-col justify-center pt-16 pb-10">
       <div class="max-w-[680px]">
@@ -86,7 +77,7 @@ const points = [
       <ul class="flex flex-wrap items-center gap-x-10 gap-y-4 flex-1 lg:justify-between">
         {principals.map((b) => (
           <li><a href={`/brands/${b.slug}/`} class="group block no-underline" aria-label={b.name}>
-            {b.logo ? <img src={b.logo} alt={b.name} class:list={['h-7 sm:h-8 w-auto max-w-[150px] sm:max-w-[175px] object-contain transition', b.logoOnLight === 'dark' ? 'logo-dark group-hover:opacity-100' : 'logo-grey group-hover:filter-none group-hover:opacity-100']} /> : <span class="wordmark text-[20px] text-[#7A8792] group-hover:text-navy transition-colors">{b.name}</span>}
+            {b.logo ? <img src={b.logo} alt={`${b.name} logo`} class:list={['h-7 sm:h-8 w-auto max-w-[150px] sm:max-w-[175px] object-contain transition', b.logoOnLight === 'dark' ? 'logo-dark group-hover:opacity-100' : 'logo-grey group-hover:filter-none group-hover:opacity-100']} /> : <span class="wordmark text-[20px] text-[#7A8792] group-hover:text-navy transition-colors">{b.name}</span>}
           </a></li>
         ))}
       </ul>
@@ -101,7 +92,7 @@ const points = [
         {tiles.map((t) => (
           <a href={t.href} class="group reveal relative overflow-hidden rounded-card bg-surface border border-line no-underline text-ink hover:text-ink hover:border-teal lift flex flex-col">
             <div class="relative h-[130px] sm:h-[180px] bg-surface-muted flex items-center justify-center p-4 pt-8 sm:p-5">
-              {t.img ? <img src={t.img} alt="" class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={t.icon} size={64} class="text-teal opacity-80" />}
+              {t.img ? <img src={t.img} alt={altFor(t.img)} class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={t.icon} size={64} class="text-teal opacity-80" />}
               <span class:list={['count-badge absolute top-2 right-2 sm:top-3 sm:right-3 !text-[10.5px] sm:!text-[12px]', t.count === 'On request' && 'count-badge-muted !bg-white']}>{t.count}</span>
             </div>
             <div class="px-3.5 sm:px-5 py-3 sm:py-4 flex items-center justify-between gap-2 flex-1">
@@ -121,7 +112,7 @@ const points = [
       <div class="scroll-x gap-4 -mx-4 px-4 sm:mx-0 sm:px-0 pb-2">
         {industries.map((i) => (
           <a href={`/industries/${i.slug}/`} class="group reveal relative isolate overflow-hidden rounded-card aspect-[4/3] no-underline text-white hover:text-white">
-            <img src={industryImage(i.slug)} alt="" class="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.07]" loading="lazy" />
+            <img src={industryImage(i.slug)} alt={altFor(industryImage(i.slug))} class="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.07]" loading="lazy" />
             <div class="absolute inset-0 -z-10 bg-gradient-to-t from-navy-deep via-navy-deep/45 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
               <span class="block h-[3px] w-10 bg-amber mb-2.5 transition-all duration-300 group-hover:w-16"></span>
@@ -148,7 +139,7 @@ const points = [
         {measures.map((m) => (
           <a href={`/applications/${m.slug}/`} class="group reveal lift relative overflow-hidden rounded-card bg-navy-light border border-white/10 no-underline text-white hover:text-white hover:border-amber flex flex-col">
             <div class="relative h-[100px] sm:h-[120px] bg-surface flex items-center justify-center p-3">
-              {m.img ? <img src={m.img} alt="" class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={m.icon} size={52} class="text-navy" />}
+              {m.img ? <img src={m.img} alt={altFor(m.img)} class="max-h-full max-w-full w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={m.icon} size={52} class="text-navy" />}
               {m.sym && <span class="absolute top-2 left-2 min-w-8 h-8 px-1.5 rounded-btn bg-amber text-navy font-display font-extrabold text-[17px] flex items-center justify-center">{m.sym}</span>}
             </div>
             <div class="px-3.5 sm:px-4 py-3 flex items-center justify-between gap-2 flex-1">
@@ -182,7 +173,7 @@ const points = [
         <a href="/about/" class="inline-flex items-center gap-2 mt-8 text-[15px] font-semibold text-navy no-underline border-b-2 border-amber pb-1 hover:text-teal">More about DEGMARK <span aria-hidden="true">→</span></a>
       </div>
       <div class="relative reveal">
-        <img src="/images/home/ind-atomic-energy-research.webp" alt="Stainless-steel research instrumentation" class="w-full h-[200px] sm:h-[240px] object-cover rounded-card" loading="lazy" />
+        <img src={photos.about} alt={altFor(photos.about)} class="w-full h-[200px] sm:h-[240px] object-cover rounded-card" loading="lazy" />
         <div class="absolute -bottom-5 left-4 bg-navy text-white rounded-card px-5 py-4 shadow-[0_24px_48px_-20px_rgba(10,30,44,.6)] max-w-[260px]">
           <div class="font-mono text-[11px] uppercase tracking-[0.14em] text-amber">Established</div>
           <div class:list={['font-display font-extrabold mt-1 leading-tight', company.founded.startsWith('[') ? 'text-[18px] text-amber' : 'text-[30px]']}>{company.founded}</div>
