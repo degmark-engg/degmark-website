@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import type { Download } from '../data/resources';
+interface Props { item: Download; }
+const { item } = Astro.props;
+---
+<li class="flex flex-wrap items-center gap-4 px-5 py-4 border-t border-line first:border-t-0" data-brand={item.brand}>
+  <Icon name="document" size={28} />
+  <div class="flex-1 min-w-[200px]"><div class="font-semibold">{item.title}</div><div class="text-[13px] text-muted">{item.brand} · {item.format}{item.size && ` · ${item.size}`}</div></div>
+  {item.file ? <a href={item.file} class="font-semibold">Download</a> : <a href={`/request-a-quote/?doc=${encodeURIComponent(item.title)}`} class="font-semibold">Available on request</a>}
+</li>

@@ -1,0 +1,38 @@
+---
+import { mainNav } from '../data/site';
+import Icon from './Icon.astro';
+const path = Astro.url.pathname;
+const active = (href: string) => path.startsWith(href);
+---
+<header class="bg-surface border-b border-line sticky top-0 z-20">
+  <div class="container-x flex items-center justify-between gap-4 min-h-16">
+    <a href="/" class="flex items-center gap-2 no-underline text-navy hover:text-navy" aria-label="DEGMARK home">
+      <Icon name="logo" size={26} class="text-teal" />
+      <span class="text-[22px] font-bold tracking-[0.06em]">DEGMARK</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Main">
+      {mainNav.map((n) => (
+        <a href={n.href} class:list={['px-2.5 py-5 text-[15px] font-medium no-underline border-b-2', active(n.href) ? 'text-teal border-teal' : 'text-ink border-transparent hover:text-teal']}>{n.label}</a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="/search/" class="inline-flex items-center justify-center w-11 h-11 rounded-btn text-ink hover:text-teal" aria-label="Search"><Icon name="search" size={22} class="" /></a>
+      <a href="/request-a-quote/" class="btn-primary hidden sm:inline-flex">Request a Quote</a>
+      <button type="button" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-btn border border-line text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" id="menu-btn"><Icon name="menu" size={22} class="" /></button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="lg:hidden hidden border-t border-line bg-surface" aria-label="Main mobile">
+    <div class="container-x py-2 flex flex-col">
+      {mainNav.map((n) => <a href={n.href} class:list={['py-3 text-[16px] font-medium no-underline border-b border-line', active(n.href) ? 'text-teal' : 'text-ink']}>{n.label}</a>)}
+      <a href="/request-a-quote/" class="btn-primary my-3">Request a Quote</a>
+    </div>
+  </nav>
+</header>
+<script>
+  const b = document.getElementById('menu-btn');
+  const n = document.getElementById('mobile-nav');
+  b?.addEventListener('click', () => {
+    const open = n?.classList.toggle('hidden') === false;
+    b.setAttribute('aria-expanded', String(open));
+  });
+</script>

@@ -1,0 +1,6 @@
+---
+interface Props { brand: string; }
+const { brand } = Astro.props;
+const other = brand.toLowerCase().startsWith('other');
+---
+<span class:list={['inline-flex items-center rounded-full px-2.5 py-0.5 text-[12px] font-semibold text-white', other ? 'bg-muted' : 'bg-navy']}>{brand}</span>

@@ -1,0 +1,9 @@
+---
+interface Props { title: string; text: string; href: string; label: string; dark?: boolean; }
+const { title, text, href, label, dark = false } = Astro.props;
+---
+<div class:list={['rounded-card p-6 flex flex-col gap-3 items-start', dark ? 'bg-navy' : 'card']}>
+  <h2 class:list={['!text-[20px]', dark ? '!text-white' : '']}>{title}</h2>
+  <p class={dark ? 'text-on-navy' : 'text-ink-soft'}>{text}</p>
+  <a href={href} class={dark ? 'btn-accent' : 'btn-primary'}>{label}</a>
+</div>

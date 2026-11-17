@@ -1,0 +1,8 @@
+---
+interface Props { text?: string; }
+const { text = 'Other models in this series are available on request.' } = Astro.props;
+---
+<div class="rounded-card bg-teal-tint text-teal-tint-text px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+  <p class="font-medium">{text}</p>
+  <a href="/request-a-quote/" class="font-semibold">Request a model →</a>
+</div>

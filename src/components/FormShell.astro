@@ -1,0 +1,12 @@
+---
+// Shared enquiry form wrapper: honeypot + form type. Posted to /forms/send.php on the server.
+interface Props { type: 'quote' | 'upload' | 'contact'; upload?: boolean; submit: string; }
+const { type, upload = false, submit } = Astro.props;
+---
+<form method="post" action="/forms/send.php" enctype={upload ? 'multipart/form-data' : undefined} class="card p-6 space-y-4">
+  <input type="hidden" name="form_type" value={type} />
+  <div class="absolute -left-[9999px]" aria-hidden="true"><label>Leave empty<input type="text" name="company_website" tabindex="-1" autocomplete="off" /></label></div>
+  <slot />
+  <p class="text-[13px] text-muted">By sending this form you agree to our <a href="/privacy-policy/">privacy policy</a>.</p>
+  <button type="submit" class="btn-primary">{submit}</button>
+</form>

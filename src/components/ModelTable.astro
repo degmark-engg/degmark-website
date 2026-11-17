@@ -1,0 +1,30 @@
+---
+import Icon from './Icon.astro';
+import type { Series } from '../lib/series';
+interface Props { series: Series; }
+const { series: s } = Astro.props;
+const quote = (m: string) => `/request-a-quote/?model=${encodeURIComponent(m)}`;
+---
+<div class="card overflow-x-auto relative">
+  <table class="w-full text-left border-collapse min-w-[640px]">
+    <caption class="sr-only">Key models in {s.name}</caption>
+    <thead class="bg-surface-muted">
+      <tr class="text-[13px] font-semibold uppercase text-muted">
+        <th scope="col" class="px-4 py-3 sticky left-0 bg-surface-muted">Model</th>
+        {s.specColumns.map((c) => <th scope="col" class="px-4 py-3">{c}</th>)}
+        <th scope="col" class="px-4 py-3">Datasheet</th>
+        <th scope="col" class="px-4 py-3"><span class="sr-only">Request quote</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      {s.models.map((m) => (
+        <tr id={m.anchor} class="model-row border-t border-line hover:bg-teal-tint/60 text-[15px]">
+          <th scope="row" class="px-4 py-3 sticky left-0 bg-inherit"><span class="model text-[16px]" data-pagefind-meta="model">{m.model}</span>{m.note && <div class="text-[13px] text-muted font-normal">{m.note}</div>}</th>
+          {s.specColumns.map((c) => <td class="px-4 py-3">{m.specs[c] ?? '—'}</td>)}
+          <td class="px-4 py-3">{m.datasheet ? <a href={m.datasheet} class="inline-flex items-center gap-1 text-[14px] font-semibold no-underline" aria-label={`Datasheet for ${m.model}`}><Icon name="download" size={18} class="" />PDF</a> : <span class="text-[13px] text-muted">On request</span>}</td>
+          <td class="px-4 py-3 whitespace-nowrap"><a href={quote(m.model)} class="text-[14px] font-semibold no-underline">Request quote</a></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

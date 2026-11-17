@@ -1,0 +1,12 @@
+---
+interface Props { label: string; name: string; type?: string; required?: boolean; textarea?: boolean; rows?: number; hint?: string; accept?: string; autocomplete?: string; }
+const { label, name, type = 'text', required = false, textarea = false, rows = 5, hint, accept, autocomplete } = Astro.props;
+const id = `f-${name}`;
+---
+<div>
+  <label for={id} class="field-label">{label}{required ? <span class="text-teal"> *</span> : <span class="font-normal text-muted"> (optional)</span>}</label>
+  {textarea
+    ? <textarea id={id} name={name} rows={rows} required={required} class="field"></textarea>
+    : <input id={id} name={name} type={type} required={required} accept={accept} autocomplete={autocomplete} class="field" />}
+  {hint && <p class="text-[13px] text-muted mt-1">{hint}</p>}
+</div>
