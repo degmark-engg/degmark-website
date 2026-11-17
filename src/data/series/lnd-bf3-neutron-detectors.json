@@ -12,7 +12,7 @@
   "applications": [
     "neutron-detection"
   ],
-  "image": "/images/products/lnd-bf3-neutron-detectors.jpg",
+  "image": "/images/products/lnd-bf3-neutron-detectors.webp",
   "catalogue": null,
   "specColumns": [
     "Max length (mm)",
