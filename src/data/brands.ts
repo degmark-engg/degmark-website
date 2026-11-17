@@ -69,6 +69,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('Gamma-Scout'),
     website: 'https://www.gamma-scout.com',
+    logo: '/images/brands/gamma-scout.png',
   },
   {
     slug: 'arrow-tech',
@@ -81,6 +82,9 @@ export const brands: Brand[] = [
     ],
     relationship: rel('Arrow-Tech'),
     website: 'https://www.dosimeter.com',
+    logo: '/images/brands/arrow-tech.png',
+    logoOnLight: 'dark',
+    logoOnDark: 'original',
   },
   {
     slug: 'other-manufacturers',
