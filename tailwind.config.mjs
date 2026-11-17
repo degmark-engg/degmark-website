@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#0F2A3D',
+        navy: { DEFAULT: '#0F2A3D', deep: '#0A1E2C', light: '#173A52' },
+        'teal-bright': '#4FC3CF',
         teal: { DEFAULT: '#0B6670', dark: '#084E56', tint: '#E6F0F1', 'tint-text': '#0B4F56' },
         amber: '#F2B33D',
         page: '#F4F6F7',
@@ -16,6 +17,7 @@ export default {
       },
       fontFamily: {
         sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        display: ['Archivo', '"IBM Plex Sans"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       maxWidth: { container: '1200px' },

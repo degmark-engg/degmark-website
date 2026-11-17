@@ -12,7 +12,9 @@ to see the style; match its colours, spacing, cards and buttons on every page.
 - **International.** Nothing should read as local or India-only.
 - **Scannable.** Card grids, short paragraphs, clear headings, specs in tables.
 - **Two actions everywhere.** "Request a quote" and "Upload requirement" are always one click away.
-- **No clutter.** No gradients, no stock-photo banners, no carousels, no emoji, no pop-ups.
+- **Photography-led.** The home page opens with a full-width photo banner under a navy overlay; inner pages use a navy photo banner. Product photos sit on light grey tiles. No carousels, no emoji, no pop-ups.
+- **Alternating bands.** Sections alternate white / light grey / navy / deep teal so no two neighbouring sections look the same.
+- **Section titles** carry a short amber underline (`.title-bar`). Every card is clickable as a whole, not just its link text.
 - **No invented content.** Unknown facts stay as `[PLACEHOLDER]`.
 
 ---
@@ -26,7 +28,9 @@ to see the style; match its colours, spacing, cards and buttons on every page.
 | `teal-dark` | `#084E56` | Link and button hover |
 | `teal-tint` | `#E6F0F1` | Chips / tag background |
 | `teal-tint-text` | `#0B4F56` | Chip text |
-| `amber` | `#F2B33D` | Small highlights and buttons **on navy only**. Never amber text on white |
+| `amber` | `#F2B33D` | Buttons and highlights on navy, title underlines on any background. Never amber body text on white |
+| `navy-deep` | `#0A1E2C` | Banner overlays, footer, utility bar |
+| `teal-bright` | `#4FC3CF` | Accents and eyebrows on navy only |
 | `page` | `#F4F6F7` | Page background |
 | `surface` | `#FFFFFF` | Cards, header, hero band |
 | `surface-muted` | `#EEF2F4` | Image placeholders, table header rows |
