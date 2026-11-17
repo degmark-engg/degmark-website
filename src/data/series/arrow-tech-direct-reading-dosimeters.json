@@ -1,0 +1,177 @@
+{
+  "slug": "arrow-tech-direct-reading-dosimeters",
+  "status": "review",
+  "brand": "Arrow-Tech",
+  "category": "personal-dosimeters",
+  "subtype": "Direct-reading",
+  "name": "Arrow-Tech Direct-Reading Dosimeters",
+  "summary": "Pen-type quartz-fibre dosimeters that show accumulated gamma and X-ray dose at a glance, with no batteries. They cover photon energies from 16 keV to 6 MeV with accuracy within ±10%, in ranges from 200 mR to 600 R.",
+  "radiationTypes": [
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "personnel-monitoring",
+    "dose-measurement"
+  ],
+  "image": "/images/products/arrow-tech-direct-reading-dosimeters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Range",
+    "Units",
+    "Window"
+  ],
+  "models": [
+    {
+      "model": "W138",
+      "anchor": "arrow-tech-w138",
+      "specs": {
+        "Range": "0–200 mR",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W138-S",
+      "anchor": "arrow-tech-w138-s",
+      "specs": {
+        "Range": "0–2 mSv",
+        "Units": "SI (Sv)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W500",
+      "anchor": "arrow-tech-w500",
+      "specs": {
+        "Range": "0–500 mR",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W500-S",
+      "anchor": "arrow-tech-w500-s",
+      "specs": {
+        "Range": "0–5 mSv",
+        "Units": "SI (Sv)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W720",
+      "anchor": "arrow-tech-w720",
+      "specs": {
+        "Range": "0–2 R",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W725",
+      "anchor": "arrow-tech-w725",
+      "specs": {
+        "Range": "0–5 R",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W725-S",
+      "anchor": "arrow-tech-w725-s",
+      "specs": {
+        "Range": "0–50 mSv",
+        "Units": "SI (Sv)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W730",
+      "anchor": "arrow-tech-w730",
+      "specs": {
+        "Range": "0–20 R",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "W735",
+      "anchor": "arrow-tech-w735",
+      "specs": {
+        "Range": "0–50 R",
+        "Units": "Roentgen (R)",
+        "Window": "Sapphire"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "740",
+      "anchor": "arrow-tech-740",
+      "specs": {
+        "Range": "0–100 R",
+        "Units": "Roentgen (R)",
+        "Window": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "742",
+      "anchor": "arrow-tech-742",
+      "specs": {
+        "Range": "0–200 R",
+        "Units": "Roentgen (R)",
+        "Window": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "746",
+      "anchor": "arrow-tech-746",
+      "specs": {
+        "Range": "0–600 R",
+        "Units": "Roentgen (R)",
+        "Window": "Details on request"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://arrowtechinc.com/product/",
+    "https://arrowtechinc.com/product-category/pen-dosimeter/",
+    "https://arrowtechinc.com/wp-content/uploads/2024/09/Arrowtech_Pen_Dosimeter_R_and_MR_Range.pdf"
+  ],
+  "internalNotes": "Ranges from Arrow-Tech product pages. -S = SI units. Energy 16 keV–6 MeV and ±10% accuracy are line-wide specs. 740/742/746 window type not stated."
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "arrow-tech-dosimeter-chargers-accessories",
+  "status": "review",
+  "brand": "Arrow-Tech",
+  "category": "personal-dosimeters",
+  "subtype": "Direct-reading",
+  "name": "Arrow-Tech Dosimeter Chargers & Accessories",
+  "summary": "Chargers that zero direct-reading dosimeters before use, plus reading lights and a checker for testing several dosimeters at once.",
+  "radiationTypes": [
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "personnel-monitoring"
+  ],
+  "image": "/images/products/arrow-tech-dosimeter-chargers-accessories.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "909C",
+      "anchor": "arrow-tech-909c",
+      "specs": {
+        "Description": "Charger for any direct-reading dosimeter; 3.7 V 3000 mAh lithium battery, 40–200 V charging, LED reading light, ANSI N42.6"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "909B",
+      "anchor": "arrow-tech-909b",
+      "specs": {
+        "Description": "Charger with LED reading light and mechanical stop to protect dosimeters from over-charging"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "750-6",
+      "anchor": "arrow-tech-750-6",
+      "specs": {
+        "Description": "Hand-operated piezoelectric charger for quartz or carbon-fibre dosimeters; no batteries needed"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Dosi-Lite",
+      "anchor": "arrow-tech-dosi-lite",
+      "specs": {
+        "Description": "LED light that slides onto the charger for reading dosimeters in low light"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "DC-DRD6Hole",
+      "anchor": "arrow-tech-dc-drd6hole",
+      "specs": {
+        "Description": "Checker for functional testing of up to six direct-reading dosimeters at once"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://arrowtechinc.com/product/",
+    "https://www.environmental-expert.com/companies/arrow-tech-inc-97114/products"
+  ],
+  "internalNotes": "909B power source not confirmed."
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "arrow-tech-survey-meters",
+  "status": "review",
+  "brand": "Arrow-Tech",
+  "category": "radiation-survey-meters",
+  "subtype": "Gamma dose-rate meters",
+  "name": "Arrow-Tech Survey Meters",
+  "summary": "Rugged analogue survey meters for radiation protection checks and industrial radiography, with external probes for alpha and beta contamination work.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "dose-measurement",
+    "gamma-detection",
+    "contamination-monitoring"
+  ],
+  "image": "/images/products/arrow-tech-survey-meters.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "3007A",
+      "anchor": "arrow-tech-3007a",
+      "specs": {
+        "Description": "Full-size survey meter for alpha, beta, gamma and X-ray with external probes; 0–50 mR/h in x1, x10, x100 ranges"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "4007A",
+      "anchor": "arrow-tech-4007a",
+      "specs": {
+        "Description": "Newer version of the 3007A in a fibreglass-reinforced case"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "3009A",
+      "anchor": "arrow-tech-3009a",
+      "specs": {
+        "Description": "Rugged survey meter for industrial radiography"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "4009A",
+      "anchor": "arrow-tech-4009a",
+      "specs": {
+        "Description": "Radiography survey meter with energy-compensated internal detector; meets 10 CFR Part 34"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "370",
+      "anchor": "arrow-tech-370",
+      "specs": {
+        "Description": "End-window probe for alpha and beta contamination monitoring"
+      },
+      "datasheet": null,
+      "note": "Probe",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://arrowtechinc.com/product/",
+    "https://arrowtechinc.com/products/3007a-survey-meter/",
+    "https://arrowtechinc.com/products/4009a-survey-meter/"
+  ],
+  "internalNotes": "Excluded resold products from other makers (SE International Inspector/Monitor/Ranger, Ludlum 375, CT008-F)."
+}
