@@ -4,11 +4,12 @@ import PageHero from '../../components/PageHero.astro';
 import LinkCard from '../../components/LinkCard.astro';
 import EnquiryStrip from '../../components/EnquiryStrip.astro';
 import { applications } from '../../data/applications';
+import { applicationIcon } from '../../lib/stats';
 ---
 <Base title="Applications" description="Find the right radiation instrument by measurement task: gamma, alpha/beta and neutron detection, dose, personnel, air sampling, contamination and environmental monitoring.">
   <PageHero title="Applications" lead="Start from what you need to measure. Each page explains the measurement and the instrument types that suit it." crumbs={[{ label: 'Applications' }]} />
   <section class="section"><div class="container-x grid-cards">
-    {applications.map((a) => <LinkCard href={`/applications/${a.slug}/`} title={a.name} text={a.question} icon="gamma" cta="Learn more →" />)}
+    {applications.map((a) => <LinkCard href={`/applications/${a.slug}/`} title={a.name} text={a.question} icon={applicationIcon[a.slug]} cta="Learn more →" />)}
   </div></section>
   <EnquiryStrip />
 </Base>
