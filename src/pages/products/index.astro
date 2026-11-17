@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
-import LinkCard from '../../components/LinkCard.astro';
+import Icon from '../../components/Icon.astro';
 import EnquiryStrip from '../../components/EnquiryStrip.astro';
 import { categories } from '../../data/categories';
 ---
@@ -10,9 +10,13 @@ import { categories } from '../../data/categories';
   <section class="section">
     <div class="container-x grid-cards">
       {categories.map((c) => (
-        <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon}>
-          <ul class="text-[13px] text-muted list-disc pl-5">{c.subtypes.map((s) => <li>{s}</li>)}</ul>
-        </LinkCard>
+        <div class="card p-5 flex flex-col gap-2">
+          <Icon name={c.icon} />
+          <h2 class="!text-[18px]"><a href={`/products/${c.slug}/`} class="text-ink no-underline hover:text-teal">{c.name}</a></h2>
+          <p class="text-[14px] text-muted">{c.short}</p>
+          <ul class="text-[14px] space-y-1">{c.subtypes.map((s) => <li><a href={`/products/${c.slug}/?subtype=${encodeURIComponent(s)}`} class="no-underline">{s}</a></li>)}</ul>
+          <a href={`/products/${c.slug}/`} class="link-arrow mt-auto pt-1">View range →</a>
+        </div>
       ))}
     </div>
   </section>
