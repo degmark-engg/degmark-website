@@ -1,0 +1,176 @@
+{
+  "slug": "staplex-high-volume-air-samplers",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "High-volume samplers",
+  "name": "STAPLEX High-Volume Air Samplers",
+  "summary": "Portable high-volume samplers that draw large volumes of air through a filter to collect airborne particulates for radioactivity counting. Available for 110 V, 230 V and 24 V DC supplies, with optional flow adjuster and countdown timer.",
+  "radiationTypes": [
+    "Airborne particulates",
+    "Radioiodine"
+  ],
+  "applications": [
+    "air-sampling",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/staplex-high-volume-air-samplers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Power supply",
+    "Flow range",
+    "Filter holder",
+    "Built-in features"
+  ],
+  "models": [
+    {
+      "model": "TFIA",
+      "anchor": "staplex-tfia",
+      "specs": {
+        "Power supply": "110–125 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "—"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-F",
+      "anchor": "staplex-tfia-f",
+      "specs": {
+        "Power supply": "110–125 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Flow adjuster"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-CDT",
+      "anchor": "staplex-tfia-cdt",
+      "specs": {
+        "Power supply": "110–125 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Countdown timer (LCD)"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-2",
+      "anchor": "staplex-tfia-2",
+      "specs": {
+        "Power supply": "220–240 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "—"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-2F",
+      "anchor": "staplex-tfia-2f",
+      "specs": {
+        "Power supply": "220–240 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Flow adjuster"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-2CDT",
+      "anchor": "staplex-tfia-2cdt",
+      "specs": {
+        "Power supply": "220–240 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Countdown timer (LCD)"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-2FCDT",
+      "anchor": "staplex-tfia-2fcdt",
+      "specs": {
+        "Power supply": "220–240 V AC/DC, 50/60 Hz",
+        "Flow range": "0–70 cfm (0–2 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Flow adjuster and countdown timer"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-4",
+      "anchor": "staplex-tfia-4",
+      "specs": {
+        "Power supply": "24 V DC, 16 A",
+        "Flow range": "Up to 35 cfm (1 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "—"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFIA-4BC",
+      "anchor": "staplex-tfia-4bc",
+      "specs": {
+        "Power supply": "24 V DC, 16 A",
+        "Flow range": "Up to 35 cfm (1 m³/min)",
+        "Filter holder": "4\" (102 mm) dia.",
+        "Built-in features": "Battery cable with clamps"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFRC-2",
+      "anchor": "staplex-tfrc-2",
+      "specs": {
+        "Power supply": "[to confirm]",
+        "Flow range": "[to confirm]",
+        "Filter holder": "Particulate filter + charcoal cartridge",
+        "Built-in features": "[to confirm]"
+      },
+      "datasheet": null,
+      "note": "Radioiodine sampler",
+      "verified": false
+    },
+    {
+      "model": "TFRC-4IA",
+      "anchor": "staplex-tfrc-4ia",
+      "specs": {
+        "Power supply": "[to confirm]",
+        "Flow range": "[to confirm]",
+        "Filter holder": "Particulate filter + charcoal cartridge",
+        "Built-in features": "[to confirm]"
+      },
+      "datasheet": null,
+      "note": "Radioiodine sampler",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "Staplex TFIA series datasheet (mirror): https://www.yumpu.com/en/document/view/24692583/model-tfia-series-high-volume-air-samplers",
+    "TFRC: https://www.staplex.com/airsamplers/radioiodine/ (page not readable; details to confirm)"
+  ],
+  "internalNotes": "Research draft. TFIA figures from Staplex TFIA datasheet. Suffixes: F = flow adjuster, CDT = countdown timer, -2 = 220–240 V, -4 = 24 V DC. TFRC details could not be confirmed online. Motor is a brushed universal motor (brushes need periodic replacement)."
+}

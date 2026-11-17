@@ -1,0 +1,68 @@
+{
+  "slug": "staplex-calibration-kits",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "Accessories",
+  "name": "STAPLEX Calibration Kits & Flow Adjusters",
+  "summary": "Kits for calibrating high-volume sampler flow and adjusters for setting flow rate, used to keep sample volumes traceable.",
+  "radiationTypes": [
+    "Airborne particulates"
+  ],
+  "applications": [
+    "air-sampling"
+  ],
+  "image": "/images/products/staplex-calibration-kits.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "CKHV",
+      "anchor": "staplex-ckhv",
+      "specs": {
+        "Description": "Calibration kit for TFIA-series samplers with the 4\" filter holder"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "CKHV810",
+      "anchor": "staplex-ckhv810",
+      "specs": {
+        "Description": "Calibration kit for high-volume samplers, for 4\" or 8\" x 10\" filter holders"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "FA-1",
+      "anchor": "staplex-fa-1",
+      "specs": {
+        "Description": "Flow adjuster / brush seater for TFIA-series samplers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "FA-2",
+      "anchor": "staplex-fa-2",
+      "specs": {
+        "Description": "Flow adjuster / brush seater for TFIA-series samplers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "Staplex TFIA series datasheet (mirror): https://www.yumpu.com/en/document/view/24692583/model-tfia-series-high-volume-air-samplers",
+    "https://www.staplex.com/airsamplers/TSP-PM10/pm10.htm"
+  ],
+  "internalNotes": "AD810 left off (not found). Difference between FA-1 and FA-2 (likely supply voltage) to confirm."
+}

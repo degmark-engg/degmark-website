@@ -1,0 +1,91 @@
+{
+  "slug": "staplex-personal-air-samplers",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "Particulate and aerosol samplers",
+  "name": "STAPLEX Personal Air Samplers",
+  "summary": "Small battery-powered pumps worn by workers or placed in a room to sample breathing-zone air onto filter cassettes or detector tubes.",
+  "radiationTypes": [
+    "Airborne particulates"
+  ],
+  "applications": [
+    "air-sampling",
+    "personnel-monitoring"
+  ],
+  "image": "/images/products/staplex-personal-air-samplers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Type",
+    "Flow range",
+    "Power"
+  ],
+  "models": [
+    {
+      "model": "PST-5000",
+      "anchor": "staplex-pst-5000",
+      "specs": {
+        "Type": "Personal / area sampling pump",
+        "Flow range": "0.6–5 L/min (5–600 cc/min with low-flow holder)",
+        "Power": "Rechargeable NiCd, 4.8 V 1.5 Ah"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "PST-6",
+      "anchor": "staplex-pst-6",
+      "specs": {
+        "Type": "Personal air sampler",
+        "Flow range": "0.5–2.0 L/min",
+        "Power": "Battery or AC"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "PST-1DT",
+      "anchor": "staplex-pst-1dt",
+      "specs": {
+        "Type": "Detector tube sampler",
+        "Flow range": "[to confirm]",
+        "Power": "[to confirm]"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "PST-1TA",
+      "anchor": "staplex-pst-1ta",
+      "specs": {
+        "Type": "[to confirm]",
+        "Flow range": "[to confirm]",
+        "Power": "[to confirm]"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "PST-1BA",
+      "anchor": "staplex-pst-1ba",
+      "specs": {
+        "Type": "[to confirm]",
+        "Flow range": "[to confirm]",
+        "Power": "[to confirm]"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://geneq.com/environment/en/product/personal-air-sampler-11683",
+    "https://en.indonetwork.co.id/product/high-volume-air-sampler-air-sampling-pump-low-volume-air-sampler-1049070"
+  ],
+  "internalNotes": "PST-1TA and PST-1BA could not be found online; confirm before approval."
+}

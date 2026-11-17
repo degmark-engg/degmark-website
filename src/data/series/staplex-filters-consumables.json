@@ -1,0 +1,86 @@
+{
+  "slug": "staplex-filters-consumables",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "Accessories",
+  "name": "STAPLEX Filters & Consumables",
+  "summary": "Filter papers and charcoal cartridges for STAPLEX samplers, for collecting particulates and radioiodine.",
+  "radiationTypes": [
+    "Airborne particulates",
+    "Radioiodine"
+  ],
+  "applications": [
+    "air-sampling",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/staplex-filters-consumables.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Type",
+    "Size",
+    "Pack",
+    "For"
+  ],
+  "models": [
+    {
+      "model": "TFA2133",
+      "anchor": "staplex-tfa2133",
+      "specs": {
+        "Type": "Filter paper",
+        "Size": "4\" (102 mm) dia.",
+        "Pack": "100",
+        "For": "TFIA-series samplers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFAGF41",
+      "anchor": "staplex-tfagf41",
+      "specs": {
+        "Type": "Glass fibre filter",
+        "Size": "4\" (102 mm) dia.",
+        "Pack": "100",
+        "For": "TFIA-series samplers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TFAQ810",
+      "anchor": "staplex-tfaq810",
+      "specs": {
+        "Type": "Quartz fibre filter",
+        "Size": "8\" x 10\"",
+        "Pack": "25",
+        "For": "PM10 / TSP systems"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "CP-1",
+      "anchor": "staplex-cp-1",
+      "specs": {
+        "Type": "Charcoal cartridge, 8x16 mesh",
+        "Size": "2¼\" dia. x 1\" (57 x 25 mm)",
+        "Pack": "10",
+        "For": "TFRC and LVC radioiodine samplers"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "Staplex TFIA series datasheet (mirror): https://www.yumpu.com/en/document/view/24692583/model-tfia-series-high-volume-air-samplers",
+    "https://www.staplex.com/airsamplers/TSP-PM10/pm10.htm",
+    "https://emin.vn/zh_TW/staplexcp-1-staplex-cp-1-fang-she-xing-dian-kong-qi-qu-yang-yong-tan-tong-150288/pr.html"
+  ],
+  "internalNotes": "Left off pending confirmation: SCR-4722, SPR-47, TFA247, SCR-2015, TFAC22508C, TFAC33708 (no reliable description found)."
+}

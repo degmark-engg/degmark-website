@@ -1,0 +1,88 @@
+{
+  "slug": "staplex-pm10-sampling-systems",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "Particulate and aerosol samplers",
+  "name": "STAPLEX PM10 Sampling Systems",
+  "summary": "High-volume systems that collect particles of 10 µm and smaller on 8\" x 10\" filters for ambient air monitoring, with flow control, timing and recording options and an outdoor shelter.",
+  "radiationTypes": [
+    "Airborne particulates"
+  ],
+  "applications": [
+    "environmental-monitoring",
+    "air-sampling"
+  ],
+  "image": "/images/products/staplex-pm10-sampling-systems.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "PM10-2",
+      "anchor": "staplex-pm10-2",
+      "specs": {
+        "Description": "Basic PM10 high-volume system, 230 V 50 Hz, 40 cfm (1.13 m³/min), 8\" x 10\" filters"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "PM10-SSI",
+      "anchor": "staplex-pm10-ssi",
+      "specs": {
+        "Description": "Size-selective inlet (9.7 µm cut-point); converts a TSP system to PM10"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "FC-2MLT",
+      "anchor": "staplex-fc-2mlt",
+      "specs": {
+        "Description": "Constant flow controller, 220 V, with mechanical 7-day timer and elapsed-time indicator"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "FR-2",
+      "anchor": "staplex-fr-2",
+      "specs": {
+        "Description": "Flow recorder, 230 V; 24-hour record of sampler performance"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "DTM-2",
+      "anchor": "staplex-dtm-2",
+      "specs": {
+        "Description": "Digital 7-day timer, 230 V; switches the sampler on and off at set times"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "SAM",
+      "anchor": "staplex-sam",
+      "specs": {
+        "Description": "Aluminium outdoor shelter for the sampler"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.staplex.com/airsamplers/TSP-PM10/pm10.htm"
+  ],
+  "internalNotes": "FC-2LTM and MT-2 left off: FC-2LTM not found (closest is FC-2ETM); Staplex page lists MT-2 ordering text as 'MLT-2'. Confirm with Staplex."
+}

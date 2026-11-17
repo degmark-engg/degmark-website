@@ -1,0 +1,78 @@
+{
+  "slug": "staplex-holders-field-accessories",
+  "status": "review",
+  "brand": "STAPLEX",
+  "category": "air-sampling-equipment",
+  "subtype": "Sampling heads and filter holders",
+  "name": "STAPLEX Filter Holders & Field Accessories",
+  "summary": "Filter holders, cartridges, tripods and battery power for using STAPLEX samplers in the field.",
+  "radiationTypes": [
+    "Airborne particulates"
+  ],
+  "applications": [
+    "air-sampling"
+  ],
+  "image": "/images/products/staplex-holders-field-accessories.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Description"
+  ],
+  "models": [
+    {
+      "model": "SH810",
+      "anchor": "staplex-sh810",
+      "specs": {
+        "Description": "Filter holder assembly for 8\" x 10\" filters"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "FPC810",
+      "anchor": "staplex-fpc810",
+      "specs": {
+        "Description": "Spare 8\" x 10\" filter paper cartridge for quick field filter changes"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TR-1",
+      "anchor": "staplex-tr-1",
+      "specs": {
+        "Description": "Tripod for sampling where no flat surface is available; up to 60\" (152 cm) high"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TF24B",
+      "anchor": "staplex-tf24b",
+      "specs": {
+        "Description": "Portable 24 V DC battery pack: about 20 min run time, 6 h charge, 8.6 kg"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "TF-24CU-2",
+      "anchor": "staplex-tf-24cu-2",
+      "specs": {
+        "Description": "Charger for the TF24B battery pack, 220–240 V AC"
+      },
+      "datasheet": null,
+      "note": "Also written TF24CU2",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "Staplex TFIA series datasheet (mirror): https://www.yumpu.com/en/document/view/24692583/model-tfia-series-high-volume-air-samplers",
+    "https://www.staplex.com/airsamplers/TSP-PM10/pm10.htm"
+  ],
+  "internalNotes": "TFIA-4BC moved to the high-volume sampler series (it is a 24 V DC sampler)."
+}
