@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTAPanel from '../../components/CTAPanel.astro';
+import { faqs } from '../../data/resources';
+---
+<Base title="FAQs" description="Frequently asked questions about ordering, delivery, documentation and technical selection of radiation instruments.">
+  <PageHero title="Frequently asked questions" crumbs={[{ href: '/resources/', label: 'Resources' }, { label: 'FAQs' }]} />
+  <section class="section"><div class="container-x prose-x space-y-8">
+    {faqs.map((g) => <div><h2 class="!mt-0 mb-3">{g.group}</h2><div class="space-y-2">{g.items.map((i) => <FAQItem q={i.q} a={i.a} />)}</div></div>)}
+    <CTAPanel title="Still have a question?" text="Send us your question and we will reply." href="/contact/" label="Contact us" />
+  </div></section>
+</Base>

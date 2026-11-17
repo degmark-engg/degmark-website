@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import DownloadRow from '../../components/DownloadRow.astro';
+import EnquiryStrip from '../../components/EnquiryStrip.astro';
+import { downloads } from '../../data/resources';
+import { brands } from '../../data/brands';
+
+const libs = {
+  catalogues: { title: 'Catalogues', type: 'catalogue', lead: 'Product catalogues from our principals.' },
+  datasheets: { title: 'Datasheets', type: 'datasheet', lead: 'Datasheets for the models listed on this site.' },
+  manuals: { title: 'Manuals', type: 'manual', lead: 'Manuals are published only where the manufacturer permits. Others are available on request.' },
+} as const;
+export function getStaticPaths() {
+  return ['catalogues', 'datasheets', 'manuals'].map((library) => ({ params: { library } }));
+}
+const lib = libs[Astro.params.library as keyof typeof libs];
+const items = downloads.filter((d) => d.type === lib.type);
+---
+<Base title={lib.title} description={`${lib.title} for radiation detection and measurement instruments. ${lib.lead}`}>
+  <PageHero title={lib.title} lead={lib.lead} crumbs={[{ href: '/resources/', label: 'Resources' }, { label: lib.title }]} />
+  <section class="section"><div class="container-x space-y-4">
+    <div class="card p-4 flex flex-wrap gap-3">
+      <label class="flex-1 min-w-[200px]"><span class="field-label">Search</span><input id="q" type="search" class="field" placeholder="Title or model" /></label>
+      <label class="min-w-[180px]"><span class="field-label">Brand</span>
+        <select id="brand" class="field"><option value="">All brands</option>{brands.map((b) => <option>{b.name}</option>)}</select>
+      </label>
+    </div>
+    {items.length > 0 ? <ul class="card" id="list">{items.map((d) => <DownloadRow item={d} />)}</ul> : <div class="card p-6 text-ink-soft">Documents are being added. Request any {lib.type} you need and we will send it.</div>}
+    <p class="text-[15px]">Not listed? <a href="/request-a-quote/">Request it</a>.</p>
+  </div></section>
+  <EnquiryStrip />
+</Base>
+<script>
+  const q = document.getElementById('q') as HTMLInputElement, br = document.getElementById('brand') as HTMLSelectElement;
+  const rows = [...document.querySelectorAll<HTMLElement>('#list > li')];
+  const f = () => rows.forEach((r) => { r.hidden = !(r.textContent!.toLowerCase().includes(q.value.toLowerCase()) && (!br.value || r.dataset.brand === br.value)); });
+  q?.addEventListener('input', f); br?.addEventListener('change', f);
+</script>
