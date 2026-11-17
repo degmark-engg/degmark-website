@@ -4,8 +4,13 @@ export const company = {
   wordmark: 'DEGMARK',
   tagline: 'Radiation detection, monitoring and measurement instruments',
   address: 'Mumbai, India',
-  phone: '[PLACEHOLDER: phone]',
-  email: '[PLACEHOLDER: enquiry email]',
+  phone: '+91 79778 16330', // mobile / WhatsApp
+  phoneHref: 'tel:+917977816330',
+  landline: '+91 22 6502 7149',
+  landlineHref: 'tel:+912265027149',
+  email: 'degmark@gmail.com', // all enquiries and form submissions go here
+  emailHref: 'mailto:degmark@gmail.com',
+  whatsapp: 'https://wa.me/917977816330?text=' + encodeURIComponent('Hello DEGMARK, I have an enquiry about radiation instruments.'),
   hours: '[PLACEHOLDER: business hours]',
   responseTime: '[PLACEHOLDER: response time]',
   domain: 'https://www.degmarkeng.com',
