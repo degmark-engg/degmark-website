@@ -7,6 +7,7 @@ import { company } from '../data/site';
 
 interface Props { title?: string; description: string; noindex?: boolean; }
 const { title, description, noindex = false } = Astro.props;
+const preview = !!process.env.SITE_BASE;
 const pageTitle = title ? `${title} – DEGMARK` : `DEGMARK – ${company.tagline}`;
 ---
 <!doctype html>
@@ -16,7 +17,7 @@ const pageTitle = title ? `${title} – DEGMARK` : `DEGMARK – ${company.taglin
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex" />}
+    {(noindex || preview) && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={new URL(Astro.url.pathname, company.domain)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -26,6 +27,7 @@ const pageTitle = title ? `${title} – DEGMARK` : `DEGMARK – ${company.taglin
   </head>
   <body class="min-h-screen flex flex-col">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface p-2 z-50">Skip to content</a>
+    {preview && <div class="bg-amber text-ink text-[13px] font-semibold text-center px-4 py-1.5">Preview site. Forms do not send from here.</div>}
     <UtilityBar />
     <Header />
     <main id="main" class="flex-1" data-pagefind-body><slot /></main>
