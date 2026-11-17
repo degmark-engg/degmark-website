@@ -88,4 +88,6 @@ const count = (st: string) => list.filter((s) => s.subtype === st).length;
     apply();
   }));
   document.querySelectorAll('.f-rad, .f-brand').forEach((i) => i.addEventListener('change', apply));
+  const wanted = new URLSearchParams(location.search).get('subtype');
+  if (wanted) document.querySelector<HTMLButtonElement>(`.subtype-btn[data-subtype="${CSS.escape(wanted)}"]`)?.click();
 </script>
