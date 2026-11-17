@@ -8,7 +8,7 @@ export type Brand = {
   relationship: string;
   logoOnDark?: 'white' | 'original';
   logoOnLight?: 'dark' | 'original'; // ATOMTEX's file is white, so it is darkened on white backgrounds // how the logo shows on navy: recoloured white (default) or as supplied
-  logo?: string; // official logo file supplied by the principal, e.g. /images/brands/lnd.svg
+  logo?: string; // official logo file supplied by the principal, e.g. /images/brands/lnd-inc-logo.png
   website?: string;
 };
 
@@ -29,7 +29,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('LND'),
     website: 'https://www.lndinc.com',
-    logo: '/images/brands/lnd.png',
+    logo: '/images/brands/lnd-inc-logo.png',
     logoOnDark: 'original',
   },
   {
@@ -43,7 +43,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('ATOMTEX'),
     website: 'https://atomtex.com',
-    logo: '/images/brands/atomtex.svg',
+    logo: '/images/brands/atomtex-logo.svg',
     logoOnLight: 'dark',
   },
   {
@@ -69,7 +69,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('Gamma-Scout'),
     website: 'https://www.gamma-scout.com',
-    logo: '/images/brands/gamma-scout.png',
+    logo: '/images/brands/gamma-scout-logo.png',
   },
   {
     slug: 'arrow-tech',
@@ -82,7 +82,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('Arrow-Tech'),
     website: 'https://www.dosimeter.com',
-    logo: '/images/brands/arrow-tech.png',
+    logo: '/images/brands/arrow-tech-logo.png',
     logoOnLight: 'dark',
     logoOnDark: 'original',
   },
