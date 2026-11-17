@@ -1,26 +1,22 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { brands } from '../../data/site';
+import PageHero from '../../components/PageHero.astro';
+import EnquiryStrip from '../../components/EnquiryStrip.astro';
+import { brands } from '../../data/brands';
 ---
-<Base title="Brands" description="International radiation instrumentation brands supplied by Degmark Engineering in India: LND, ATOMTEX, STAPLEX, Gamma-Scout, Arrow-Tech and more.">
-  <section>
-    <div class="wrap">
-      <h1>Brands</h1>
-      <p class="lead">We work with established manufacturers of radiation detection and measurement equipment, and source from other international makers on request.</p>
-      <div class="grid" style="margin-top:28px">
-        {brands.map((b) => (
-          <a class="card" href={`/brands/${b.slug}/`}>
-            <h3>{b.name}</h3>
-            <p>{b.summary}</p>
-            <span class="tag">{b.origin}</span>
-          </a>
-        ))}
-        <div class="card">
-          <h3>Other manufacturers</h3>
-          <p>Looking for a make not listed here? We regularly source instruments and components from other international suppliers.</p>
-          <p style="margin-top:12px"><a href="/contact/">Ask us →</a></p>
-        </div>
-      </div>
+<Base title="Brands" description="International manufacturers of radiation detection and measurement equipment represented by DEGMARK: LND, ATOMTEX, STAPLEX, Gamma-Scout, Arrow-Tech and others.">
+  <PageHero title="Brands" lead="We represent established manufacturers of radiation detection and measurement equipment, and source from other international makers on request." crumbs={[{ label: 'Brands' }]} />
+  <section class="section">
+    <div class="container-x grid-cards">
+      {brands.map((b) => (
+        <a href={`/brands/${b.slug}/`} class="card p-5 no-underline text-ink hover:text-ink hover:border-teal flex flex-col gap-2">
+          <div class="h-12 flex items-center">{b.logo ? <img src={b.logo} alt={b.name} class="max-h-10" /> : <span class="text-[22px] font-bold tracking-[0.04em] text-navy">{b.name}</span>}</div>
+          <span class="text-[13px] text-muted">{b.country}</span>
+          <p class="text-[14px] text-muted">{b.oneLine}</p>
+          <span class="link-arrow mt-auto pt-1">View products →</span>
+        </a>
+      ))}
     </div>
   </section>
+  <EnquiryStrip />
 </Base>
