@@ -4,20 +4,38 @@ import PageHero from '../../components/PageHero.astro';
 import Icon from '../../components/Icon.astro';
 import EnquiryStrip from '../../components/EnquiryStrip.astro';
 import { categories } from '../../data/categories';
+import { modelsInCategory, modelsInSubtype, countLabel, categoryImage } from '../../lib/stats';
 ---
 <Base title="Products" description="Radiation detectors, survey meters, monitoring systems, air sampling equipment, personal dosimeters, contamination monitors and detector components.">
   <PageHero title="Products" lead="Key models from our principals, grouped into seven categories. Other models are available on request." crumbs={[{ label: 'Products' }]} />
-  <section class="section">
-    <div class="container-x grid-cards">
-      {categories.map((c) => (
-        <div class="card p-5 flex flex-col gap-2">
-          <Icon name={c.icon} />
-          <h2 class="!text-[18px]"><a href={`/products/${c.slug}/`} class="text-ink no-underline hover:text-teal">{c.name}</a></h2>
-          <p class="text-[14px] text-muted">{c.short}</p>
-          <ul class="text-[14px] space-y-1">{c.subtypes.map((s) => <li><a href={`/products/${c.slug}/?subtype=${encodeURIComponent(s)}`} class="no-underline">{s}</a></li>)}</ul>
-          <a href={`/products/${c.slug}/`} class="link-arrow mt-auto pt-1">View range →</a>
-        </div>
-      ))}
+  <section class="py-16 lg:py-20">
+    <div class="container-x grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {categories.map((c) => {
+        const n = modelsInCategory(c.slug);
+        return (
+          <div class="group card lift relative overflow-hidden flex flex-col hover:border-teal reveal">
+            <div class="relative h-[180px] bg-surface-muted flex items-center justify-center p-5">
+              {categoryImage[c.slug] ? <img src={categoryImage[c.slug]} alt="" class="max-h-[150px] w-auto object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.06]" loading="lazy" /> : <Icon name={c.icon} size={64} class="text-teal" />}
+              <span class:list={['count-badge absolute top-3 right-3', n === 0 && 'count-badge-muted !bg-white']}>{countLabel(n)}</span>
+            </div>
+            <div class="p-5 flex flex-col gap-2 flex-1">
+              <h2 class="!text-[19px] !leading-snug"><a href={`/products/${c.slug}/`} class="stretched text-navy no-underline group-hover:text-teal">{c.name}</a></h2>
+              <p class="text-[14px] text-muted">{c.short}</p>
+              <ul class="text-[14px] mt-1 divide-y divide-line border-y border-line">{c.subtypes.map((s) => {
+                const k = modelsInSubtype(c.slug, s);
+                return <li><a href={`/products/${c.slug}/?subtype=${encodeURIComponent(s)}`} class="above-stretch flex justify-between gap-2 py-1.5 no-underline text-ink-soft hover:text-teal"><span>{s}</span>{k > 0 && <span class="font-mono text-[12px] text-muted">{k}</span>}</a></li>;
+              })}</ul>
+              <span class="mt-auto pt-3 flex items-center justify-between text-[14px] font-semibold text-navy"><span class="border-b-2 border-amber pb-0.5">View range</span><span class="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center transition-colors group-hover:bg-amber group-hover:text-navy" aria-hidden="true">→</span></span>
+            </div>
+          </div>
+        );
+      })}
+      <a href="/upload-requirement/" class="lift reveal rounded-card bg-navy grid-bg p-6 flex flex-col gap-3 no-underline text-on-navy hover:text-on-navy">
+        <Icon name="upload" class="text-amber" />
+        <h2 class="!text-[20px] !text-white mt-auto">Can't find a model?</h2>
+        <p class="text-[14px]">The site lists key models only. Send your specification or tender and we will source a match.</p>
+        <span class="btn-accent self-start mt-2">Upload requirement</span>
+      </a>
     </div>
   </section>
   <EnquiryStrip />
