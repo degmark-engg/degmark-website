@@ -1,17 +1,26 @@
 # Image credits
 
-## Banner and industry photos (Unsplash licence: free for commercial use, no attribution required)
-- home/hero.webp: unsplash.com/photos/C82jAEQkfE0 (nuclear cooling towers at night)
-- home/ind-nuclear-power.webp: unsplash.com/photos/vMQFh9rAkeU
-- home/ind-atomic-energy-research.webp: unsplash.com/photos/LjViI6K6H8g
-- home/ind-healthcare-nuclear-medicine.webp: unsplash.com/photos (CT scan procedure, id 1758206523747)
-- home/ind-industrial-radiography-ndt.webp: unsplash.com/photos/jHIVc9lB1d4
-- home/ind-environmental-monitoring.webp: unsplash.com/photos/J3Pp1yZPj4A
-- home/ind-defence-security.webp: unsplash.com/photos/5T5zmIqs0AM
-- home/ind-laboratories.webp: unsplash.com/photos/8yS04veb1TQ
-- home/tender.webp: unsplash.com/photos/WDCE0T4khsE
+## Photos (public/images/photos) — Unsplash licence: free for commercial use, no attribution required
+- nuclear-power-plant-cooling-towers-at-night.webp: unsplash.com/photos/C82jAEQkfE0
+- nuclear-power-station-cooling-towers.webp: unsplash.com/photos/vMQFh9rAkeU
+- atomic-energy-research-facility-instrumentation.webp: unsplash.com/photos/LjViI6K6H8g
+- nuclear-medicine-ct-scanner-hospital.webp: Unsplash photo id 1758206523747-69af03fb56e4
+- industrial-radiography-ndt-pipeline-welding.webp: unsplash.com/photos/jHIVc9lB1d4
+- environmental-radiation-monitoring-station.webp: unsplash.com/photos/J3Pp1yZPj4A
+- port-container-terminal-radiation-security.webp: unsplash.com/photos/5T5zmIqs0AM
+- radiation-laboratory-scientist.webp: unsplash.com/photos/8yS04veb1TQ
+- tender-specification-engineering-drawings.webp: unsplash.com/photos/WDCE0T4khsE
 
-## Product photos and logos (manufacturers' own images; confirm permission with each principal)
-- products-hero/*: ATOMTEX (atomtex.com) and LND (lndinc.com)
-- brands/lnd.png: LND, Inc.; brands/atomtex.svg: ATOMTEX; brands/gamma-scout.png: Gamma-Scout; brands/arrow-tech.png: Arrow-Tech (dosimeter.com)
-- To add: STAPLEX air sampler photo and logo
+## Product photos (public/images/products) — manufacturers' own images; confirm permission with each principal
+- atomtex-*: atomtex.com
+- lnd-*: lndinc.com
+- gamma-scout-*: gamma-scout.com
+- arrow-tech-*: dosimeter.com (Arrow-Tech)
+
+## Logos (public/images/brands)
+- lnd-inc-logo.png, atomtex-logo.svg, gamma-scout-logo.png, arrow-tech-logo.png: from each manufacturer's website
+
+## Still to add
+- STAPLEX: logo and photos for all six STAPLEX series
+- LND: photos for BF3 neutron detectors, He-3 neutron detectors and gamma ionisation chambers (LND's site shows drawings only)
+- Arrow-Tech: survey meter photo
