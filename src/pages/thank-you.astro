@@ -5,7 +5,7 @@ import { company } from '../data/site';
 <Base title="Thank you" description="Your enquiry has been sent to DEGMARK." noindex>
   <section class="section"><div class="container-x"><div class="card p-8 max-w-xl mx-auto text-center space-y-4">
     <h1 class="!text-[30px]">Thank you</h1>
-    <p class="text-ink-soft">Your enquiry has been sent. We will reply within {company.responseTime}.</p>
+    <p class="text-ink-soft">Your enquiry has been sent. We will reply shortly. For anything urgent, call or WhatsApp us on <a href={company.phoneHref}>{company.phone}</a>.</p>
     <div class="flex flex-wrap justify-center gap-3"><a href="/products/" class="btn-primary">Browse products</a><a href="/" class="btn-secondary">Home</a></div>
   </div></div></section>
 </Base>

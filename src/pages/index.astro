@@ -46,12 +46,12 @@ const points = [
   <section class="relative isolate overflow-hidden bg-navy-deep text-white">
     <img src={photos.banner} alt={altFor(photos.banner)} class="kenburns absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" fetchpriority="high" />
     <div class="absolute inset-0 -z-10" style="background: linear-gradient(90deg, rgba(10,30,44,.96) 0%, rgba(10,30,44,.86) 38%, rgba(10,30,44,.25) 72%, rgba(10,30,44,.05) 100%), linear-gradient(0deg, rgba(10,30,44,.9) 0%, rgba(10,30,44,0) 35%);"></div>
-    <div class="container-x min-h-[560px] lg:min-h-[640px] flex flex-col justify-center pt-16 pb-10">
+    <div class="container-x min-h-[380px] lg:min-h-[430px] flex flex-col justify-center pt-8 pb-8 lg:pt-10">
       <div class="max-w-[680px]">
         <div class="eyebrow text-amber">Radiation detection · Monitoring · Measurement</div>
-        <h1 class="h-display mt-5 !text-white !text-[38px] sm:!text-[54px] lg:!text-[64px] !leading-[1.04]">Precision instruments for measuring what can't be seen.</h1>
-        <p class="mt-6 text-[17px] sm:text-[19px] leading-relaxed text-on-navy max-w-[560px]">Detectors, survey meters, monitoring systems, air samplers and dosimeters from leading international manufacturers, for nuclear, research, medical, industrial and environmental users.</p>
-        <div class="flex flex-wrap gap-3 mt-8">
+        <h1 class="h-display mt-3 !text-white !text-[30px] sm:!text-[40px] lg:!text-[46px] !leading-[1.08]">Precision instruments for measuring what can't be seen.</h1>
+        <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-on-navy max-w-[560px]">Detectors, survey meters, monitoring systems, air samplers and dosimeters from leading international manufacturers, for nuclear, research, medical, industrial and environmental users.</p>
+        <div class="flex flex-wrap gap-3 mt-6">
           <a href="/products/" class="btn-accent !px-6 !min-h-12 !text-[16px]">Explore products <span aria-hidden="true">→</span></a>
           <a href="/upload-requirement/" class="btn-ghost-light !px-6 !min-h-12 !text-[16px]">Upload a tender</a>
         </div>
@@ -60,10 +60,10 @@ const points = [
     <div class="border-t border-white/15 bg-white/[.04] backdrop-blur-sm">
       <dl class="container-x grid grid-cols-2 lg:grid-cols-4">
         {stats.map(([n, l], i) => (
-          <div class:list={['py-5 sm:py-6', i % 2 === 1 ? 'pl-5 sm:pl-8 border-l border-white/15' : (i > 0 ? 'lg:pl-8 lg:border-l border-white/15' : ''), i > 1 && 'border-t lg:border-t-0 border-white/15']}>
+          <div class:list={['py-3.5 sm:py-4', i % 2 === 1 ? 'pl-5 sm:pl-8 border-l border-white/15' : (i > 0 ? 'lg:pl-8 lg:border-l border-white/15' : ''), i > 1 && 'border-t lg:border-t-0 border-white/15']}>
             <dt class="sr-only">{l}</dt>
-            <dd class="font-display font-extrabold text-[30px] sm:text-[38px] leading-none">{n}</dd>
-            <dd class="mt-2 font-mono text-[11.5px] uppercase tracking-[0.14em] text-on-navy-muted">{l}</dd>
+            <dd class="font-display font-extrabold text-[24px] sm:text-[30px] leading-none">{n}</dd>
+            <dd class="mt-1.5 font-mono text-[11.5px] uppercase tracking-[0.14em] text-on-navy-muted">{l}</dd>
           </div>
         ))}
       </dl>
@@ -72,7 +72,7 @@ const points = [
 
   <!-- 2. Principal logos -->
   <section class="bg-surface border-b border-line">
-    <div class="container-x py-7 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-10">
+    <div class="container-x py-5 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-10">
       <p class="font-mono text-[11.5px] uppercase tracking-[0.14em] text-muted shrink-0">Supplying instruments from</p>
       <ul class="flex flex-wrap items-center gap-x-10 gap-y-4 flex-1 lg:justify-between">
         {principals.map((b) => (
@@ -85,7 +85,7 @@ const points = [
   </section>
 
   <!-- 3. Products: uniform tiles with product photos -->
-  <section class="bg-page py-20 lg:py-24">
+  <section class="bg-page py-12 lg:py-14">
     <div class="container-x">
       <SectionHead eyebrow="Catalogue" title="Product categories" lead="Key models from our principals, with other models available on request." href="/products/" linkText="All products" />
       <div class="grid gap-3 sm:gap-4 grid-cols-2 lg:grid-cols-4">
@@ -106,7 +106,7 @@ const points = [
   </section>
 
   <!-- 4. Industries: equal photo tiles (swipe on mobile) -->
-  <section class="bg-surface py-20 lg:py-24">
+  <section class="bg-surface py-12 lg:py-14">
     <div class="container-x">
       <SectionHead eyebrow="Sectors" title="Industries we serve" lead="The instruments each sector typically uses for radiation protection and measurement." href="/industries/" linkText="All industries" />
       <div class="scroll-x gap-4 -mx-4 px-4 sm:mx-0 sm:px-0 pb-2">
@@ -130,7 +130,7 @@ const points = [
   </section>
 
   <!-- 5. Measurement: navy band, equal image tiles -->
-  <section class="relative bg-navy grid-bg text-white py-20 lg:py-24 overflow-hidden">
+  <section class="relative bg-navy grid-bg text-white py-12 lg:py-14 overflow-hidden">
     <div class="absolute -right-40 -top-40 w-[520px] h-[520px] rounded-full border border-white/10 pointer-events-none"></div>
     <div class="absolute -right-20 -top-20 w-[360px] h-[360px] rounded-full border border-white/10 pointer-events-none"></div>
     <div class="container-x relative">
@@ -156,7 +156,7 @@ const points = [
 
   <!-- 6. About DEGMARK (end of page) -->
   <section class="bg-surface">
-    <div class="container-x py-16 lg:py-20 grid gap-10 lg:grid-cols-[1.35fr_1fr] items-center">
+    <div class="container-x py-12 lg:py-14 grid gap-10 lg:grid-cols-[1.35fr_1fr] items-center">
       <div class="reveal">
         <div class="eyebrow text-teal mb-3">About DEGMARK</div>
         <h2 class="title-bar !text-[30px] sm:!text-[42px] !leading-[1.1] tracking-[-0.015em]">A specialist supplier for radiation measurement.</h2>

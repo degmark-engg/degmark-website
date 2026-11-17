@@ -4,15 +4,15 @@ import PageHero from '../components/PageHero.astro';
 import FormShell from '../components/FormShell.astro';
 import FormField from '../components/FormField.astro';
 import { company } from '../data/site';
+import ContactLinks from '../components/ContactLinks.astro';
 ---
 <Base title="Contact" description="Contact Degmark Engineering for radiation detection and measurement instruments.">
   <PageHero title="Contact us" lead="For quotations, use Request a Quote. For anything else, write to us here." crumbs={[{ label: 'Contact' }]} />
   <section class="section"><div class="container-x flex flex-wrap gap-6 items-start">
-    <div class="flex-[1_1_300px] card p-6 space-y-4 text-[15px]">
-      <div><div class="text-[13px] font-semibold uppercase text-muted">Address</div><p>{company.address}</p></div>
-      <div><div class="text-[13px] font-semibold uppercase text-muted">Phone</div><p>{company.phone}</p></div>
-      <div><div class="text-[13px] font-semibold uppercase text-muted">Email</div><p>{company.email}</p></div>
-      <div><div class="text-[13px] font-semibold uppercase text-muted">Hours</div><p>{company.hours}</p></div>
+    <div class="flex-[1_1_300px] card p-6 text-[15px] border-t-4 !border-t-navy">
+      <h2 class="title-bar !text-[22px] mb-6">Talk to us</h2>
+      <ContactLinks address />
+      <p class="text-[14px] text-muted pt-2">All enquiries and form submissions come to {company.email}.</p>
     </div>
     <div class="flex-[999_1_480px] min-w-0">
       <FormShell type="contact" submit="Send message">
