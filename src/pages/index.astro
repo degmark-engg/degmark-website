@@ -86,7 +86,7 @@ const points = [
       <ul class="flex flex-wrap items-center gap-x-10 gap-y-4 flex-1 lg:justify-between">
         {principals.map((b) => (
           <li><a href={`/brands/${b.slug}/`} class="group block no-underline" aria-label={b.name}>
-            {b.logo ? <img src={b.logo} alt={b.name} class:list={['h-7 sm:h-8 w-auto transition', b.logoOnLight === 'dark' ? 'logo-dark group-hover:opacity-100' : 'logo-grey group-hover:filter-none group-hover:opacity-100']} /> : <span class="wordmark text-[20px] text-[#7A8792] group-hover:text-navy transition-colors">{b.name}</span>}
+            {b.logo ? <img src={b.logo} alt={b.name} class:list={['h-7 sm:h-8 w-auto max-w-[150px] sm:max-w-[175px] object-contain transition', b.logoOnLight === 'dark' ? 'logo-dark group-hover:opacity-100' : 'logo-grey group-hover:filter-none group-hover:opacity-100']} /> : <span class="wordmark text-[20px] text-[#7A8792] group-hover:text-navy transition-colors">{b.name}</span>}
           </a></li>
         ))}
       </ul>
