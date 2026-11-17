@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import LinkCard from '../../components/LinkCard.astro';
+import EnquiryStrip from '../../components/EnquiryStrip.astro';
+import { categories } from '../../data/categories';
+---
+<Base title="Products" description="Radiation detectors, survey meters, monitoring systems, air sampling equipment, personal dosimeters, contamination monitors and detector components.">
+  <PageHero title="Products" lead="Key models from our principals, grouped into seven categories. Other models are available on request." crumbs={[{ label: 'Products' }]} />
+  <section class="section">
+    <div class="container-x grid-cards">
+      {categories.map((c) => (
+        <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon}>
+          <ul class="text-[13px] text-muted list-disc pl-5">{c.subtypes.map((s) => <li>{s}</li>)}</ul>
+        </LinkCard>
+      ))}
+    </div>
+  </section>
+  <EnquiryStrip />
+</Base>
