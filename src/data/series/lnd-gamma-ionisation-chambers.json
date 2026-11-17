@@ -1,0 +1,91 @@
+{
+  "slug": "lnd-gamma-ionisation-chambers",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "Ionisation chambers",
+  "name": "LND Gamma Ionisation Chambers",
+  "summary": "Gas-filled ionisation chambers for gamma dose-rate measurement, including high-range applications. Used in area monitors, fixed monitoring systems and dose-rate instruments.",
+  "radiationTypes": [
+    "Gamma"
+  ],
+  "applications": [
+    "dose-measurement",
+    "gamma-detection",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/lnd-gamma-ionisation-chambers.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 50310",
+      "anchor": "lnd-50310",
+      "specs": {
+        "Max length (mm)": 275.3,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 52110",
+      "anchor": "lnd-52110",
+      "specs": {
+        "Max length (mm)": 154.9,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 1500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 501",
+      "anchor": "lnd-501",
+      "specs": {
+        "Max length (mm)": 55.63,
+        "Max diameter (mm)": 8.13,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 503",
+      "anchor": "lnd-503",
+      "specs": {
+        "Max length (mm)": 218.2,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 52102",
+      "anchor": "lnd-52102",
+      "specs": {
+        "Max length (mm)": 154.9,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 1500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/ionization-chambers/gamma-ionization-chambers/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

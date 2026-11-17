@@ -1,0 +1,113 @@
+{
+  "slug": "lnd-bf3-neutron-detectors",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "Neutron detectors",
+  "name": "LND BF3 Neutron Detectors",
+  "summary": "Boron trifluoride filled proportional counters for thermal neutron detection with good gamma discrimination. Used in reactor instrumentation, neutron monitoring and research.",
+  "radiationTypes": [
+    "Neutron"
+  ],
+  "applications": [
+    "neutron-detection"
+  ],
+  "image": "/images/products/lnd-bf3-neutron-detectors.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 20332",
+      "anchor": "lnd-20332",
+      "specs": {
+        "Max length (mm)": 467.1,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 1250
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 20338",
+      "anchor": "lnd-20338",
+      "specs": {
+        "Max length (mm)": 396.9,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 1400
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 20357",
+      "anchor": "lnd-20357",
+      "specs": {
+        "Max length (mm)": 427.9,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 1800
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 201",
+      "anchor": "lnd-201",
+      "specs": {
+        "Max length (mm)": 156.21,
+        "Max diameter (mm)": 12.7,
+        "Operating voltage (V)": 1350
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 202",
+      "anchor": "lnd-202",
+      "specs": {
+        "Max length (mm)": 308.1,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 1350
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 2021",
+      "anchor": "lnd-2021",
+      "specs": {
+        "Max length (mm)": 138.94,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 1600
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 203",
+      "anchor": "lnd-203",
+      "specs": {
+        "Max length (mm)": 403.3,
+        "Max diameter (mm)": 50.8,
+        "Operating voltage (V)": 2150
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/neutron-detectors/bf3-detectors/cylindrical-bf3-neutron-detectors/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

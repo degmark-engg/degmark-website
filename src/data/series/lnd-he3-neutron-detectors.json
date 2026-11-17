@@ -1,0 +1,101 @@
+{
+  "slug": "lnd-he3-neutron-detectors",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "Neutron detectors",
+  "name": "LND He-3 Neutron Detectors",
+  "summary": "Helium-3 filled proportional counters for thermal neutron detection, offered in a range of lengths and diameters. Used in neutron survey meters, portal monitors, reactor and research instrumentation.",
+  "radiationTypes": [
+    "Neutron"
+  ],
+  "applications": [
+    "neutron-detection"
+  ],
+  "image": "/images/products/lnd-he3-neutron-detectors.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 25288",
+      "anchor": "lnd-25288",
+      "specs": {
+        "Max length (mm)": 575.6,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 1100
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 251",
+      "anchor": "lnd-251",
+      "specs": {
+        "Max length (mm)": 136.4,
+        "Max diameter (mm)": 12.7,
+        "Operating voltage (V)": 1000
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 2513",
+      "anchor": "lnd-2513",
+      "specs": {
+        "Max length (mm)": 111.25,
+        "Max diameter (mm)": 12.7,
+        "Operating voltage (V)": 1000
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 252",
+      "anchor": "lnd-252",
+      "specs": {
+        "Max length (mm)": 284.5,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 1150
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 2528",
+      "anchor": "lnd-2528",
+      "specs": {
+        "Max length (mm)": 288.04,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 1250
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 252180",
+      "anchor": "lnd-252180",
+      "specs": {
+        "Max length (mm)": 87.8,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 700
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/neutron-detectors/he3-detectors/cylindrical-he3-neutron-detectors/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

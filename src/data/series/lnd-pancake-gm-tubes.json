@@ -1,0 +1,117 @@
+{
+  "slug": "lnd-pancake-gm-tubes",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "GM tubes",
+  "name": "LND Pancake GM Tubes",
+  "summary": "Large-area Geiger-Mueller tubes with a thin mica window, built for fast surface contamination surveys. They are the detector of choice in hand-held frisker probes and contamination meters.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma"
+  ],
+  "applications": [
+    "alpha-beta-detection",
+    "contamination-monitoring",
+    "personnel-monitoring"
+  ],
+  "image": "/images/products/lnd-pancake-gm-tubes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 7311",
+      "anchor": "lnd-7311",
+      "specs": {
+        "Max length (mm)": 76.1,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7312",
+      "anchor": "lnd-7312",
+      "specs": {
+        "Max length (mm)": 76.1,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7314",
+      "anchor": "lnd-7314",
+      "specs": {
+        "Max length (mm)": 83.31,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7317",
+      "anchor": "lnd-7317",
+      "specs": {
+        "Max length (mm)": 76.1,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 73132",
+      "anchor": "lnd-73132",
+      "specs": {
+        "Max length (mm)": 70.4,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 8767",
+      "anchor": "lnd-8767",
+      "specs": {
+        "Max length (mm)": 76.1,
+        "Max diameter (mm)": 53.6,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "QPL qualified",
+      "verified": false
+    },
+    {
+      "model": "LND 7313",
+      "anchor": "lnd-7313",
+      "specs": {
+        "Max length (mm)": 31.7,
+        "Max diameter (mm)": 53.1,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/geiger-mueller-tubes/thin-window-alpha-beta-gamma-detectors/pancake-style-mica-window-tubes/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

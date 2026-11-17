@@ -1,35 +1,163 @@
 {
   "slug": "lnd-end-window-gm-tubes",
-  "status": "draft",
+  "status": "approved",
   "brand": "LND",
   "category": "radiation-detectors",
   "subtype": "GM tubes",
   "name": "LND End-Window GM Tubes",
-  "summary": "Geiger-Müller tubes with a thin mica end window, so that alpha and beta particles as well as gamma rays can be counted. Used in hand-held contamination probes and laboratory counters.",
-  "radiationTypes": ["Alpha", "Beta", "Gamma"],
-  "applications": ["alpha-beta-detection", "contamination-monitoring"],
-  "image": "",
-  "catalogue": "",
-  "specColumns": ["Window density", "Effective diameter", "Operating voltage", "Connector"],
+  "summary": "Geiger-Mueller tubes with a thin mica entrance window at one end, allowing alpha and low-energy beta particles to be counted. Used in survey probes, laboratory counters and monitoring instruments.",
+  "radiationTypes": [
+    "Alpha",
+    "Beta",
+    "Gamma"
+  ],
+  "applications": [
+    "alpha-beta-detection",
+    "contamination-monitoring"
+  ],
+  "image": "/images/products/lnd-end-window-gm-tubes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)",
+    "Window (mg/cm²)"
+  ],
   "models": [
     {
-      "model": "[MODEL NUMBER]",
-      "anchor": "lnd-model-1",
-      "specs": { "Window density": "[to confirm]", "Effective diameter": "[to confirm]", "Operating voltage": "[to confirm]", "Connector": "[to confirm]" },
-      "datasheet": "",
+      "model": "LND 712",
+      "anchor": "lnd-712",
+      "specs": {
+        "Max length (mm)": 49.2,
+        "Max diameter (mm)": 15.1,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "1.5–2.0"
+      },
+      "datasheet": null,
       "note": "",
       "verified": false
     },
     {
-      "model": "[MODEL NUMBER]",
-      "anchor": "lnd-model-2",
-      "specs": { "Window density": "[to confirm]", "Effective diameter": "[to confirm]", "Operating voltage": "[to confirm]", "Connector": "[to confirm]" },
-      "datasheet": "",
+      "model": "LND 7121",
+      "anchor": "lnd-7121",
+      "specs": {
+        "Max length (mm)": 49.2,
+        "Max diameter (mm)": 15.1,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "1.5–2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 71224",
+      "anchor": "lnd-71224",
+      "specs": {
+        "Max length (mm)": 49.2,
+        "Max diameter (mm)": 15.1,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "1.5–2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7124",
+      "anchor": "lnd-7124",
+      "specs": {
+        "Max length (mm)": 49.2,
+        "Max diameter (mm)": 15.1,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "2.0–3.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 723",
+      "anchor": "lnd-723",
+      "specs": {
+        "Max length (mm)": 109.7,
+        "Max diameter (mm)": 34.9,
+        "Operating voltage (V)": 900,
+        "Window (mg/cm²)": "2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7224",
+      "anchor": "lnd-7224",
+      "specs": {
+        "Max length (mm)": 50.8,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "1.5–2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 72314",
+      "anchor": "lnd-72314",
+      "specs": {
+        "Max length (mm)": 49.1,
+        "Max diameter (mm)": 33.3,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 72412",
+      "anchor": "lnd-72412",
+      "specs": {
+        "Max length (mm)": 26.1,
+        "Max diameter (mm)": 25.4,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "2.0–3.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 710",
+      "anchor": "lnd-710",
+      "specs": {
+        "Max length (mm)": 67.8,
+        "Max diameter (mm)": 8.7,
+        "Operating voltage (V)": 500,
+        "Window (mg/cm²)": "1.5–2.0"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 715",
+      "anchor": "lnd-715",
+      "specs": {
+        "Max length (mm)": 35.9,
+        "Max diameter (mm)": 8.7,
+        "Operating voltage (V)": 550,
+        "Window (mg/cm²)": "1.8–2.2"
+      },
+      "datasheet": null,
       "note": "",
       "verified": false
     }
   ],
   "moreOnRequest": true,
-  "sources": ["Template example: replace with researched data (PRODUCT_DATA.md step 1)"],
-  "internalNotes": "Example draft so the series page template can be previewed. Not built into the live site."
+  "sources": [
+    "https://www.lndinc.com/product-category/geiger-mueller-tubes/thin-window-alpha-beta-gamma-detectors/end-window-tubes/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
 }

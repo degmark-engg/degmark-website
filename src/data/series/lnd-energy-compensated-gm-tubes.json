@@ -1,0 +1,116 @@
+{
+  "slug": "lnd-energy-compensated-gm-tubes",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "GM tubes",
+  "name": "LND Energy-Compensated GM Tubes",
+  "summary": "Geiger-Mueller tubes fitted with energy-compensating shields so their response stays close to flat across photon energies. Suited to dose-rate meters and electronic dosimeters where accurate dose readings matter.",
+  "radiationTypes": [
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "dose-measurement",
+    "gamma-detection",
+    "personnel-monitoring"
+  ],
+  "image": "/images/products/lnd-energy-compensated-gm-tubes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 7149",
+      "anchor": "lnd-7149",
+      "specs": {
+        "Max length (mm)": 32.1,
+        "Max diameter (mm)": 9.7,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 71210",
+      "anchor": "lnd-71210",
+      "specs": {
+        "Max length (mm)": 46.2,
+        "Max diameter (mm)": 21.4,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 71632",
+      "anchor": "lnd-71632",
+      "specs": {
+        "Max length (mm)": 25.4,
+        "Max diameter (mm)": 9.7,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7165",
+      "anchor": "lnd-7165",
+      "specs": {
+        "Max length (mm)": 26.9,
+        "Max diameter (mm)": 13.5,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7807",
+      "anchor": "lnd-7807",
+      "specs": {
+        "Max length (mm)": 269.7,
+        "Max diameter (mm)": 26.4,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7128",
+      "anchor": "lnd-7128",
+      "specs": {
+        "Max length (mm)": 50.8,
+        "Max diameter (mm)": 18.7,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7139",
+      "anchor": "lnd-7139",
+      "specs": {
+        "Max length (mm)": 47.2,
+        "Max diameter (mm)": 12.85,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/geiger-mueller-tubes/energy-compensated-gm-detectors/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

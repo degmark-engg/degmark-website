@@ -1,0 +1,104 @@
+{
+  "slug": "lnd-gamma-gm-tubes",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "GM tubes",
+  "name": "LND Gamma GM Tubes",
+  "summary": "Cylindrical Geiger-Mueller tubes for gamma and X-ray detection, in sizes from miniature tubes for compact instruments to long tubes for area and environmental monitors.",
+  "radiationTypes": [
+    "Gamma",
+    "X-ray"
+  ],
+  "applications": [
+    "gamma-detection",
+    "dose-measurement",
+    "environmental-monitoring"
+  ],
+  "image": "/images/products/lnd-gamma-gm-tubes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 714",
+      "anchor": "lnd-714",
+      "specs": {
+        "Max length (mm)": 33.9,
+        "Max diameter (mm)": 5.2,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 716",
+      "anchor": "lnd-716",
+      "specs": {
+        "Max length (mm)": 24.5,
+        "Max diameter (mm)": 5.2,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 726",
+      "anchor": "lnd-726",
+      "specs": {
+        "Max length (mm)": 49.8,
+        "Max diameter (mm)": 8.7,
+        "Operating voltage (V)": 700
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 7808",
+      "anchor": "lnd-7808",
+      "specs": {
+        "Max length (mm)": 345.2,
+        "Max diameter (mm)": 20.6,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 743",
+      "anchor": "lnd-743",
+      "specs": {
+        "Max length (mm)": 193.2,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 78017",
+      "anchor": "lnd-78017",
+      "specs": {
+        "Max length (mm)": 269.7,
+        "Max diameter (mm)": 20.6,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/geiger-mueller-tubes/gamma-detectors/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}

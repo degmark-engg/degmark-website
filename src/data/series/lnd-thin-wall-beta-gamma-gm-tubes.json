@@ -1,0 +1,115 @@
+{
+  "slug": "lnd-thin-wall-beta-gamma-gm-tubes",
+  "status": "approved",
+  "brand": "LND",
+  "category": "radiation-detectors",
+  "subtype": "GM tubes",
+  "name": "LND Thin-Wall Beta-Gamma GM Tubes",
+  "summary": "Geiger-Mueller tubes with thin metal walls that let higher-energy beta particles through as well as gamma rays. Used in beta-gamma survey instruments and monitoring systems.",
+  "radiationTypes": [
+    "Beta",
+    "Gamma"
+  ],
+  "applications": [
+    "alpha-beta-detection",
+    "gamma-detection"
+  ],
+  "image": "/images/products/lnd-thin-wall-beta-gamma-gm-tubes.jpg",
+  "catalogue": null,
+  "specColumns": [
+    "Max length (mm)",
+    "Max diameter (mm)",
+    "Operating voltage (V)"
+  ],
+  "models": [
+    {
+      "model": "LND 713",
+      "anchor": "lnd-713",
+      "specs": {
+        "Max length (mm)": 47,
+        "Max diameter (mm)": 7.9,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 719",
+      "anchor": "lnd-719",
+      "specs": {
+        "Max length (mm)": 273.1,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 71916",
+      "anchor": "lnd-71916",
+      "specs": {
+        "Max length (mm)": 273.1,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 721",
+      "anchor": "lnd-721",
+      "specs": {
+        "Max length (mm)": 142.1,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 72118",
+      "anchor": "lnd-72118",
+      "specs": {
+        "Max length (mm)": 129.5,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 500
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 725",
+      "anchor": "lnd-725",
+      "specs": {
+        "Max length (mm)": 108.7,
+        "Max diameter (mm)": 23.8,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "LND 720",
+      "anchor": "lnd-720",
+      "specs": {
+        "Max length (mm)": 95.4,
+        "Max diameter (mm)": 16,
+        "Operating voltage (V)": 900
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "https://www.lndinc.com/product-category/geiger-mueller-tubes/thin-wall-beta-gamma/"
+  ],
+  "internalNotes": "Specs from LND website (size and voltage only). Datasheets to be added; set verified=true once checked. Datasheet null = 'Datasheet on request'."
+}
