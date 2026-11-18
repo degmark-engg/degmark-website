@@ -87,12 +87,24 @@ export const brands: Brand[] = [
     logoOnDark: 'original',
   },
   {
+    slug: 'pic-design',
+    name: 'PIC Design',
+    country: 'USA',
+    oneLine: 'Precision gears, speed reducers, linear motion and mechanical components.',
+    about: [
+      'PIC Design, a division of RBC Bearings, has made precision mechanical components in Middlebury, Connecticut, since 1954. It was one of the first companies to offer pre-engineered, catalogue gear products.',
+      'Its range covers fine-pitch gears, speed reducers, belts and pulleys, linear motion components, couplings, shafting, dowel pins and bearings, in inch and metric sizes. These parts are used in instrument drives, positioning and optical systems, laboratory equipment, defence and aerospace mechanisms.',
+    ],
+    relationship: rel('PIC Design'),
+    website: 'https://www.pic-design.com',
+  },
+  {
     slug: 'other-manufacturers',
     name: 'Other manufacturers',
     country: 'International',
     oneLine: 'Instruments and components from other international makers, on request.',
     about: [
-      'Beyond our principal lines, we source radiation instruments and detector components from other established international manufacturers to meet specific requirements.',
+      'Beyond our principal lines, we source radiation instruments, detector components and precision mechanical components from other established international manufacturers to meet specific requirements.',
     ],
     relationship: 'Send us the make and model, or your specification, and we will confirm availability.',
   },
