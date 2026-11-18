@@ -14,6 +14,7 @@ export function getStaticPaths() {
 const { i } = Astro.props as { i: Industry };
 const cats = categories.filter((c) => i.categories.includes(c.slug));
 const apps = applications.filter((a) => i.applications.includes(a.slug));
+const precision = categories.filter((c) => (i.precision ?? []).includes(c.slug));
 ---
 <Base title={i.name} description={`Radiation instruments for ${i.name.toLowerCase()}: ${i.oneLine}`}>
   <PageHero title={i.name} lead={i.oneLine} crumbs={[{ href: '/industries/', label: 'Industries' }, { label: i.name }]} image={industryImage(i.slug)} />
@@ -25,6 +26,19 @@ const apps = applications.filter((a) => i.applications.includes(a.slug));
     <h2 class="title-bar mb-7">Instruments typically used</h2>
     <div class="grid-cards">{cats.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} image={categoryImage[c.slug]} badge={countLabel(modelsInCategory(c.slug))} />)}</div>
   </div></section>
+  {precision.length > 0 && (
+    <section class="section pt-0"><div class="container-x">
+      <div class="flex flex-wrap items-end justify-between gap-3 mb-7">
+        <div>
+          <div class="eyebrow text-teal">Division 2 · Precision mechanical components</div>
+          <h2 class="title-bar mt-2">For workshops and equipment maintenance</h2>
+          <p class="mt-5 text-ink-soft max-w-[680px]">Precision gears, reducers, couplings and bearings for instrument drives, positioning mechanisms and replacement parts in existing equipment.</p>
+        </div>
+        <a href="/precision-components/" class="text-[15px] font-semibold text-navy no-underline border-b-2 border-amber pb-0.5 hover:text-teal">All precision components →</a>
+      </div>
+      <div class="grid-cards">{precision.map((c) => <LinkCard href={`/products/${c.slug}/`} title={c.name} text={c.short} icon={c.icon} image={categoryImage[c.slug]} badge={countLabel(modelsInCategory(c.slug))} />)}</div>
+    </div></section>
+  )}
   <section class="section pt-0"><div class="container-x">
     <h2 class="title-bar mb-6">Relevant applications</h2>
     <div class="flex flex-wrap gap-2">{apps.map((a) => <a href={`/applications/${a.slug}/`} class="chip">{a.name}</a>)}</div>
