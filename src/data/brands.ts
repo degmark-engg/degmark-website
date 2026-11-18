@@ -97,6 +97,7 @@ export const brands: Brand[] = [
     ],
     relationship: rel('PIC Design'),
     website: 'https://www.pic-design.com',
+    logo: '/images/brands/pic-design-logo.svg',
   },
   {
     slug: 'other-manufacturers',
