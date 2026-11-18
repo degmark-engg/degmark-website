@@ -25,6 +25,9 @@ import ContactLinks from './ContactLinks.astro';
     </div>
   </div>
   <div class="border-t border-white/10">
-    <div class="container-x py-4 text-[13px] text-on-navy-muted">© {new Date().getFullYear()} {company.name}. All rights reserved.</div>
+    <div class="container-x py-4 flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between lg:gap-10 text-[13px] text-on-navy-muted">
+      <div class="shrink-0">© {new Date().getFullYear()} {company.name}. All rights reserved.</div>
+      <p class="text-[12px] leading-relaxed opacity-80 lg:max-w-[720px] lg:text-right">DEGMARK Engineering is an independent seller and is not an authorised distributor or representative of the manufacturers shown on this site. Manufacturer authorisation can be arranged for specific projects where a customer requires it. <a href="/terms/#independent-seller" class="text-on-navy-muted underline hover:text-white">Details</a></p>
+    </div>
   </div>
 </footer>
