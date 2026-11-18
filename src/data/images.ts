@@ -29,6 +29,12 @@ export const alt: Record<string, string> = {
   [`${P}gamma-scout-standard-geiger-counter.webp`]: 'GAMMA-SCOUT Standard pocket Geiger counter',
   [`${P}arrow-tech-w138-direct-reading-pocket-dosimeter.webp`]: 'Arrow-Tech W138 direct-reading pocket dosimeter',
   [`${P}arrow-tech-909b-dosimeter-charger.webp`]: 'Arrow-Tech 909B dosimeter charger',
+  [`${P}staplex-high-volume-air-samplers.webp`]: 'STAPLEX TFIA-2 high-volume air sampler with filter screen',
+  [`${P}staplex-calibration-kits.webp`]: 'STAPLEX CKHV810 calibration kit fitted to a high-volume air sampler',
+  [`${P}staplex-holders-field-accessories.webp`]: 'STAPLEX air sampler field kit in carry case with filter holder and tripod',
+  [`${P}staplex-filters-consumables.webp`]: 'STAPLEX TFAGF41 4-inch glass fibre filters, box of 100',
+  [`${P}staplex-personal-air-samplers.webp`]: 'STAPLEX personal air sampler pump with tubing and charger',
+  [`${P}staplex-pm10-sampling-systems.webp`]: 'STAPLEX PM10 / PM2.5 high-volume sampling head',
   // Photos
   [`${F}nuclear-power-plant-cooling-towers-at-night.webp`]: 'Nuclear power plant cooling towers at night',
   [`${F}nuclear-power-station-cooling-towers.webp`]: 'Nuclear power station cooling towers',
@@ -63,7 +69,7 @@ export const categoryPhoto: Record<string, string | undefined> = {
   'radiation-detectors': `${P}atomtex-bdkg-spectrometric-gamma-detection-units.webp`,
   'radiation-survey-meters': `${P}atomtex-at1117m-multipurpose-radiation-monitor-kit.webp`,
   'radiation-monitoring-systems': `${P}atomtex-area-radiation-monitors-x-ray-gamma.webp`,
-  'air-sampling-equipment': undefined, // STAPLEX photo to follow
+  'air-sampling-equipment': `${P}staplex-high-volume-air-samplers.webp`,
   'personal-dosimeters': `${P}atomtex-at2503b-electronic-personal-dosimeter.webp`,
   'contamination-monitors': `${P}atomtex-at1117m-alpha-beta-contamination-monitor.webp`,
   'detector-components': `${P}atomtex-bdkg-05s-scintillation-gamma-detection-unit.webp`,
@@ -76,7 +82,7 @@ export const applicationPhoto: Record<string, string | undefined> = {
   'neutron-detection': `${P}atomtex-bdkn-neutron-radiation-detection-unit.webp`,
   'dose-measurement': `${P}atomtex-at1125a-x-ray-gamma-dose-rate-meter.webp`,
   'personnel-monitoring': `${P}atomtex-at2503b-electronic-personal-dosimeter.webp`,
-  'air-sampling': undefined, // STAPLEX photo to follow
+  'air-sampling': `${P}staplex-high-volume-air-samplers.webp`,
   'contamination-monitoring': `${P}atomtex-at1117m-bdps-02-alpha-beta-contamination-probe.webp`,
   'environmental-monitoring': `${P}atomtex-at1315-gamma-beta-spectrometer-environmental-samples.webp`,
 };
