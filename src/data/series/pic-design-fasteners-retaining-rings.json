@@ -1,0 +1,248 @@
+{
+  "slug": "pic-design-fasteners-retaining-rings",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "couplings-shafts-hardware",
+  "subtype": "Screws, pins & retaining rings",
+  "name": "PIC Design Screws, Fasteners & Retaining Rings",
+  "summary": "Precision screws and fasteners, retaining rings, dowel pins and shoulder screws for assembling instrument mechanisms.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-fasteners-retaining-rings.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "MSW1-4-6",
+      "anchor": "pic-msw1-4-6",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW1-4-8",
+      "anchor": "pic-msw1-4-8",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW1-4-12",
+      "anchor": "pic-msw1-4-12",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-2-8",
+      "anchor": "pic-msw4-2-8",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-2-12",
+      "anchor": "pic-msw4-2-12",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-3-6",
+      "anchor": "pic-msw4-3-6",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-3-12",
+      "anchor": "pic-msw4-3-12",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-4-10",
+      "anchor": "pic-msw4-4-10",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSW4-4-12",
+      "anchor": "pic-msw4-4-12",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Y1-4-U",
+      "anchor": "pic-y1-4-u",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Y1-4-T",
+      "anchor": "pic-y1-4-t",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Y2-4-T",
+      "anchor": "pic-y2-4-t",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Y3-4-T",
+      "anchor": "pic-y3-4-t",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Y5-6-V",
+      "anchor": "pic-y5-6-v",
+      "specs": {
+        "Description": "Screw / fastener",
+        "Typical use": "Assembling precision mechanisms"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MRR1-3",
+      "anchor": "pic-mrr1-3",
+      "specs": {
+        "Description": "Retaining ring",
+        "Typical use": "Axial retention on shafts and in bores"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MRR2-4",
+      "anchor": "pic-mrr2-4",
+      "specs": {
+        "Description": "Retaining ring",
+        "Typical use": "Axial retention on shafts and in bores"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MRR2-6",
+      "anchor": "pic-mrr2-6",
+      "specs": {
+        "Description": "Retaining ring",
+        "Typical use": "Axial retention on shafts and in bores"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "Dowel pins",
+      "anchor": "pic-dowel-pins",
+      "specs": {
+        "Description": "Precision stainless steel dowel pins",
+        "Typical use": "Accurate part location"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Shoulder screws",
+      "anchor": "pic-shoulder-screws",
+      "specs": {
+        "Description": "Precision shoulder screws",
+        "Typical use": "Pivots, spacers, guided parts"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Set screws",
+      "anchor": "pic-set-screws",
+      "specs": {
+        "Description": "Set screws for hubs and collars",
+        "Typical use": "Fixing gears and pulleys to shafts"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
+}

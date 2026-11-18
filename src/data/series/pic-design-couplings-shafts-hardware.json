@@ -3,9 +3,9 @@
   "status": "draft",
   "brand": "PIC Design",
   "category": "couplings-shafts-hardware",
-  "subtype": "Couplings, shafts & hardware",
-  "name": "PIC Design Couplings, Shafting & Precision Hardware",
-  "summary": "Shaft couplings, precision shafting, stainless dowel pins, shoulder screws and set screws for assembling precision mechanisms.",
+  "subtype": "Couplings & shafting",
+  "name": "PIC Design Couplings & Shafting",
+  "summary": "Bellows, flexible zero-adjustable and Oldham shaft couplings, precision shafting and shaft extensions for connecting motors, encoders and gear trains.",
   "radiationTypes": [
     "Inch",
     "Metric"
@@ -19,6 +19,17 @@
   ],
   "models": [
     {
+      "model": "T1-10",
+      "anchor": "pic-t1-10",
+      "specs": {
+        "Description": "Bellows coupling",
+        "Typical use": "Zero-backlash motor and encoder connections"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "T10-1",
       "anchor": "pic-t10-1",
       "specs": {
@@ -30,11 +41,77 @@
       "verified": false
     },
     {
+      "model": "T10-7",
+      "anchor": "pic-t10-7",
+      "specs": {
+        "Description": "Flexible zero-adjustable coupling",
+        "Typical use": "Motor, encoder and gear train connections"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "T5-3",
+      "anchor": "pic-t5-3",
+      "specs": {
+        "Description": "Oldham coupling (miniature / split hub)",
+        "Typical use": "Connecting misaligned shafts in small drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "T8-5",
       "anchor": "pic-t8-5",
       "specs": {
-        "Description": "Miniature Oldham coupling",
+        "Description": "Oldham coupling (miniature / split hub)",
         "Typical use": "Connecting misaligned shafts in small drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MCU10-6",
+      "anchor": "pic-mcu10-6",
+      "specs": {
+        "Description": "Oldham coupling (miniature / split hub)",
+        "Typical use": "Connecting misaligned shafts in small drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MCU11-6",
+      "anchor": "pic-mcu11-6",
+      "specs": {
+        "Description": "Oldham coupling (miniature / split hub)",
+        "Typical use": "Connecting misaligned shafts in small drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MCU12-6",
+      "anchor": "pic-mcu12-6",
+      "specs": {
+        "Description": "Oldham coupling (miniature / split hub)",
+        "Typical use": "Connecting misaligned shafts in small drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSE1-9",
+      "anchor": "pic-mse1-9",
+      "specs": {
+        "Description": "Shaft extension",
+        "Typical use": "Extending motor or gearbox shafts"
       },
       "datasheet": null,
       "note": "Previously supplied by DEGMARK",
@@ -57,39 +134,6 @@
       "specs": {
         "Description": "Precision ground shafts",
         "Typical use": "Gear and bearing shafts"
-      },
-      "datasheet": null,
-      "note": "",
-      "verified": false
-    },
-    {
-      "model": "Dowel pins",
-      "anchor": "pic-dowel-pins",
-      "specs": {
-        "Description": "Precision stainless steel dowel pins",
-        "Typical use": "Accurate part location"
-      },
-      "datasheet": null,
-      "note": "",
-      "verified": false
-    },
-    {
-      "model": "Shoulder screws",
-      "anchor": "pic-shoulder-screws",
-      "specs": {
-        "Description": "Precision shoulder screws",
-        "Typical use": "Pivots, spacers, guided parts"
-      },
-      "datasheet": null,
-      "note": "",
-      "verified": false
-    },
-    {
-      "model": "Set screws",
-      "anchor": "pic-set-screws",
-      "specs": {
-        "Description": "Set screws for hubs and collars",
-        "Typical use": "Fixing gears and pulleys to shafts"
       },
       "datasheet": null,
       "note": "",

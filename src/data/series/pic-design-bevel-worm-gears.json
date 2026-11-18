@@ -19,6 +19,28 @@
   ],
   "models": [
     {
+      "model": "MM2-3",
+      "anchor": "pic-mm2-3",
+      "specs": {
+        "Description": "Mitre & bevel gear",
+        "Typical use": "Right-angle drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MMB3-4-4-C-T6",
+      "anchor": "pic-mmb3-4-4-c-t6",
+      "specs": {
+        "Description": "Mitre & bevel gear",
+        "Typical use": "Right-angle drives"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "Mitre gear sets",
       "anchor": "pic-mitre-gear-sets",
       "specs": {
@@ -57,5 +79,5 @@
     "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
     "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
   ],
-  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
 }

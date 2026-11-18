@@ -1,0 +1,160 @@
+{
+  "slug": "pic-design-collars-clamps",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "couplings-shafts-hardware",
+  "subtype": "Collars, clamps & motor mounts",
+  "name": "PIC Design Collars, Clamps & Motor Mounts",
+  "summary": "Adjustable hub clamps, precision set screw collars and motor mount cleats for locating and clamping parts on shafts and mounting motors.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-collars-clamps.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "L1-1",
+      "anchor": "pic-l1-1",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L1-2",
+      "anchor": "pic-l1-2",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L1-4",
+      "anchor": "pic-l1-4",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L1-5",
+      "anchor": "pic-l1-5",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L1-6",
+      "anchor": "pic-l1-6",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MCL1-6",
+      "anchor": "pic-mcl1-6",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L4-3",
+      "anchor": "pic-l4-3",
+      "specs": {
+        "Description": "Adjustable / hub clamp",
+        "Typical use": "Clamping hubs and components to shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L2-2",
+      "anchor": "pic-l2-2",
+      "specs": {
+        "Description": "Motor mount cleat",
+        "Typical use": "Mounting motors to plates and frames"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L2-3",
+      "anchor": "pic-l2-3",
+      "specs": {
+        "Description": "Motor mount cleat",
+        "Typical use": "Mounting motors to plates and frames"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "L2-12",
+      "anchor": "pic-l2-12",
+      "specs": {
+        "Description": "Motor mount cleat",
+        "Typical use": "Mounting motors to plates and frames"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MMT1-2",
+      "anchor": "pic-mmt1-2",
+      "specs": {
+        "Description": "Motor mount cleat",
+        "Typical use": "Mounting motors to plates and frames"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSC1-4",
+      "anchor": "pic-msc1-4",
+      "specs": {
+        "Description": "Precision set screw collar",
+        "Typical use": "Axial location on shafts"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
+}

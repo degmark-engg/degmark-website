@@ -41,8 +41,63 @@
       "verified": false
     },
     {
+      "model": "U4-7",
+      "anchor": "pic-u4-7",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "U4-8",
       "anchor": "pic-u4-8",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "U4-9",
+      "anchor": "pic-u4-9",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSR3-7",
+      "anchor": "pic-msr3-7",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSR3-7-0001",
+      "anchor": "pic-msr3-7-0001",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSR3-9",
+      "anchor": "pic-msr3-9",
       "specs": {
         "Description": "Precision speed reducer",
         "Typical use": "Instrument drives, positioners"

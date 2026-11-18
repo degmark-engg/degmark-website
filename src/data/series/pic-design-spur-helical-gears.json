@@ -19,6 +19,116 @@
   ],
   "models": [
     {
+      "model": "H23-22",
+      "anchor": "pic-h23-22",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-30",
+      "anchor": "pic-h23-30",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-36",
+      "anchor": "pic-h23-36",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-48-Q12",
+      "anchor": "pic-h23-48-q12",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-51",
+      "anchor": "pic-h23-51",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-57",
+      "anchor": "pic-h23-57",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H23-60",
+      "anchor": "pic-h23-60",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H25-48-Q12",
+      "anchor": "pic-h25-48-q12",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H26-36",
+      "anchor": "pic-h26-36",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "H26-112",
+      "anchor": "pic-h26-112",
+      "specs": {
+        "Description": "Spur gear",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "G43-96",
       "anchor": "pic-g43-96",
       "specs": {
