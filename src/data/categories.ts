@@ -133,11 +133,11 @@ export const categories: Category[] = [
     slug: 'couplings-shafts-hardware',
     division: 'precision',
     name: 'Couplings, Shafts & Hardware',
-    short: 'Shaft couplings, precision shafting, dowel pins and shoulder screws.',
+    short: 'Shaft couplings, shafting, collars, clamps, motor mounts, screws and retaining rings.',
     intro:
-      'The precision hardware that ties a mechanism together: shaft couplings, ground shafting, dowel pins, shoulder screws and set screws, in inch and metric sizes.',
+      'The precision hardware that ties a mechanism together: shaft couplings, shafting and shaft extensions, collars, hub clamps and motor mounts, screws, dowel pins and retaining rings, in inch and metric sizes.',
     icon: 'coupling',
-    subtypes: ['Couplings, shafts & hardware'],
+    subtypes: ['Couplings & shafting', 'Collars, clamps & motor mounts', 'Screws, pins & retaining rings'],
   },
   {
     slug: 'precision-bearings',
