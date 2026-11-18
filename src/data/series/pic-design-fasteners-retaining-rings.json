@@ -26,7 +26,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -37,7 +37,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -48,7 +48,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -59,7 +59,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -70,7 +70,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -81,7 +81,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -92,7 +92,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -103,7 +103,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -114,7 +114,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -125,7 +125,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -136,7 +136,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -147,7 +147,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -158,7 +158,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -169,7 +169,7 @@
         "Typical use": "Assembling precision mechanisms"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -180,7 +180,7 @@
         "Typical use": "Axial retention on shafts and in bores"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -191,7 +191,7 @@
         "Typical use": "Axial retention on shafts and in bores"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -202,7 +202,7 @@
         "Typical use": "Axial retention on shafts and in bores"
       },
       "datasheet": null,
-      "note": "Previously supplied by DEGMARK",
+      "note": "",
       "verified": false
     },
     {
@@ -244,5 +244,5 @@
     "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
     "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
   ],
-  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows are popular PIC Design models listed by Degmark; descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
 }
