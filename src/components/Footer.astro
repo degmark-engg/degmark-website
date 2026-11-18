@@ -1,17 +1,14 @@
 ---
 import { company, footerNav } from '../data/site';
-import Icon from './Icon.astro';
 import ContactLinks from './ContactLinks.astro';
 ---
 <footer class="bg-navy-deep text-on-navy grid-bg">
   <div class="h-1 bg-gradient-to-r from-teal via-teal-bright to-amber"></div>
   <div class="container-x py-12 grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
     <div>
-      <a href="/" class="flex items-center gap-2.5 no-underline text-white hover:text-white">
-        <Icon name="logo" size={28} class="text-teal-bright" />
-        <span class="wordmark text-[22px]">DEGMARK</span>
+      <a href="/" class="inline-block no-underline" aria-label="DEGMARK Engineering home">
+        <img src="/images/degmark-logo-white.png" alt="DEGMARK Engineering" width="294" height="82" class="h-12 w-auto" loading="lazy" />
       </a>
-      <p class="mt-1 font-mono text-[11px] uppercase tracking-[0.16em] text-on-navy-muted">Engineering Co.</p>
       <p class="mt-4 text-[14px] text-on-navy-muted max-w-[320px]">{company.tagline} from leading international manufacturers.</p>
       <a href="/request-a-quote/" class="btn-accent mt-5">Request a quote</a>
     </div>
