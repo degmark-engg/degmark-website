@@ -14,7 +14,7 @@ export const company = {
   hours: '[PLACEHOLDER: business hours]',
   responseTime: '[PLACEHOLDER: response time]',
   domain: 'https://www.degmarkeng.com',
-  founded: '[PLACEHOLDER: year]',
+  founded: '2002',
 };
 
 export const mainNav = [
