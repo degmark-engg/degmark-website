@@ -54,7 +54,11 @@ const points = [
         <p class="mt-4 text-[16px] sm:text-[17px] leading-relaxed text-on-navy max-w-[560px]">Detectors, survey meters, monitoring systems, air samplers and dosimeters from leading international manufacturers, for nuclear, research, medical, industrial and environmental users.</p>
         <div class="flex flex-wrap gap-3 mt-6">
           <a href="/products/" class="btn-accent !px-6 !min-h-12 !text-[16px]">Explore products <span aria-hidden="true">→</span></a>
-          <a href="/upload-requirement/" class="btn-ghost-light !px-6 !min-h-12 !text-[16px]">Upload a tender</a>
+          <form action="/search/" method="get" role="search" class="flex flex-1 min-w-[260px] max-w-[400px] min-h-12 rounded-btn overflow-hidden bg-white shadow-[0_8px_24px_-12px_rgba(0,0,0,.5)] ring-1 ring-white/20 focus-within:ring-2 focus-within:ring-amber">
+            <label for="hero-q" class="sr-only">Search by part number, model number or brand</label>
+            <input id="hero-q" name="q" type="search" required placeholder="Search part / model no. or brand" class="flex-1 min-w-0 px-4 text-[16px] text-ink bg-transparent border-0 outline-none placeholder:text-muted" />
+            <button type="submit" class="shrink-0 px-4 bg-teal text-white hover:bg-teal-dark flex items-center gap-2 font-semibold text-[15px]" aria-label="Search"><Icon name="search" size={20} class="" /><span class="hidden sm:inline">Search</span></button>
+          </form>
         </div>
       </div>
     </div>
