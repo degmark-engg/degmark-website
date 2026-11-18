@@ -16,11 +16,13 @@
 - lnd-*: lndinc.com
 - gamma-scout-*: gamma-scout.com
 - arrow-tech-*: dosimeter.com (Arrow-Tech)
+- staplex-*: STAPLEX product photos supplied by Degmark
+- pic-design-*: pic-designcatalog.com (PIC Design)
 
 ## Logos (public/images/brands)
-- lnd-inc-logo.png, atomtex-logo.svg, gamma-scout-logo.png, arrow-tech-logo.png: from each manufacturer's website
+- lnd-inc-logo.png, atomtex-logo.svg, gamma-scout-logo.png, arrow-tech-logo.png, pic-design-logo.svg: from each manufacturer's website
 
 ## Still to add
-- STAPLEX: logo and photos for all six STAPLEX series
+- STAPLEX: logo
 - LND: photos for BF3 neutron detectors, He-3 neutron detectors and gamma ionisation chambers (LND's site shows drawings only)
 - Arrow-Tech: survey meter photo
