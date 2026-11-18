@@ -19,6 +19,61 @@
   ],
   "models": [
     {
+      "model": "U2-23",
+      "anchor": "pic-u2-23",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "U4-3",
+      "anchor": "pic-u4-3",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "U4-8",
+      "anchor": "pic-u4-8",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSR3-11",
+      "anchor": "pic-msr3-11",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSR3-13",
+      "anchor": "pic-msr3-13",
+      "specs": {
+        "Description": "Precision speed reducer",
+        "Typical use": "Instrument drives, positioners"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "HHB series",
       "anchor": "pic-hhb-series",
       "specs": {
@@ -58,5 +113,5 @@
     "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design",
     "HHB/HWB ratios and torque: https://news.thomasnet.com/companies/590083"
   ],
-  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. HHB/HWB ratio and torque figures come from a PIC Design product release on Thomasnet; confirm against the current catalogue."
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. HHB/HWB ratio and torque figures come from a PIC Design product release on Thomasnet; confirm against the current catalogue. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
 }

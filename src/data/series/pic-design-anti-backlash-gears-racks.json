@@ -19,6 +19,61 @@
   ],
   "models": [
     {
+      "model": "MAB37-40",
+      "anchor": "pic-mab37-40",
+      "specs": {
+        "Description": "Anti-backlash gear",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MAB18-90-C",
+      "anchor": "pic-mab18-90-c",
+      "specs": {
+        "Description": "Anti-backlash gear",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MAB18-100-C",
+      "anchor": "pic-mab18-100-c",
+      "specs": {
+        "Description": "Anti-backlash gear",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "P4-4-128-C",
+      "anchor": "pic-p4-4-128-c",
+      "specs": {
+        "Description": "Anti-backlash gear",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "P17-2-30-C",
+      "anchor": "pic-p17-2-30-c",
+      "specs": {
+        "Description": "Anti-backlash gear",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "Anti-backlash gears",
       "anchor": "pic-anti-backlash-gears",
       "specs": {
@@ -57,5 +112,5 @@
     "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
     "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
   ],
-  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
 }

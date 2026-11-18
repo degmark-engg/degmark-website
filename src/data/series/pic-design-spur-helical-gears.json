@@ -19,6 +19,28 @@
   ],
   "models": [
     {
+      "model": "G43-96",
+      "anchor": "pic-g43-96",
+      "specs": {
+        "Description": "Spur gear, pin hub",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
+      "model": "MSG27-160",
+      "anchor": "pic-msg27-160",
+      "specs": {
+        "Description": "Spur gear, pin hub",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "Previously supplied by DEGMARK",
+      "verified": false
+    },
+    {
       "model": "Spur gears",
       "anchor": "pic-spur-gears",
       "specs": {
@@ -68,5 +90,5 @@
     "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
     "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
   ],
-  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. Part-number rows supplied by Degmark (popular, previously supplied); descriptions from Degmark's categorisation, specs to be added from PIC datasheets."
 }
