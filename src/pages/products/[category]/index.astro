@@ -15,16 +15,18 @@ const { cat } = Astro.props;
 const list = seriesInCategory(cat.slug);
 const radiation = [...new Set(list.flatMap((s) => s.radiationTypes))].sort();
 const brandsHere = [...new Set(list.map((s) => s.brand))].sort();
+const precision = cat.division === 'precision';
+const tagLegend = precision ? 'Standard' : 'Radiation type';
 const count = (st: string) => list.filter((s) => s.subtype === st).length;
 ---
 <Base title={cat.name} description={`${cat.name}: ${cat.short} Key models from international manufacturers, other models on request.`}>
   <PageHero
     title={cat.name}
     lead={cat.intro}
-    crumbs={[{ href: '/products/', label: 'Products' }, { label: cat.name }]}
+    crumbs={precision ? [{ href: '/products/', label: 'Products' }, { href: '/precision-components/', label: 'Precision Components' }, { label: cat.name }] : [{ href: '/products/', label: 'Products' }, { label: cat.name }]}
     chips={radiation}
     product={categoryImage[cat.slug]}
-    panel={{ eyebrow: 'Specification ready?', text: 'Upload your tender or specification and we will match suitable models.', href: '/upload-requirement/', label: 'Upload requirement' }}
+    panel={precision ? { eyebrow: 'Have a part number?', text: 'Send a part number, drawing, old BOM or photo of the part and we will identify a match.', href: '/upload-requirement/', label: 'Send part details' } : { eyebrow: 'Specification ready?', text: 'Upload your tender or specification and we will match suitable models.', href: '/upload-requirement/', label: 'Upload requirement' }}
   />
 
   <section class="section pb-0">
@@ -41,7 +43,7 @@ const count = (st: string) => list.filter((s) => s.subtype === st).length;
     <div class="container-x flex flex-wrap gap-6 items-start">
       <aside class="flex-[1_1_220px] card p-5 space-y-5">
         <fieldset>
-          <legend class="text-[13px] font-semibold uppercase text-muted mb-2">Radiation type</legend>
+          <legend class="text-[13px] font-semibold uppercase text-muted mb-2">{tagLegend}</legend>
           {radiation.length === 0 && <p class="text-[14px] text-muted">—</p>}
           {radiation.map((r) => <label class="flex items-center gap-2 text-[15px] min-h-9"><input type="checkbox" class="f-rad w-4 h-4 accent-teal" value={r} />{r}</label>)}
         </fieldset>

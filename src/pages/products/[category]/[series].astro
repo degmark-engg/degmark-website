@@ -29,7 +29,7 @@ const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${mod
 <Base title={`${s.name}${modelList.length ? ` (${modelList.slice(0, 3).join(', ')})` : ''}`} description={description}>
   <section class="bg-surface grid-bg-light border-b border-line border-t-4 border-t-navy">
     <div class="container-x py-10">
-      <Breadcrumb items={[{ href: '/products/', label: 'Products' }, { href: `/products/${cat.slug}/`, label: cat.name }, { label: s.name }]} />
+      <Breadcrumb items={[{ href: '/products/', label: 'Products' }, ...(cat.division === 'precision' ? [{ href: '/precision-components/', label: 'Precision Components' }] : []), { href: `/products/${cat.slug}/`, label: cat.name }, { label: s.name }]} />
       {s.status !== 'approved' && <p class="mb-4 rounded-btn bg-amber/30 px-3 py-2 text-[14px] font-semibold text-ink">Preview: this series is "{s.status}" and is not published on the live site.</p>}
       <div class="flex flex-wrap gap-8 items-start">
         <div class="flex-[1_1_300px]">
@@ -40,7 +40,7 @@ const description = `${s.name}: ${s.summary}${modelList.length ? ` Models: ${mod
           <h1 class="mt-3">{s.name}</h1>
           <p class="lead mt-4">{s.summary}</p>
           <div class="mt-5 space-y-3">
-            <div class="flex flex-wrap items-center gap-2"><span class="text-[13px] font-semibold uppercase text-muted w-28">Radiation</span>{s.radiationTypes.map((r) => <span class="chip">{r}</span>)}</div>
+            {s.radiationTypes.length > 0 && <div class="flex flex-wrap items-center gap-2"><span class="text-[13px] font-semibold uppercase text-muted w-28">{cat.division === 'precision' ? 'Standard' : 'Radiation'}</span>{s.radiationTypes.map((r) => <span class="chip">{r}</span>)}</div>}
             {apps.length > 0 && <div class="flex flex-wrap items-center gap-2"><span class="text-[13px] font-semibold uppercase text-muted w-28">Applications</span>{apps.map((a) => <a href={`/applications/${a.slug}/`} class="chip">{a.name}</a>)}</div>}
           </div>
           <div class="flex flex-wrap gap-3 mt-6">
