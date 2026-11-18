@@ -1,0 +1,61 @@
+{
+  "slug": "pic-design-anti-backlash-gears-racks",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "precision-gears",
+  "subtype": "Anti-backlash gears & racks",
+  "name": "PIC Design Anti-Backlash Gears & Racks",
+  "summary": "Anti-backlash gears that remove play for accurate, repeatable positioning, and fine-pitch flat and round racks for rack-and-pinion motion.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-anti-backlash-gears-racks.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Anti-backlash gears",
+      "anchor": "pic-anti-backlash-gears",
+      "specs": {
+        "Description": "Spring-loaded split gears that take up backlash",
+        "Typical use": "Encoders, positioning, optical focus/zoom"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Fine-pitch racks",
+      "anchor": "pic-fine-pitch-racks",
+      "specs": {
+        "Description": "Flat precision racks",
+        "Typical use": "Rack-and-pinion linear motion"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Fine-pitch round racks",
+      "anchor": "pic-fine-pitch-round-racks",
+      "specs": {
+        "Description": "Racks cut on round bar",
+        "Typical use": "Linear motion through a bushing"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

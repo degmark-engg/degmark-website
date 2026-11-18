@@ -1,0 +1,61 @@
+{
+  "slug": "pic-design-bevel-worm-gears",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "precision-gears",
+  "subtype": "Bevel & worm gears",
+  "name": "PIC Design Bevel, Mitre & Worm Gears",
+  "summary": "Mitre and bevel gear sets for right-angle drives, and worms and worm wheels for high-ratio, self-locking drives.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-bevel-worm-gears.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Mitre gear sets",
+      "anchor": "pic-mitre-gear-sets",
+      "specs": {
+        "Description": "1:1 bevel gear pairs",
+        "Typical use": "Right-angle drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Bevel gear sets",
+      "anchor": "pic-bevel-gear-sets",
+      "specs": {
+        "Description": "Bevel gear pairs with ratio",
+        "Typical use": "Right-angle drives with reduction"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Worms & worm wheels",
+      "anchor": "pic-worms-worm-wheels",
+      "specs": {
+        "Description": "Matched worm and wheel sets",
+        "Typical use": "High-ratio and self-locking drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

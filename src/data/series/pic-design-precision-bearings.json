@@ -1,0 +1,94 @@
+{
+  "slug": "pic-design-precision-bearings",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "precision-bearings",
+  "subtype": "Bearings & rod ends",
+  "name": "PIC Design Precision Bearings",
+  "summary": "Precision ball, bronze sleeve, thrust, linear and plastic bearings and rod ends for instrument mechanisms, with access to the wider RBC Bearings range.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-precision-bearings.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Precision ball bearings",
+      "anchor": "pic-precision-ball-bearings",
+      "specs": {
+        "Description": "Miniature and instrument ball bearings",
+        "Typical use": "Low-friction precise rotation"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Bronze sleeve bearings",
+      "anchor": "pic-bronze-sleeve-bearings",
+      "specs": {
+        "Description": "Bronze bushings",
+        "Typical use": "Simple, compact plain bearings"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Thrust bearings",
+      "anchor": "pic-thrust-bearings",
+      "specs": {
+        "Description": "Axial-load bearings",
+        "Typical use": "Axial support in drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Linear bearings",
+      "anchor": "pic-linear-bearings",
+      "specs": {
+        "Description": "Linear ball bushings and bearings",
+        "Typical use": "Shaft-guided linear travel"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Plastic bearings",
+      "anchor": "pic-plastic-bearings",
+      "specs": {
+        "Description": "Self-lubricating polymer bearings",
+        "Typical use": "Clean, lubrication-free use"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Rod ends",
+      "anchor": "pic-rod-ends",
+      "specs": {
+        "Description": "Spherical rod ends",
+        "Typical use": "Linkages and actuator ends"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

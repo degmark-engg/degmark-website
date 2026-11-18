@@ -1,0 +1,62 @@
+{
+  "slug": "pic-design-speed-reducers",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "speed-reducers",
+  "subtype": "Speed reducers & gearheads",
+  "name": "PIC Design Speed Reducers & Gearheads",
+  "summary": "Compact single-reduction speed reducers with crossed-helical or worm-and-wheel gearing, delivering high torque from a small housing, plus gearheads and custom gear assemblies.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-speed-reducers.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "HHB series",
+      "anchor": "pic-hhb-series",
+      "specs": {
+        "Description": "Crossed-helical single-reduction reducer",
+        "Typical use": "Compact right-angle drives"
+      },
+      "datasheet": null,
+      "note": "Ratios 1:1 to 60:1 across HHB/HWB; output torque up to 77 lb-in",
+      "verified": false
+    },
+    {
+      "model": "HWB series",
+      "anchor": "pic-hwb-series",
+      "specs": {
+        "Description": "Worm-and-wheel single-reduction reducer",
+        "Typical use": "High-ratio, compact drives"
+      },
+      "datasheet": null,
+      "note": "Ratios 1:1 to 60:1 across HHB/HWB; output torque up to 77 lb-in",
+      "verified": false
+    },
+    {
+      "model": "Gearheads & gear assemblies",
+      "anchor": "pic-gearheads-gear-assemblies",
+      "specs": {
+        "Description": "Standard gearheads and custom-built gear assemblies",
+        "Typical use": "Motor gearheads, instrument drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design",
+    "HHB/HWB ratios and torque: https://news.thomasnet.com/companies/590083"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series. HHB/HWB ratio and torque figures come from a PIC Design product release on Thomasnet; confirm against the current catalogue."
+}

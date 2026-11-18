@@ -1,0 +1,83 @@
+{
+  "slug": "pic-design-slides-stages",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "linear-motion",
+  "subtype": "Slides, stages & rails",
+  "name": "PIC Design Slides, Stages & Rails",
+  "summary": "Ball and crossed-roller slides, linear stages and positioners, rails and slide guides, and complete linear systems for accurate straight-line motion.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-slides-stages.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Ball slides",
+      "anchor": "pic-ball-slides",
+      "specs": {
+        "Description": "Ball-bearing linear slides",
+        "Typical use": "Light-load precision travel"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Crossed roller slides",
+      "anchor": "pic-crossed-roller-slides",
+      "specs": {
+        "Description": "Crossed-roller linear slides",
+        "Typical use": "High-stiffness precision travel"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Linear stages & positioners",
+      "anchor": "pic-linear-stages-positioners",
+      "specs": {
+        "Description": "Manual and driven stages",
+        "Typical use": "Sample, optics and probe positioning"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Linear rails & slide guides",
+      "anchor": "pic-linear-rails-slide-guides",
+      "specs": {
+        "Description": "Rails, guides and carriages",
+        "Typical use": "Building custom linear axes"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Complete linear systems",
+      "anchor": "pic-complete-linear-systems",
+      "specs": {
+        "Description": "Assembled linear motion systems",
+        "Typical use": "Turnkey motion axes"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

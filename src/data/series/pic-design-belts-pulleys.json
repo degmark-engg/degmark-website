@@ -1,0 +1,94 @@
+{
+  "slug": "pic-design-belts-pulleys",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "belts-pulleys",
+  "subtype": "Belts, pulleys & chain",
+  "name": "PIC Design Belts, Pulleys & Precision Chain",
+  "summary": "Timing and positive-engagement positioning belts, round belts, machined pulleys and sprockets, and fine-pitch stainless steel chain for precise, quiet drives.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-belts-pulleys.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "No-Slip positioning belts",
+      "anchor": "pic-no-slip-positioning-belts",
+      "specs": {
+        "Description": "Positive tooth-engagement belts",
+        "Typical use": "Accurate indexing and positioning"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "No-Slide timing belts",
+      "anchor": "pic-no-slide-timing-belts",
+      "specs": {
+        "Description": "Self-tracking timing belts",
+        "Typical use": "Synchronous drives without flanges"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Traditional timing belts",
+      "anchor": "pic-traditional-timing-belts",
+      "specs": {
+        "Description": "Standard synchronous belts",
+        "Typical use": "Synchronous power transmission"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Round belts",
+      "anchor": "pic-round-belts",
+      "specs": {
+        "Description": "Round-section drive belts",
+        "Typical use": "Light-duty and flexible-path drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Machined pulleys & sprockets",
+      "anchor": "pic-machined-pulleys-sprockets",
+      "specs": {
+        "Description": "Precision pulleys and sprockets",
+        "Typical use": "Belt and chain drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Stainless steel chain",
+      "anchor": "pic-stainless-steel-chain",
+      "specs": {
+        "Description": ".1425\" and .250\" pitch precision chain",
+        "Typical use": "Fine-pitch chain drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

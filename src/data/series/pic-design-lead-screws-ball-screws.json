@@ -1,0 +1,72 @@
+{
+  "slug": "pic-design-lead-screws-ball-screws",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "linear-motion",
+  "subtype": "Lead screws & ball screws",
+  "name": "PIC Design Lead Screws, Nuts & Ball Screws",
+  "summary": "Acme and precision lead screws with standard and anti-backlash nuts, and rolled ball screws, for converting rotary to linear motion.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-lead-screws-ball-screws.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Acme lead screws & nuts",
+      "anchor": "pic-acme-lead-screws-nuts",
+      "specs": {
+        "Description": "Acme-thread screws and nuts",
+        "Typical use": "General linear actuation"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Precision lead screws & nuts",
+      "anchor": "pic-precision-lead-screws-nuts",
+      "specs": {
+        "Description": "Precision-style screws and nuts",
+        "Typical use": "Accurate positioning"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Anti-backlash nuts",
+      "anchor": "pic-anti-backlash-nuts",
+      "specs": {
+        "Description": "Preloaded nuts that remove axial play",
+        "Typical use": "Repeatable bidirectional positioning"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Rolled ball screws & nuts",
+      "anchor": "pic-rolled-ball-screws-nuts",
+      "specs": {
+        "Description": "Ball screw assemblies",
+        "Typical use": "Efficient, higher-load linear drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

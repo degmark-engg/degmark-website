@@ -1,0 +1,72 @@
+{
+  "slug": "pic-design-spur-helical-gears",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "precision-gears",
+  "subtype": "Spur & helical gears",
+  "name": "PIC Design Spur & Helical Gears",
+  "summary": "Fine-pitch precision spur and helical gears, cluster gears and pinion shafts for instrument drives, positioning mechanisms and optical systems.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-spur-helical-gears.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Spur gears",
+      "anchor": "pic-spur-gears",
+      "specs": {
+        "Description": "Fine-pitch precision spur gears",
+        "Typical use": "Instrument drives, gear trains"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Helical gears",
+      "anchor": "pic-helical-gears",
+      "specs": {
+        "Description": "Fine-pitch helical gears",
+        "Typical use": "Quiet, smooth parallel-shaft drives"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Cluster gears",
+      "anchor": "pic-cluster-gears",
+      "specs": {
+        "Description": "Two gears combined on one hub",
+        "Typical use": "Compact multi-stage gear trains"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Pinion shafts",
+      "anchor": "pic-pinion-shafts",
+      "specs": {
+        "Description": "Pinion cut integral with its shaft",
+        "Typical use": "Input stages, motor pinions"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}

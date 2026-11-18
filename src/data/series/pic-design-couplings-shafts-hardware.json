@@ -1,0 +1,83 @@
+{
+  "slug": "pic-design-couplings-shafts-hardware",
+  "status": "draft",
+  "brand": "PIC Design",
+  "category": "couplings-shafts-hardware",
+  "subtype": "Couplings, shafts & hardware",
+  "name": "PIC Design Couplings, Shafting & Precision Hardware",
+  "summary": "Shaft couplings, precision shafting, stainless dowel pins, shoulder screws and set screws for assembling precision mechanisms.",
+  "radiationTypes": [
+    "Inch",
+    "Metric"
+  ],
+  "applications": [],
+  "image": "/images/products/pic-design-couplings-shafts-hardware.webp",
+  "catalogue": null,
+  "specColumns": [
+    "Description",
+    "Typical use"
+  ],
+  "models": [
+    {
+      "model": "Couplings",
+      "anchor": "pic-couplings",
+      "specs": {
+        "Description": "Shaft-to-shaft couplings",
+        "Typical use": "Motor, encoder and gear train connections"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Shafting",
+      "anchor": "pic-shafting",
+      "specs": {
+        "Description": "Precision ground shafts",
+        "Typical use": "Gear and bearing shafts"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Dowel pins",
+      "anchor": "pic-dowel-pins",
+      "specs": {
+        "Description": "Precision stainless steel dowel pins",
+        "Typical use": "Accurate part location"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Shoulder screws",
+      "anchor": "pic-shoulder-screws",
+      "specs": {
+        "Description": "Precision shoulder screws",
+        "Typical use": "Pivots, spacers, guided parts"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    },
+    {
+      "model": "Set screws",
+      "anchor": "pic-set-screws",
+      "specs": {
+        "Description": "Set screws for hubs and collars",
+        "Typical use": "Fixing gears and pulleys to shafts"
+      },
+      "datasheet": null,
+      "note": "",
+      "verified": false
+    }
+  ],
+  "moreOnRequest": true,
+  "sources": [
+    "PIC Design line card (RBC Bearings): https://www.rbcbearings.com/literature/pdfs/PIC_Line_Card.pdf",
+    "RBC Bearings PIC Design page: https://www.rbcbearings.com/PIC-Design"
+  ],
+  "internalNotes": "Research draft built from PIC Design's published line card. Rows are product families, not individual part numbers; confirm the families Degmark actually quotes, add key part numbers and sizes, then set status to approved. 'radiationTypes' holds the Standard tags (Inch/Metric) for precision-division series."
+}
