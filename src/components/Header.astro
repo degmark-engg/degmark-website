@@ -1,6 +1,6 @@
 ---
 import { mainNav } from '../data/site';
-import { categories } from '../data/categories';
+import { categoriesIn } from '../data/categories';
 import { brands } from '../data/brands';
 import { applications } from '../data/applications';
 import { industries } from '../data/industries';
@@ -11,11 +11,15 @@ const active = (href: string) => path.startsWith(href);
 
 // Dropdown content for each top-level item. Items without an entry are plain links.
 type MenuItem = { href: string; label: string; sub?: string; icon?: string; badge?: string };
-const menus: Record<string, { wide?: boolean; cols: number; items: MenuItem[]; all: string }> = {
+const menus: Record<string, { wide?: boolean; cols: number; items: MenuItem[]; all: string; side?: { title: string; href: string; items: MenuItem[] } }> = {
   '/products/': {
     wide: true, cols: 2, all: 'All products',
-    items: categories.map((c) => ({ href: `/products/${c.slug}/`, label: c.name, sub: c.subtypes.slice(0, 3).join(' · '), icon: c.icon, badge: countLabel(modelsInCategory(c.slug)) }))
+    items: categoriesIn('radiation').map((c) => ({ href: `/products/${c.slug}/`, label: c.name, sub: c.subtypes.slice(0, 3).join(' · '), icon: c.icon, badge: countLabel(modelsInCategory(c.slug)) }))
       .concat([{ href: '/products/radiation-detectors/?subtype=GM%20tubes', label: 'Geiger-Müller (GM) Tubes', sub: 'End-window · Pancake · Thin-wall', icon: 'gmtube', badge: countLabel(gmTubeModels) }]),
+    side: {
+      title: 'Precision mechanical components', href: '/precision-components/',
+      items: categoriesIn('precision').map((c) => ({ href: `/products/${c.slug}/`, label: c.name, icon: c.icon })),
+    },
   },
   '/brands/': {
     cols: 1, all: 'All brands',
@@ -76,6 +80,19 @@ const menus: Record<string, { wide?: boolean; cols: number; items: MenuItem[]; a
                       </li>
                     ))}
                   </ul>
+                  {m.side && (
+                    <div class="w-[290px] shrink-0 border-l border-line p-3">
+                      <a href={m.side.href} class="block px-3 pt-2 pb-1.5 eyebrow text-teal no-underline hover:text-teal-dark">{m.side.title} →</a>
+                      <ul class="grid gap-0.5">
+                        {m.side.items.map((it) => (
+                          <li><a href={it.href} class="flex items-center gap-3 rounded-btn px-3 py-2 no-underline text-ink hover:bg-teal-tint hover:text-ink">
+                            {it.icon && <span class="shrink-0 w-8 h-8 rounded-btn bg-teal-tint flex items-center justify-center"><Icon name={it.icon} size={18} /></span>}
+                            <span class="font-semibold text-[14.5px] text-navy">{it.label}</span>
+                          </a></li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {m.wide && (
                     <div class="w-[280px] shrink-0 bg-navy-deep grid-bg p-6 flex flex-col gap-3 text-on-navy">
                       <div class="eyebrow text-amber">Have a tender?</div>
