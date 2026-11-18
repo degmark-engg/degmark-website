@@ -20,7 +20,7 @@ const list = seriesForBrand(b.name);
 const cats = categories.filter((c) => list.some((s) => s.category === c.slug));
 const docs = downloads.filter((d) => d.brand === b.name);
 ---
-<Base title={b.name} description={`${b.name} (${b.country}): ${b.oneLine} Supplied by DEGMARK.`}>
+<Base title={b.name} description={`${b.name} (${b.country}): ${b.oneLine}`}>
   <PageHero title={b.name} lead={b.oneLine} crumbs={[{ href: '/brands/', label: 'Brands' }, { label: b.name }]} chips={[b.country]}>
     {b.logo && <img src={b.logo} alt={`${b.name} logo`} class:list={['max-h-12 mt-6', b.logoOnDark !== 'original' && 'logo-white']} />}
   </PageHero>
