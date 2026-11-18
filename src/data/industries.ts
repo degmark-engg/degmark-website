@@ -6,6 +6,7 @@ export type Industry = {
   needs: string[];
   categories: string[]; // category slugs
   applications: string[]; // application slugs
+  precision?: string[]; // precision mechanical component categories used in this sector's workshops and equipment
 };
 
 export const industries: Industry[] = [
@@ -20,6 +21,7 @@ export const industries: Industry[] = [
     ],
     categories: ['radiation-survey-meters', 'radiation-monitoring-systems', 'contamination-monitors', 'personal-dosimeters', 'air-sampling-equipment', 'radiation-detectors'],
     applications: ['dose-measurement', 'contamination-monitoring', 'personnel-monitoring', 'air-sampling'],
+    precision: ['precision-gears', 'speed-reducers', 'couplings-shafts-hardware', 'precision-bearings'],
   },
   {
     slug: 'atomic-energy-research',
@@ -31,6 +33,7 @@ export const industries: Industry[] = [
     ],
     categories: ['radiation-detectors', 'detector-components', 'radiation-survey-meters', 'air-sampling-equipment'],
     applications: ['neutron-detection', 'gamma-detection', 'alpha-beta-detection'],
+    precision: ['precision-gears', 'linear-motion', 'speed-reducers', 'couplings-shafts-hardware'],
   },
   {
     slug: 'healthcare-nuclear-medicine',
@@ -75,6 +78,7 @@ export const industries: Industry[] = [
     ],
     categories: ['radiation-survey-meters', 'personal-dosimeters', 'contamination-monitors'],
     applications: ['gamma-detection', 'neutron-detection', 'personnel-monitoring'],
+    precision: ['precision-gears', 'speed-reducers', 'precision-bearings', 'linear-motion'],
   },
   {
     slug: 'laboratories',
@@ -86,5 +90,6 @@ export const industries: Industry[] = [
     ],
     categories: ['radiation-detectors', 'detector-components', 'contamination-monitors'],
     applications: ['alpha-beta-detection', 'contamination-monitoring'],
+    precision: ['linear-motion', 'precision-gears', 'couplings-shafts-hardware', 'precision-bearings'],
   },
 ];
