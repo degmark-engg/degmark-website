@@ -3,15 +3,23 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import Icon from '../../components/Icon.astro';
 import EnquiryStrip from '../../components/EnquiryStrip.astro';
-import { categories } from '../../data/categories';
+import { categoriesIn, divisions } from '../../data/categories';
 import { modelsInCategory, modelsInSubtype, countLabel, categoryImage } from '../../lib/stats';
 import { altFor } from '../../data/images';
 ---
-<Base title="Products" description="Radiation detectors, survey meters, monitoring systems, air sampling equipment, personal dosimeters, contamination monitors and detector components.">
-  <PageHero title="Products" lead="Key models from our principals, grouped into seven categories. Other models are available on request." crumbs={[{ label: 'Products' }]} />
-  <section class="py-16 lg:py-20">
+<Base title="Products" description="Radiation detectors, survey meters, monitoring systems, air sampling equipment, personal dosimeters, contamination monitors and detector components, plus precision gears, speed reducers, linear motion components and bearings.">
+  <PageHero title="Products" lead="Key models from our principals in two divisions: radiation detection and measurement, and precision mechanical components. Other models are available on request." crumbs={[{ label: 'Products' }]} />
+  {divisions.map((d, di) => (
+  <section class:list={['py-14 lg:py-16', di > 0 && 'bg-surface border-t border-line']} id={d.slug}>
+    <div class="container-x mb-7 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <div class="eyebrow text-teal">Division {di + 1}</div>
+        <h2 class="title-bar mt-2">{d.name}</h2>
+      </div>
+      {d.slug === 'precision' && <a href={d.href} class="text-[15px] font-semibold text-navy no-underline border-b-2 border-amber pb-0.5 hover:text-teal">About this division →</a>}
+    </div>
     <div class="container-x grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {categories.map((c) => {
+      {categoriesIn(d.slug).map((c) => {
         const n = modelsInCategory(c.slug);
         return (
           <div class="group card lift relative overflow-hidden flex flex-col hover:border-teal reveal">
@@ -20,7 +28,7 @@ import { altFor } from '../../data/images';
               <span class:list={['count-badge absolute top-3 right-3', n === 0 && 'count-badge-muted !bg-white']}>{countLabel(n)}</span>
             </div>
             <div class="p-5 flex flex-col gap-2 flex-1">
-              <h2 class="!text-[19px] !leading-snug"><a href={`/products/${c.slug}/`} class="stretched text-navy no-underline group-hover:text-teal">{c.name}</a></h2>
+              <h3 class="!text-[19px] !leading-snug"><a href={`/products/${c.slug}/`} class="stretched text-navy no-underline group-hover:text-teal">{c.name}</a></h3>
               <p class="text-[14px] text-muted">{c.short}</p>
               <ul class="text-[14px] mt-1 divide-y divide-line border-y border-line">{c.subtypes.map((s) => {
                 const k = modelsInSubtype(c.slug, s);
@@ -33,11 +41,12 @@ import { altFor } from '../../data/images';
       })}
       <a href="/upload-requirement/" class="lift reveal rounded-card bg-navy grid-bg p-6 flex flex-col gap-3 no-underline text-on-navy hover:text-on-navy">
         <Icon name="upload" class="text-amber" />
-        <h2 class="!text-[20px] !text-white mt-auto">Can't find a model?</h2>
-        <p class="text-[14px]">The site lists key models only. Send your specification or tender and we will source a match.</p>
-        <span class="btn-accent self-start mt-2">Upload requirement</span>
+        <h3 class="!text-[20px] !text-white mt-auto">{d.slug === 'precision' ? 'Have a part number or drawing?' : "Can't find a model?"}</h3>
+        <p class="text-[14px]">{d.slug === 'precision' ? 'Send the part number, an old BOM, a drawing or a photo of the part and we will identify a match.' : 'The site lists key models only. Send your specification or tender and we will source a match.'}</p>
+        <span class="btn-accent self-start mt-2">{d.slug === 'precision' ? 'Send part details' : 'Upload requirement'}</span>
       </a>
     </div>
   </section>
+  ))}
   <EnquiryStrip />
 </Base>
