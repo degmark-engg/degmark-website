@@ -5,12 +5,13 @@ import Icon from '../components/Icon.astro';
 import EnquiryStrip from '../components/EnquiryStrip.astro';
 import { photos, altFor, applicationPhoto } from '../data/images';
 import { company } from '../data/site';
-import { categories } from '../data/categories';
+import { categories, categoriesIn } from '../data/categories';
 import { brands } from '../data/brands';
 import { applications } from '../data/applications';
 import { industries } from '../data/industries';
 import { modelsInCategory, gmTubeModels, countLabel, totalModels, totalSeries, totalPrincipals, totalCategories, applicationIcon, categoryImage, industryImage } from '../lib/stats';
 
+const precisionCats = categoriesIn('precision');
 const principals = brands.filter((b) => b.slug !== 'other-manufacturers');
 
 // Product tiles (all the same size).
@@ -102,6 +103,29 @@ const points = [
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- 3b. Second division: precision mechanical components -->
+  <section class="bg-surface border-y border-line py-12 lg:py-14">
+    <div class="container-x grid gap-8 lg:grid-cols-[1fr_1.4fr] items-center">
+      <div class="reveal">
+        <div class="eyebrow text-teal">Division 2 · Precision mechanical components</div>
+        <h2 class="title-bar mt-3 !text-[26px] sm:!text-[32px] !leading-[1.15]">Precision gears, reducers and motion components.</h2>
+        <p class="mt-5 text-[16px] text-ink-soft">Fine-pitch gears, speed reducers, linear motion, couplings and bearings from PIC Design (RBC Bearings), for instrument drives, positioning systems and laboratory equipment. Send a part number or drawing and we will match the part.</p>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="/precision-components/" class="btn-primary">Explore precision components</a>
+          <a href="/upload-requirement/" class="btn-secondary">Send part details</a>
+        </div>
+      </div>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {precisionCats.map((c) => (
+          <li><a href={`/products/${c.slug}/`} class="group reveal lift card h-full p-4 flex flex-col gap-3 no-underline text-ink hover:text-ink hover:border-teal">
+            <span class="w-11 h-11 rounded-btn bg-teal-tint flex items-center justify-center"><Icon name={c.icon} size={24} /></span>
+            <span class="text-[14.5px] font-semibold text-navy leading-snug group-hover:text-teal">{c.name}</span>
+          </a></li>
+        ))}
+      </ul>
     </div>
   </section>
 
